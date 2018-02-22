@@ -59,9 +59,12 @@ class ArticleController extends Controller
         $where = array(
           'is_show'=>1,
         );
-        $details = Article::where($where)->first()->toarray();
-        //获取上一条和下一条
-        return view('home.details', compact('details'));
+        $details = Article::where($where)->where('aid',intval($id))->first();
+        //获取上一条
+        $top_article = Article::where($where)->where('publish_time','<',$details['publish_time'])->where('cate_id',$details['cate_id'])->first();
+        $next_article = Article::where($where)->where('publish_time','>',$details['publish_time'])->where('cate_id',$details['cate_id'])->first();
+        dd($top_article);
+        return view('home.details', compact('details','top_article','next_article'));
     }
         /**
      * Show the form for editing the specified resource.
