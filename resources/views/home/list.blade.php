@@ -6,7 +6,7 @@
                 <article class="blog-grid">
                     <div class="blog-grid-box-shadow">
                         <div class="blog-grid-content">
-                            <h2 class="blog-grid-title-md" id="{{$list->aid}}" onclick="article_num(<?php echo $list->aid; ?>);return false;"><a href="{{ route('article.show', [$list->aid]) }}">{{ $list->article_title}}</a></h2>
+                            <h2 class="blog-grid-title-md" id="{{$list->aid}}"><a href="{{ route('article.show', [$list->aid]) }}">{{ $list->article_title}}</a></h2>
                             <p><span>{{ $list->desc}}</span></p>
                         </div>
                         <div class="blog-grid-supplemental">
@@ -26,36 +26,5 @@
     </div>
     <script type="text/javascript" src="/public/default/js/jquery-3.1.0.min.js"></script>
     <!--<script type="text/javascript" src="/public/default/js/default.js"></script>-->
-    <script>
-       function article_num(aid){
-           var article_id = aid;
-           $.ajax({
-                type : "get",
-                url: "/update_click",
-                cache:false,//不缓存数据
-                data:{
-                   "aid":article_id,
-                },
-                dataType : "json",//数据类型为json
-                success : function(root){
-                    console.log(root);
-                    return false;
-                }
-            });
-       }
-//           $.ajax({
-//                type:'get',
-//                url: 'update_click',
-//                data:{
-//                    aid:aid,
-//                },
-//                dataType:'json',
-//                beforeSend:function(){
-//                    
-//                },
-//                success:function(data){
-//                    console.log(data)
-//                }
-//        }
-    </script>
+    
 @endsection

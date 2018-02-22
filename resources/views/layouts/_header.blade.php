@@ -86,8 +86,8 @@
 </header>
 <section class="breadcrumbs-v5">
 <div class="container">
-    <h2 class="breadcrumbs-v5-title">I am Wanli</h2>
-    <span class="breadcrumbs-v5-subtitle">I am a slow walker, but I never walk backwards...</span>
+    <h2 class="breadcrumbs-v5-title">@yield('titles','I am ChenBaoJin')</h2>
+    <span class="breadcrumbs-v5-subtitle">@yield('desc','I am a slow walker, but I never walk backwards...')</span>
 </div>
 </section>
 <section class="breadcrumbs-v1">
