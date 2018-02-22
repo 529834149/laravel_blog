@@ -54,9 +54,14 @@ class ArticleController extends Controller
     {
         Article::where('aid',intval($aid))->update(['']);
     }
-    public function show($id)
+    public function show(Request $request,$id)
     {
-
+        $where = array(
+          'is_show'=>1,
+        );
+        $details = Article::where($where)->first()->toarray();
+        //获取上一条和下一条
+        return view('home.details', compact('details'));
     }
         /**
      * Show the form for editing the specified resource.
