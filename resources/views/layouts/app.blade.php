@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>Python-i晚黎博客</title>
+<title>bodys男孩儿</title>
 <meta name="keywords" content="Body,博客,Laravel,PHP,框架,教程,资源,学习,笔记,不忘初心" />
 <meta name="description" content="i晚黎博客致力于提供优质学习资源,分享个人笔记、视频教程。,Python">
 <meta name="author" content="">
