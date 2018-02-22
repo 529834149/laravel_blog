@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <title>Python-i晚黎博客</title>
-<meta name="keywords" content="晚黎,博客,Laravel,PHP,框架,教程,资源,学习,笔记,iwanli" />
+<meta name="keywords" content="Body,博客,Laravel,PHP,框架,教程,资源,学习,笔记,不忘初心" />
 <meta name="description" content="i晚黎博客致力于提供优质学习资源,分享个人笔记、视频教程。,Python">
 <meta name="author" content="">
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -47,7 +47,9 @@
 <script src="js/html5shiv.js"></script>
 <script src="js/respond.min.js"></script>
 <![endif]-->
+
 <script type="text/javascript" src="/public/default/js/all-afcbcb8afd.js"></script>
 <script type="text/javascript" src="/public/default/js/app-5faadcb028.js"></script>
+
 </body>
 </html>

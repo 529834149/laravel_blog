@@ -16,3 +16,6 @@ Route::get('/', function () {
 });
 
 Route::resource('demo', 'DemoController');
+Route::get('home', 'ArticleController@homes');//首页
+Route::get('update_click', 'ArticleController@update_click');//首页
+Route::resource('article', 'ArticleController');//首页

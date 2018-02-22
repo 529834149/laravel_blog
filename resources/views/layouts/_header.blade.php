@@ -40,7 +40,15 @@
         <div class="collapse navbar-collapse nav-collapse">
             <div class="menu-container">
                 <ul class="nav navbar-nav">
-                                        <li class="nav-item">
+                @foreach ($navList as $n)
+                       <!--<li class="lis  {{$n->name}} "><a href="/{{$n->url}}/{{$n->cate_id}}">{{$n->name}}</a></li>-->
+                    <li class="nav-item">
+                        <a class="nav-item-child radius-3" target="_blank" href="{{$n->url}}">
+                            <i class="fa fa-home"></i> {{$n->title}}
+                        </a>
+                    </li>  
+                @endforeach
+<!--                <li class="nav-item">
                     <a class="nav-item-child radius-3" target="_blank" href="http://blog.iwanli.me">
                         <i class="fa fa-home"></i> Home
                     </a>
@@ -69,7 +77,7 @@
                     <a class="nav-item-child radius-3" target="_blank" href="http://coding.iwanli.me">
                         <i class="fa fa-free-code-camp"></i> Laravel学院
                     </a>
-                </li>
+                </li>-->
                 </ul>
             </div>
         </div>
