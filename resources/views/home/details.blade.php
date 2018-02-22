@@ -22,8 +22,11 @@
             @else
                  <p style="color:green">上一篇文章：<a href="#" title="" style="color:red">无</a></p>
             @endif
-           
-            <p style="color:green">下一篇文章：<a href="http://coding.iwanli.me/course/video-5.html" title="{{$next_article->article_title}}" style="color:red">{{$next_article->article_title}}</a></p>
+            @if (isset($next_article))
+                 <p style="color:green">下一篇文章：<a href="http://coding.iwanli.me/course/video-5.html" title="{{$next_article->article_title}}" style="color:red">{{$top_article->article_title}}</a></p>
+            @else
+                 <p style="color:green">下一篇文章：<a href="#" title="" style="color:red">无</a></p>
+            @endif
 
         </div>
     </article>
