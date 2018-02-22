@@ -11,10 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
+Route::get('/', 'ArticleController@homes');//首页
 Route::resource('demo', 'DemoController');
 Route::get('home', 'ArticleController@homes');//首页
 Route::get('update_click', 'ArticleController@update_click');//首页
