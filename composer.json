@@ -7,7 +7,6 @@
     "require": {
         "php": ">=5.6.4",
         "andreskrey/readability.php": "^1.1",
-        "jenssegers/mongodb": "3.2.*",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "mashape/unirest-php": "^2.6"
