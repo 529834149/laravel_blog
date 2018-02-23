@@ -14,8 +14,8 @@
 <link href="/public/default/css/app-9b5eb9253b.css" rel="stylesheet" type="text/css"/>
 <link rel="shortcut icon" href="http://blog.iwanli.me/image/favicon.ico"/>
 <!--文章详情页轮播-->
-<link rel="stylesheet" href="/public/default/css/reset.css"/>
-<link rel="stylesheet" href="/public/default/css/index.css"/>
+<!--<link rel="stylesheet" href="/public/default/css/reset.css"/>
+<link rel="stylesheet" href="/public/default/css/index.css"/>-->
 </head>
 <body class="animsition">
 <div class="wrapper">
