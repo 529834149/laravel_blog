@@ -22,7 +22,7 @@ class Controller extends BaseController
                 ->take(7)
                 ->get();
         //当前左侧用户信息
-        $left_item = Article::where('is_show',1)->take(4)->get();
+        $left_item = Article::where('is_show',1)->orderBy('publish_time','desc')->take(4)->get();
         View::share(['navList'=>$navList,'left_item'=>$left_item]);//首页导航页面共享
     }  
     public function returnCode($code,$message='',$data='')

@@ -25,7 +25,7 @@
     @endif
 @endsection
 @section('desc')
-    <p class="breadcrumbs-v5-divider" align="center"> {{$details->desc}}</p>
+    <p class="breadcrumbs-v5-divider" align="center"> {{$details->motto}}</p>
    
 @endsection
 @section('content')
