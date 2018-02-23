@@ -5,14 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <title>bodys男孩儿</title>
-<meta name="keywords" content="Body,博客,Laravel,PHP,框架,教程,资源,学习,笔记,不忘初心" />
-<meta name="description" content="i晚黎博客致力于提供优质学习资源,分享个人笔记、视频教程。,Python">
-<meta name="author" content="">
+<meta name="keywords" content="Body,博客,Laravel,PHP,框架,教程,资源,学习,笔记,不忘初心,语言无限学精才是王道" />
+<meta name="description" content="Body博客致力于提供优质学习资源,分享个人笔记、视频教程。,php 爬虫 ">
+<meta name="author" content="陈宝金">
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link rel="stylesheet" type="text/css" href="/public/default/fonts/font-awesome-4.7.0/css/font-awesome.css">
 <link href="/public/default/css/all-271888b423.css" rel="stylesheet" type="text/css"/>
 <link href="/public/default/css/app-9b5eb9253b.css" rel="stylesheet" type="text/css"/>
 <link rel="shortcut icon" href="http://blog.iwanli.me/image/favicon.ico"/>
+<!--文章详情页轮播-->
+<link rel="stylesheet" href="/public/default/css/reset.css"/>
+<link rel="stylesheet" href="/public/default/css/index.css"/>
 </head>
 <body class="animsition">
 <div class="wrapper">
@@ -37,8 +40,6 @@
             </div>
         </div>
     </div>
-    
-
       @include('layouts._footer')
 </div>
 <a href="javascript:void(0);" class="js-back-to-top back-to-top-theme"></a>
