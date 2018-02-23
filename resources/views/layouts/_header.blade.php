@@ -43,7 +43,9 @@
                 @foreach ($navList as $n)
                        <!--<li class="lis  {{$n->name}} "><a href="/{{$n->url}}/{{$n->cate_id}}">{{$n->name}}</a></li>-->
                     <li class="nav-item">
-                        <a class="nav-item-child radius-3" target="_blank" href="{{$n->url}}">
+                        <!--<a class="nav-item-child radius-3" target="_blank" href="{{$n->url}}">-->
+                        <a class="nav-item-child radius-3"  href="{{$n->url}}">
+
                             <i class="fa fa-home"></i> {{$n->title}}
                         </a>
                     </li>  
