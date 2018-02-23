@@ -17,16 +17,8 @@
             <!--<p>Laravel5.5新特性-前端模板上一篇文章</p>-->
             <hr>
             <h1 style="color:green">推荐文章</h1>
-            @if (isset($top_article))
-                 <p style="color:green">上一篇文章：<a href="http://coding.iwanli.me/course/video-5.html" title="{{$top_article->article_title}}" style="color:red">{{$top_article->article_title}}</a></p>
-            @else
-                 <p style="color:green">上一篇文章：<a href="#" title="" style="color:red">无</a></p>
-            @endif
-            @if (isset($next_article))
-                 <p style="color:green">下一篇文章：<a href="http://coding.iwanli.me/course/video-5.html" title="{{$next_article->article_title}}" style="color:red">{{$top_article->article_title}}</a></p>
-            @else
-                 <p style="color:green">下一篇文章：<a href="#" title="" style="color:red">无</a></p>
-            @endif
+                 <p style="color:green">上一篇文章：<a href="http://coding.iwanli.me/course/video-5.html" title="{{$top_article['article_title']}}" style="color:red">{{$top_article['article_title']}}</a></p>
+                 <p style="color:green">下一篇文章：<a href="http://coding.iwanli.me/course/video-5.html" title="{{$next_article['article_title']}}" style="color:red">{{$next_article['article_title']}}</a></p>
 
         </div>
     </article>
