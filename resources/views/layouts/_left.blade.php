@@ -10,7 +10,7 @@
                 <li class="timeline-v2-list-item">
                     <i class="timeline-v2-badge-icon radius-circle fa fa-calendar"></i>
                     <small class="timeline-v2-news-date"><?php echo date('Y-m-d h:i:s',$list->publish_time)?></small>
-                    <h5 class="timeline-v2-news-title"><a href="http://blog.iwanli.me/article/yJAWgAWo.html">{{$list->article_title}}</a></h5>
+                    <h5 class="timeline-v2-news-title"><a href="{{ route('article.show', [$list->aid]) }}">{{$list->article_title}}</a></h5>
                 </li>  
             @endforeach 
             <li class="clearfix" style="float: none;"></li>

@@ -92,10 +92,10 @@
 </section>
 <section class="breadcrumbs-v1">
 <div class="container">
-    <h2 class="breadcrumbs-v1-title">Python</h2>
+    <h2 class="breadcrumbs-v1-title"> @yield('items','首页')</h2>
     <ol class="breadcrumbs-v1-links">
-        <li><a href="http://blog.iwanli.me">Home</a></li>
-        <li class="active">Python</li>
+        <li><a href="http://blog.iwanli.me">@yield('items','首页')</a></li>
+        <li class="active">@yield('items_info','栏目')</li>
     </ol>
 </div>
 </section>
