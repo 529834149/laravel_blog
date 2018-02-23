@@ -19,4 +19,9 @@
         <i class="lists-item-element fa fa-angle-right"></i> 
         <a target="_blank" href="https://easywechat.org/">微信第三方开发</a>
     </li>
+    <li>
+        <i class="lists-item-element fa fa-angle-right"></i> 
+        <a target="_blank" href="http://www.blogchina.com/">博客中国</a>
+    </li>
+    
 </ul>
