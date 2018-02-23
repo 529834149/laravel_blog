@@ -26,3 +26,5 @@ Route::resource('discuss', 'DiscussController');//讨论
 Route::resource('database_all', 'DatabaseController');//mysql
 Route::resource('webdesign', 'WebdesignController');//javascript
 Route::resource('informal ', 'InformalController');//随笔
+Route::resource('readability ', 'ReadabilityController');//文章抓取
+Route::post('readability_success ', 'ReadabilityController@index');//文章抓取

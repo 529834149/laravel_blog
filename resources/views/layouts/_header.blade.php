@@ -51,7 +51,7 @@
                     </li>  
                 @endforeach
                     <li class="nav-item">
-                        <a class="nav-item-child radius-3" target="_blank" href="">
+                        <a class="nav-item-child radius-3" href="/readability">
                             <i class="fa fa-home"></i> 文章抓取
                         </a>
                     </li>  
