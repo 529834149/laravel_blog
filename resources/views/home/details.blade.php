@@ -48,7 +48,7 @@
 <div id="SOHUCS" sid="{{$top_article['aid']}}" ></div> 
 <script type="text/javascript"> 
 (function(){ 
-var appid = 'cytd8xJQ7'; 
+var appid = 'cyttVmRbA'; 
 var conf = 'prod_6ce43aaeddc102a52b1dec1ff3d2f652'; 
 var width = window.innerWidth || document.documentElement.clientWidth; 
 if (width < 960) { 
