@@ -43,9 +43,10 @@
 
         </div>
     </article>
+    <!--PC和WAP自适应版-->
+    <div id="SOHUCS" sid="{{$top_article['aid']}}" ></div> 
 </div>
-<!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="{{$top_article['aid']}}" ></div> 
+
 <script type="text/javascript"> 
 (function(){ 
 var appid = 'cyttVmRbA'; 
