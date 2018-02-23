@@ -64,15 +64,13 @@ class ArticleController extends Controller
         $top_article = Article::where($where)->where('publish_time','<',$details['publish_time'])->where('cate_id',$details['cate_id'])->first();
         if(!$top_article){
             $top_article['article_title'] = '无';
+            $top_article['aid'] = '';
         }
         $next_article = Article::where($where)->where('publish_time','>',$details['publish_time'])->where('cate_id',$details['cate_id'])->first();
          if(!$next_article){
             $next_article['article_title'] = '无';
+            $next_article['aid'] = '';
         }
-        
-//        dump($top_article);
-//        dump($next_article);
-//        die;
         return view('home.details', compact('details','top_article','next_article'));
     }
         /**
