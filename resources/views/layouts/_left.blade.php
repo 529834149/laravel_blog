@@ -6,26 +6,13 @@
     </div>
     <div class="blog-sidebar-content">
         <ul class="timeline-v2">
-            <li class="timeline-v2-list-item">
-                <i class="timeline-v2-badge-icon radius-circle fa fa-calendar"></i>
-                <small class="timeline-v2-news-date">2017-03-15 17:23:05</small>
-                <h5 class="timeline-v2-news-title"><a href="http://blog.iwanli.me/article/yJAWgAWo.html">Vue中使用JavaScript加密库crypto-js</a></h5>
-            </li>  
-            <li class="timeline-v2-list-item">
-                <i class="timeline-v2-badge-icon radius-circle fa fa-calendar"></i>
-                <small class="timeline-v2-news-date">2017-03-15 17:23:05</small>
-                <h5 class="timeline-v2-news-title"><a href="http://blog.iwanli.me/article/yJAWgAWo.html">Vue中使用JavaScript加密库crypto-js</a></h5>
-            </li> 
-            <li class="timeline-v2-list-item">
-                <i class="timeline-v2-badge-icon radius-circle fa fa-calendar"></i>
-                <small class="timeline-v2-news-date">2017-03-15 17:23:05</small>
-                <h5 class="timeline-v2-news-title"><a href="http://blog.iwanli.me/article/yJAWgAWo.html">Vue中使用JavaScript加密库crypto-js</a></h5>
-            </li> 
-            <li class="timeline-v2-list-item">
-                <i class="timeline-v2-badge-icon radius-circle fa fa-calendar"></i>
-                <small class="timeline-v2-news-date">2017-03-15 17:23:05</small>
-                <h5 class="timeline-v2-news-title"><a href="http://blog.iwanli.me/article/yJAWgAWo.html">Vue中使用JavaScript加密库crypto-js</a></h5>
-            </li> 
+            @foreach ($left_item as $index => $list)
+                <li class="timeline-v2-list-item">
+                    <i class="timeline-v2-badge-icon radius-circle fa fa-calendar"></i>
+                    <small class="timeline-v2-news-date"><?php echo date('Y-m-d h:i:s',$list->publish_time)?></small>
+                    <h5 class="timeline-v2-news-title"><a href="http://blog.iwanli.me/article/yJAWgAWo.html">{{$list->article_title}}</a></h5>
+                </li>  
+            @endforeach 
             <li class="clearfix" style="float: none;"></li>
         </ul>
     </div>

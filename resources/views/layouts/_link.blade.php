@@ -9,22 +9,14 @@
     </li>
     <li>
         <i class="lists-item-element fa fa-angle-right"></i> 
-        <a target="_blank" href="https://aabvip.com/">Destiny</a>
+        <a target="_blank" href="https://www.csdn.net/">CSDN</a>
     </li>
     <li>
         <i class="lists-item-element fa fa-angle-right"></i>
-        <a target="_blank" href="http://www.humengxu.com/">小胡发掘网</a>
+        <a target="_blank" href="http://www.chen2016php.com">异空间技术博客</a>
     </li>
     <li>
         <i class="lists-item-element fa fa-angle-right"></i> 
-        <a target="_blank" href="http://www.haoyuqi.top/">郝瑜琦博客</a>
-    </li>
-    <li>
-        <i class="lists-item-element fa fa-angle-right"></i> 
-        <a target="_blank" href="http://www.php01.com/">黄宽的博客</a>
-    </li>
-    <li>
-        <i class="lists-item-element fa fa-angle-right"></i> 
-        <a target="_blank" href="https://www.blueeye.cc">BLUE个人博客</a>
+        <a target="_blank" href="https://easywechat.org/">微信第三方开发</a>
     </li>
 </ul>
