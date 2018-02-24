@@ -32,7 +32,8 @@
 <div class=" col-xs-12 col-md-9 no-space">
     <article class="blog-grid">
         <div class="blog-grid-content article margin-b-30">
-            {{$details->content}}
+            <!--{{$details->content}}-->
+             <?php echo $details['content'];?>
             <p></p>
             <!--上一篇文章下一篇文章-->
             <!--<p>Laravel5.5新特性-前端模板上一篇文章</p>-->
