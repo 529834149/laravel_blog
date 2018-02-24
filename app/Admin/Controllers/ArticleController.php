@@ -104,7 +104,7 @@ class ArticleController extends Controller
             $form->text('article_title', '文章标题');
             $form->select('cate_id','所在分类')->options(Categories::selectOptions());
             $form->textarea('desc','文章简述')->rules('required');
-            $form->select('is_show','是否显示')->options([2 => '显示', 1 => '不显示']); 
+            $form->select('is_show','是否显示')->options([1 => '显示', 2 => '不显示']); 
             $form->editor('content')->attribute(['rows' => '20']);
             $form->saving(function (Form $form) {
                  $form->publish_time = time();
