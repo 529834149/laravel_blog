@@ -89,6 +89,7 @@ class CategoriesController extends Controller
             $form->select('parent_id','父级ID')->options(Categories::selectOptions());
             $form->text('title','分类名字')->rules('required');
             $form->text('url','路径地址(路由)')->rules('required');
+            $form->number('order','排序')->rules('required');
         });
     }
 }
