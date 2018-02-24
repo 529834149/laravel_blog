@@ -25,7 +25,7 @@ class WebdesignController extends Controller
                 ->where('articles.cate_id',5)
                 ->paginate(2);
 //        return view('home.list', ['article_list' => $article_list]);
-        return view('webdesign.list', compact('article_list'));
+        return view('php.list', compact('article_list'));
     }
 
     /**
