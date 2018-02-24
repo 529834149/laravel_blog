@@ -10,7 +10,7 @@
                     <article class="blog-grid">
                         <div class="blog-grid-box-shadow">
                             <div class="blog-grid-content">
-                                <h2 class="blog-grid-title-md" id="{{$list->aid}}"><a href="{{ route('article.show', [$list->aid]) }}">{{ $list->article_title}}</a></h2>
+                                <h2 class="blog-grid-title-md" onclick="onclicks({{$list->aid}});" id="{{$list->aid}}"><a href="{{ route('article.show', [$list->aid]) }}">{{ $list->article_title}}</a></h2>
                                 <p><span>{{ $list->desc}}</span></p>
                             </div>
                             <div class="blog-grid-supplemental">
@@ -31,6 +31,21 @@
         @endif
         
     </div>
-    <!--<script type="text/javascript" src="/public/default/js/default.js"></script>-->
+    <script type="text/javascript" src="/public/default/js/jquery-3.1.0.min.js"></script>
+    <script>
+        function onclicks(aid){
+            $.ajax({
+                url:'update_click/',
+                data:{'aid':aid},
+                type: "get",
+                dataType: "json",
+                success: function(result){
+                    if(result.code == 200){
+                        console.log('redis +1');
+                    }
+                }
+            });
+        }
+    </script>
     
 @endsection

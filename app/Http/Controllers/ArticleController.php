@@ -16,10 +16,9 @@ class ArticleController extends Controller
     public function update_click(Request $request)
     {
         $aid = intval($request->input('aid'));
-        
         $res = DB::table('articles')->where('aid',$aid)->increment('sort_num');
         $sort_num = Article::select('sort_num')->where('aid',$aid)->first();
-        return $sort_num['sort_num'];
+        return $this->returnCode(200);
         
     }
     /**
@@ -53,7 +52,8 @@ class ArticleController extends Controller
      */
     public function click_number($aid)
     {
-        Article::where('aid',intval($aid))->update(['']);
+       
+//        Article::where('aid',intval($aid))->update(['']);
     }
     public function show(Request $request,$id)
     {
