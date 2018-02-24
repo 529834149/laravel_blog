@@ -27,6 +27,7 @@ class WebdesignController extends Controller
 //        return view('home.list', ['article_list' => $article_list]);
         return view('webdesign.list', compact('article_list'));
     }
+    
 
     /**
      * Show the form for creating a new resource.
