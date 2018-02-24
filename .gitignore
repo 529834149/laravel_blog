@@ -1,4 +1,5 @@
 /vendor
+/public/packages
 /storage
 /bootstrap
 /tests
