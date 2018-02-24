@@ -29,7 +29,8 @@
          
         @else
         <div class="msg_desc">
-            <img style="max-width:100%;overflow:hidden;" src="/public/default/picture/c8c56961fecdc8b2db89fd1153dc387a.gif" alt="">
+            暂无数据
+            <!--<img style="max-width:100%;overflow:hidden;" src="/public/default/picture/c8c56961fecdc8b2db89fd1153dc387a.gif" alt="">-->
         </div>
         @endif
         

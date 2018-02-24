@@ -3,7 +3,7 @@
     PHP
 @endsection
 @section('content')
-    <div class="col-xs-12 col-md-9 no-space" >
+    @if(count($article_list))
             @foreach ($article_list as $index => $list)
                 <div class="col-md-12 grid-item">
                     <article class="blog-grid">
@@ -25,8 +25,13 @@
                 </div>
             @endforeach 
             {{ $article_list->links() }}
-        
-    </div>
+         
+        @else
+        <div class="msg_desc">
+            暂无数据
+            <!--<img style="max-width:100%;overflow:hidden;" src="/public/default/picture/c8c56961fecdc8b2db89fd1153dc387a.gif" alt="">-->
+        </div>
+        @endif
     <script type="text/javascript" src="/public/default/js/jquery-3.1.0.min.js"></script>
     <!--<script type="text/javascript" src="/public/default/js/default.js"></script>-->
     

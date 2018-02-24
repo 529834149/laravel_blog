@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <div class="col-xs-12 col-md-9 no-space" >
+        
         @foreach ($article_list as $index => $list)
             <div class="col-md-12 grid-item">
                 <article class="blog-grid">
