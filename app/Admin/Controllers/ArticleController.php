@@ -102,14 +102,16 @@ class ArticleController extends Controller
             $form->display('aid', 'ID');
             $form->text('motto', '文章详情页名人名言');
             $form->text('article_title', '文章标题');
+            $form->date('publish_time','时间');
             $form->select('cate_id','所在分类')->options(Categories::selectOptions());
             $form->textarea('desc','文章简述')->rules('required');
             $form->select('is_show','是否显示')->options([1 => '显示', 2 => '不显示']); 
             $form->editor('content')->attribute(['rows' => '20']);
-            $form->saving(function (Form $form) {
-                 $form->publish_time = time();
+            $form->saved(function (Form $form) {
+                $aid = $form->model()->aid;
+                $time = $form->model()->publish_time;
+                Article::where('aid',intval($aid))->update(['publish_time'=>strtotime($time)]);
             });
-
         });
     }
 }
