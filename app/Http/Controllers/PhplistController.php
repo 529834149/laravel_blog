@@ -23,7 +23,7 @@ class PhplistController extends Controller
                 ->leftJoin('tags','tags.tid','=','articles.tags_id')
                 ->where('articles.is_show',1)
                 ->where('articles.cate_id',2)
-                ->paginate(2);
+                ->paginate(20);
 //        return view('home.list', ['article_list' => $article_list]);
         return view('php.list', compact('article_list'));
     }
