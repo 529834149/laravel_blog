@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Http\Requests;
+use App\Model\Article;
+use App\Model\Categories;
+use DB;
 class WebdesignController extends Controller
 {
     /**
@@ -13,7 +16,16 @@ class WebdesignController extends Controller
      */
     public function index()
     {
-         echo '升级中.........';
+        $article_list = \DB::connection('mysql')
+                ->table('articles')
+                ->select('tags.name as tage_name','tags.tid','articles.cate_id','articles.aid','articles.article_title','articles.desc','articles.publish_time','articles.sort_num','articles.tags_id','categories.cate_id','categories.title')
+                ->leftJoin('categories','articles.cate_id','=','categories.cate_id')
+                ->leftJoin('tags','tags.tid','=','articles.tags_id')
+                ->where('articles.is_show',1)
+                ->where('articles.cate_id',5)
+                ->paginate(2);
+//        return view('home.list', ['article_list' => $article_list]);
+        return view('webdesign.list', compact('article_list'));
     }
 
     /**

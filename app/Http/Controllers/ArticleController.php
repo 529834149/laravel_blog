@@ -34,6 +34,7 @@ class ArticleController extends Controller
                 ->leftJoin('categories','articles.cate_id','=','categories.cate_id')
                 ->leftJoin('tags','tags.tid','=','articles.tags_id')
                 ->where('articles.is_show',1)
+                ->orderBy('articles.publish_time','DESC')
                 ->paginate(2);
 //        return view('home.list', ['article_list' => $article_list]);
         return view('home.list', compact('article_list'));
