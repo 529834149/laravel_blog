@@ -10,4 +10,5 @@ Route::group([
     'middleware'    => ['web', 'admin'],
 ], function (Router $router) {
     $router->resource('category_list','CategoriesController'); 
+    $router->resource('article_list','ArticleController'); 
 });
