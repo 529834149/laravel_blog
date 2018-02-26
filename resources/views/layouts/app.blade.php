@@ -19,6 +19,7 @@
 </head>
 <body class="animsition">
 <div class="wrapper">
+    
     @include('layouts._header')
     <div class="bg-color-sky-light">
         <div class="content-xs container">
@@ -28,20 +29,36 @@
                 @include('layouts._left')
                                    
     <div class="blog-sidebar margin-b-30">
-    <div class="blog-sidebar-heading">
-        <i class="blog-sidebar-heading-icon fa fa-link"></i>
-        <h4 class="blog-sidebar-heading-title">友情链接</h4>
-    </div>
-    <div class="blog-sidebar-content">
-        @include('layouts._link')
+        <div class="blog-sidebar-heading">
+            <i class="blog-sidebar-heading-icon fa fa-link"></i>
+            <h4 class="blog-sidebar-heading-title">友情链接</h4>
+        </div>
+
+        <div class="blog-sidebar-content">
+            @include('layouts._link')
+        
+        </div>
+        
+    </div>  
+     <div class="blog-sidebar margin-b-30">
+        <div class="blog-sidebar-heading">
+            <i class="blog-sidebar-heading-icon fa fa-link"></i>
+            <h4 class="blog-sidebar-heading-title">广告栏</h4>
+        </div>
+
+        <div class="blog-sidebar-content">
+            @include('layouts._advertisement')
+        
+        </div>
         
     </div>
-</div>                                </div>
+    </div>
             </div>
         </div>
     </div>
       @include('layouts._footer')
 </div>
+
 <a href="javascript:void(0);" class="js-back-to-top back-to-top-theme"></a>
 
 <!--[if lt IE 9]>
@@ -51,6 +68,8 @@
 
 <script type="text/javascript" src="/public/default/js/all-afcbcb8afd.js"></script>
 <script type="text/javascript" src="/public/default/js/app-5faadcb028.js"></script>
+<script>
 
+</script>
 </body>
 </html>
