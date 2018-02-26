@@ -11,11 +11,11 @@
     @elseif ($details->cate_id === 3)
         讨论
     @elseif ($details->cate_id === 4)
-        Mysql
+        数据库
     @elseif ($details->cate_id === 5)
-        Javascript
+        前端
     @elseif ($details->cate_id === 6)
-        随笔
+        版本控制器
     @elseif ($details->cate_id === 7)
         Github
     @elseif ($details->cate_id === 8)

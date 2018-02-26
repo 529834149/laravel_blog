@@ -12,7 +12,7 @@
                         </div>
                         <div class="blog-grid-supplemental">
                             <span class="blog-grid-supplemental-title">
-                                <i class="fa fa-leaf"></i><a class="blog-grid-supplemental-category" href="{{ route('article.show', [$list->aid]) }}"> {{ $list->tage_name}}</a> - <i class="fa fa-clock-o"></i> <?php echo date('Y-m-d h:i:s',$list->publish_time)?>
+                                <i class="fa fa-leaf"></i><a class="blog-grid-supplemental-category" href="{{ route('article.show', [$list->aid]) }}"> {{ $list->title}}</a> - <i class="fa fa-clock-o"></i> <?php echo date('Y-m-d h:i:s',$list->publish_time)?>
                             </span>
                             <span class="blog-grid-supplemental-title pull-right">
                                 <i class="fa fa-fire"></i> {{ $list->sort_num}}
