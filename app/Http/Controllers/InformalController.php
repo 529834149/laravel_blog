@@ -13,7 +13,17 @@ class InformalController extends Controller
      */
     public function index()
     {
-        //
+        $article_list = \DB::connection('mysql')
+                ->table('articles')
+                ->select('tags.name as tage_name','tags.tid','articles.cate_id','articles.aid','articles.article_title','articles.desc','articles.publish_time','articles.sort_num','articles.tags_id','categories.cate_id','categories.title')
+                ->leftJoin('categories','articles.cate_id','=','categories.cate_id')
+                ->leftJoin('tags','tags.tid','=','articles.tags_id')
+                ->where('articles.is_show',1)
+                 ->where('articles.cate_id',6)
+                ->orderBy('articles.publish_time','DESC')
+                ->paginate(20);
+//        return view('home.list', ['article_list' => $article_list]);
+        return view('informal.list', compact('article_list'));
     }
 
     /**
