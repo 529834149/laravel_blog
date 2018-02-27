@@ -12,7 +12,7 @@
 <link rel="stylesheet" type="text/css" href="/public/default/fonts/font-awesome-4.7.0/css/font-awesome.css">
 <link href="/public/default/css/all-271888b423.css" rel="stylesheet" type="text/css"/>
 <link href="/public/default/css/app-9b5eb9253b.css" rel="stylesheet" type="text/css"/>
-<link rel="shortcut icon" href="http://blog.iwanli.me/image/favicon.ico"/>
+<link rel="shortcut icon" href="/public/default/picture/ico.ico"/>
 <!--文章详情页轮播-->
 <!--<link rel="stylesheet" href="/public/default/css/reset.css"/>
 <link rel="stylesheet" href="/public/default/css/index.css"/>-->
