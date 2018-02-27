@@ -16,7 +16,7 @@
   </header>
 <div class="nav-scroller py-1 mb-2">
     <nav class="nav d-flex justify-content-between">
-        <a class="p-2 text-muted" href="#">首页</a>
+        <a class="p-2 text-muted" href="#">首页 </a>
         <a class="p-2 text-muted" href="#">PHP</a>
         <a class="p-2 text-muted" href="#">服务器</a>
         <a class="p-2 text-muted" href="#">WEB前端</a>
