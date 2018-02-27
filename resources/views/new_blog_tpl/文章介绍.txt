@@ -1,0 +1,2 @@
+carousel.blade  负责页面轮播图片
+dayList.blade   当天文章列表

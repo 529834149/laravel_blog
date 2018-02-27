@@ -13,7 +13,7 @@ class DiscussController extends Controller
      */
     public function index()
     {
-        return view('discuss.list');
+        return view('new_blog_tpl.tpl.home');
     }
 
     /**
