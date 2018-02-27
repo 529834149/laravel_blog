@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('items_info')
-    PHP
+    数据库
 @endsection
 @section('content')
     <div class="col-xs-12 col-md-9 no-space" >

@@ -92,17 +92,23 @@
 </nav>
 </header>
 <section class="breadcrumbs-v5">
-<div class="container">
+<div class="container"  >
     <h2 class="breadcrumbs-v5-title">@yield('titles','I am ChenBaoJin')</h2>
     <span class="breadcrumbs-v5-subtitle">@yield('desc','I am a slow walker, but I never walk backwards...')</span>
 </div>
 </section>
 <section class="breadcrumbs-v1">
-<div class="container">
+    <!--<div id="particles-js"></div>-->
+<div class="container" >
     <h2 class="breadcrumbs-v1-title"> @yield('items','首页')</h2>
     <ol class="breadcrumbs-v1-links">
         <li><a href="/">@yield('items','首页')</a></li>
         <li class="active">@yield('items_info','栏目')</li>
     </ol>
 </div>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+
+</script>
 </section>

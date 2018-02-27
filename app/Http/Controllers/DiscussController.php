@@ -13,7 +13,7 @@ class DiscussController extends Controller
      */
     public function index()
     {
-        echo '升级中.........';
+        return view('discuss.list');
     }
 
     /**

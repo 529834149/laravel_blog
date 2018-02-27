@@ -68,8 +68,15 @@
 
 <script type="text/javascript" src="/public/default/js/all-afcbcb8afd.js"></script>
 <script type="text/javascript" src="/public/default/js/app-5faadcb028.js"></script>
-<script>
-
-</script>
+    <script src="/public/default/rose/js/snowfall.jquery.js"></script> 
+    <script>
+            $(document).snowfall('clear');
+            $(document).snowfall({
+                image: "/public/default/rose/images/huaban.png",
+                flakeCount:50,
+                minSize: 5,
+                maxSize: 22
+            });
+    </script>
 </body>
 </html>
