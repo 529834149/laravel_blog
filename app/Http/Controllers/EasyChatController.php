@@ -9,7 +9,7 @@ use DB;
 use Log;
 use EasyWeChat\Factory;
 class EasyChatController extends Controller
-{
+{   
     public function wx(Request $request)
     {
        Log::info('request arrived.'); # 注意：Log 为 Laravel 组件，所以它记的日志去 Laravel 日志看，而不是 EasyWeChat 日志
@@ -33,64 +33,11 @@ class EasyChatController extends Controller
 //        gQGo7zwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyUFFaTmRhNXdkajIxd1FadU5xY3UAAgQ0VJZaAwQA6QcA
         $url = $app->qrcode->url('gQGo7zwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyUFFaTmRhNXdkajIxd1FadU5xY3UAAgQ0VJZaAwQA6QcA');
         $result = $app->qrcode->forever(56);
-        dd($result);
-    }
-    /**
-     * 以下方法主要处理分类信息
-     */
-    public function  index(Request $request)
-    {
-        dd($request->all());
-    }
-    public function show(Request $request,$id)
-    {
-       dd($request->all());
-    }
-    public function create()
-    {
-        //
-    }
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        dd($request->all());
-    }
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        dd($request->all());
-    }
+        
+        $content = file_get_contents($url); // 得到二进制图片内容
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
+        file_put_contents(__DIR__ . '/code.jpg', $content); // 写入文件
     }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+  
+    
 }
