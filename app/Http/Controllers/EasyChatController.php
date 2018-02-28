@@ -7,6 +7,7 @@ use App\Model\Article;
 use App\Model\Categories;
 use DB;
 use Log;
+use EasyWeChat\Factory;
 class EasyChatController extends Controller
 {
     public function wx(Request $request)
@@ -19,6 +20,16 @@ class EasyChatController extends Controller
         });
 
         return $app->server->serve();
+    }
+    public function wxtest(Request $request)
+    {
+        $config = [
+            'app_id'=>'wxd984f6acfdde0f54',
+            'secret'=>'8f7d6e98269c068681fc00070979d922'
+        ];
+        $app = Factory::officialAccount($config);
+        $response = $app->user->list();
+        dd($response);
     }
     /**
      * 以下方法主要处理分类信息
