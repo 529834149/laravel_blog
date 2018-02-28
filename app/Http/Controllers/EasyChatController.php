@@ -30,7 +30,9 @@ class EasyChatController extends Controller
         $app = Factory::officialAccount($config);
         $response = $app->user->list();
         $result = $app->qrcode->temporary('foo', 6 * 24 * 3600);
-        dd($result);
+//        gQGo7zwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyUFFaTmRhNXdkajIxd1FadU5xY3UAAgQ0VJZaAwQA6QcA
+        $url = $app->qrcode->url('gQGo7zwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyUFFaTmRhNXdkajIxd1FadU5xY3UAAgQ0VJZaAwQA6QcA');
+        dd($url);
     }
     /**
      * 以下方法主要处理分类信息
