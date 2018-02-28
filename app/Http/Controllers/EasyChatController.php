@@ -38,6 +38,10 @@ class EasyChatController extends Controller
         var_dump($content);
         file_put_contents(__DIR__ . '/public/code.jpg', $content); // 写入文件
     }
+    public function resourceWX(Request $request,$status){
+        dump($request->all());
+        dump($status);
+    }
   
     
 }
