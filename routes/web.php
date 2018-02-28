@@ -30,5 +30,5 @@ Route::resource('readability ', 'ReadabilityController');//文章抓取
 Route::post('readability_success ', 'ReadabilityController@index');//文章抓取
 Route::any('webchat', 'EasyChatController@wx');//用户支付信息
 Route::get('test', function(){
-   echo '11';
-})->middleware('wechat.oauth');//
+    dd(session('wechat.oauth_user.default'));
+})->middleware('wechat.oauth:default');//

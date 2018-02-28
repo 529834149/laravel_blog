@@ -61,7 +61,7 @@ return [
         'default' => [
             'app_id' => env('WECHAT_OFFICIAL_ACCOUNT_APPID', 'wxd984f6acfdde0f54'),         // AppID
             'secret' => env('WECHAT_OFFICIAL_ACCOUNT_SECRET', '8f7d6e98269c068681fc00070979d922'),    // AppSecret
-            'token' => env('WECHAT_OFFICIAL_ACCOUNT_TOKEN', 'your-token'),           // Token
+            'token' => env('WECHAT_OFFICIAL_ACCOUNT_TOKEN', '2018chenbaojin'),           // Token
             'aes_key' => env('WECHAT_OFFICIAL_ACCOUNT_AES_KEY', ''),                 // EncodingAESKey
 
             /*
