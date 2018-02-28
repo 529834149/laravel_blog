@@ -35,7 +35,6 @@ class EasyChatController extends Controller
         $result = $app->qrcode->forever(56);
         
         $content = file_get_contents($url); // 得到二进制图片内容
-
         file_put_contents(__DIR__ . '/code.jpg', $content); // 写入文件
     }
   
