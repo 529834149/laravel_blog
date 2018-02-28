@@ -178,6 +178,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 //        Jenssegers\Mongodb\MongodbServiceProvider::class,
         Encore\Admin\Providers\AdminServiceProvider::class,
+         Overtrue\LaravelWeChat\ServiceProvider::class,
     ],
 
     /*
@@ -227,6 +228,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 //        'Moloquent' => Jenssegers\Mongodb\Eloquent\Model::class,
+        'EasyWeChat' => Overtrue\LaravelWeChat\Facade::class,
 
     ],
 
