@@ -38,9 +38,15 @@ class EasyChatController extends Controller
         var_dump($content);
         file_put_contents(__DIR__ . '/public/code.jpg', $content); // 写入文件
     }
-    public function resourceWX(Request $request,$status){
-        dump($request->all());
-        dump($status);
+    # 用户点击微信登录按钮后，调用此方法请求微信接口
+    public function oauth(Request $request){
+        $oauthUser = \Socialite::with('weixin')->user();
+        // 在这里可以获取到用户在微信的资料
+        dd($oauthUser);
+    }
+    # 微信的回调地址
+     public function callback(Request $request){
+        return \Socialite::with('weixin')->redirect();
     }
   
     
