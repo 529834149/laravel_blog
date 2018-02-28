@@ -8,7 +8,10 @@ use App\Model\Categories;
 use DB;
 class EasyChatController extends Controller
 {
-    
+    public function wx(Request $request)
+    {
+        
+    }
     /**
      * 以下方法主要处理分类信息
      */

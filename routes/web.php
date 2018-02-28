@@ -28,4 +28,4 @@ Route::resource('webdesign', 'WebdesignController');//javascript
 Route::resource('informal ', 'InformalController');//随笔
 Route::resource('readability ', 'ReadabilityController');//文章抓取
 Route::post('readability_success ', 'ReadabilityController@index');//文章抓取
-Route::resource('webchat', 'EasyChatController');//用户支付信息
+Route::get('webchat', 'EasyChatController@wx');//用户支付信息
