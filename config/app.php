@@ -179,7 +179,7 @@ return [
 //        Jenssegers\Mongodb\MongodbServiceProvider::class,
         Encore\Admin\Providers\AdminServiceProvider::class,
          Overtrue\LaravelWeChat\ServiceProvider::class,
-        Laravel\Socialite\SocialiteServiceProvider::class,      
+         \SocialiteProviders\Manager\ServiceProvider::class,
     ],
 
     /*
