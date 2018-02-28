@@ -10,7 +10,7 @@ class EasyChatController extends Controller
 {
     public function wx(Request $request)
     {
-        
+        var_dump($request->all());
     }
     /**
      * 以下方法主要处理分类信息
