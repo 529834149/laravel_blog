@@ -13,6 +13,7 @@ class VerifyCsrfToken extends BaseVerifier
      */
     protected $except = [
        '*update_click*',
-        '*readability*'
+        '*readability*',
+        '*webchat*'
     ];
 }
