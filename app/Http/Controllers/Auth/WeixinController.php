@@ -13,7 +13,6 @@ use SocialiteProviders\Weixin\Provider;
 class WeixinController extends Controller{
     public function redirectToProvider(Request $request)
     {
-        dd(Socialite::with('weixin'));
         return Socialite::with('weixin')->redirect();
     }
 
