@@ -35,8 +35,5 @@ Route::get('test', function(){
     dd(session('wechat.oauth_user.default'));
 })->middleware('wechat.oauth:default');//
 
-# 用户点击登录按钮时请求的地址
-Route::get('/oauth', 'EasyChatController@oauth');
-
-# 微信接口回调地址
-Route::get('/callback', 'EasyChatController@callback');
+Route::get('auth/weixin', 'Auth\WeixinController@redirectToProvider');
+Route::get('auth/weixin/callback', 'Auth\WeixinController@handleProviderCallback');
