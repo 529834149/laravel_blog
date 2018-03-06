@@ -49,6 +49,7 @@ class ArticleController extends Controller
                      ->get();
         $list = [];
         foreach($infomation as $k=>$v){
+            $list[$k]['times'] = $v->time_infomation;
             $list[$k]['article_count'] = $v->user_count;
             $list[$k]['year'] = date('Y',intval($v->time_infomation));
             $list[$k]['month'] = date('m',intval($v->time_infomation));
