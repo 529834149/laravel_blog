@@ -11,6 +11,13 @@ use App\Model\Categories;
 use App\Model\Collection;
 class ReadabilityController extends Controller
 {
+    public function read_list()
+    {
+          $read_list = \DB::connection('mysql')
+                ->table('collection')
+                ->get();
+        return view('readability.list',  compact('read_list'));
+    }
     /**
      * Display a listing of the resource.
      *
@@ -57,13 +64,15 @@ class ReadabilityController extends Controller
         try {
             $arr = [];
             $readability->parse($html);
-            $arr['title'] = $readability->getTitle() ? $readability->getTitle() :'' ;//获取文章标题
+            $arr['article_title'] = $readability->getTitle() ? $readability->getTitle() :'' ;//获取文章标题
 //            $arr['author'] = $readability->getAuthor() ? $readability->getAuthor() :'' ;//获取文章作者
             $arr['author'] = $author ? $author :'' ;//当前谁操作的
             $arr['content'] = $readability->getContent() ? $readability->getContent() :'' ;//获取文章内容
             //匹配文章中的第一场图片
             $arr['title'] = $this->replace_diffNotes($arr['title']);
-            $arr['is_show'] = 0;
+            $arr['is_show'] = 1;
+            $arr['read_time'] = 0;
+            $arr['click_num'] = time();
             $coll = Collection::insert($arr);
             if($coll){
                 return back()->withInput()->with('success', '抓取成功！');
