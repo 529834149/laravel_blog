@@ -23,7 +23,18 @@ class Controller extends BaseController
                 ->get();
         //当前左侧用户信息
         $left_item = Article::where('is_show',1)->orderBy('publish_time','desc')->take(4)->get();
-        View::share(['navList'=>$navList,'left_item'=>$left_item]);//首页导航页面共享
+        //获取大家都在看 ，按着浏览数进行排序
+        $order_sort_num = Article::select('aid','sort_num','article_title')->where('is_show',1)->orderBy('sort_num','desc')->take(8)->get()->toarray();
+        $html =[];
+        foreach($order_sort_num as $k=>$v){
+            if($k<3){
+                $html[$k] = '<h5 class="timeline-v2-news-title"><a href="http://www.bodys.top/article/'.$v['aid'].'"><span style="background-color: red;margin: 0 5px 0 0;padding: 0 5px;border-radius: 2px;font-size: 14px;color:beige;">'.(intval($k)+1).'</span>'.$v['article_title'].'</a></h5>';
+            }else{
+                $html[$k] = '<h5 class="timeline-v2-news-title"><a href="http://www.bodys.top/article/'.$v['aid'].'"><span style="background-color: #ccc;margin: 0 5px 0 0;padding: 0 5px;border-radius: 2px;font-size: 14px;color:beige;">'.(intval($k)+1).'</span>'.$v['article_title'].'</a></h5>';
+
+            }
+        }
+        View::share(['navList'=>$navList,'left_item'=>$left_item,'order_sort_article'=>$html]);//首页导航页面共享
     }  
     public function returnCode($code,$message='',$data='')
     {

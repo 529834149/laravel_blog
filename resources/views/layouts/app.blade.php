@@ -39,14 +39,17 @@
                    </div>
 
                    <div class="blog-sidebar-content">
-                       <h5 class="timeline-v2-news-title"><a href="http://wanli.org/article/5"><span style="background-color: red;margin: 0 5px 0 0;padding: 0 5px;    border-radius: 2px;font-size: 14px;color:beige;">1</span>将二维数组按着时间进行分组</a></h5>
+                       @foreach($order_sort_article as $ar)
+                        {!!$ar!!}
+                       @endforeach
+<!--                       <h5 class="timeline-v2-news-title"><a href="http://wanli.org/article/5"><span style="background-color: red;margin: 0 5px 0 0;padding: 0 5px;    border-radius: 2px;font-size: 14px;color:beige;">1</span>将二维数组按着时间进行分组</a></h5>
                        <h5 class="timeline-v2-news-title"><a href="http://wanli.org/article/5"><span style="background-color: red;margin: 0 5px 0 0;padding: 0 5px;    border-radius: 2px;font-size: 14px;color:beige;">2</span>将二维数组按着时间进行分组</a></h5>
                        <h5 class="timeline-v2-news-title"><a href="http://wanli.org/article/5"><span style="background-color: red;margin: 0 5px 0 0;padding: 0 5px;    border-radius: 2px;font-size: 14px;color:beige;">3</span>将二维数组按着时间进行分组</a></h5>
                        <h5 class="timeline-v2-news-title"><a href="http://wanli.org/article/5"><span style="background-color: #ccc;margin: 0 5px 0 0;padding: 0 5px;    border-radius: 2px;font-size: 14px;color:beige;">4</span>将二维数组按着时间进行分组</a></h5>
                        <h5 class="timeline-v2-news-title"><a href="http://wanli.org/article/5"><span style="background-color: #ccc;margin: 0 5px 0 0;padding: 0 5px;    border-radius: 2px;font-size: 14px;color:beige;">5</span>将二维数组按着时间进行分组</a></h5>
                        <h5 class="timeline-v2-news-title"><a href="http://wanli.org/article/5"><span style="background-color: #ccc;margin: 0 5px 0 0;padding: 0 5px;    border-radius: 2px;font-size: 14px;color:beige;">6</span>将二维数组按着时间进行分组</a></h5>
                        <h5 class="timeline-v2-news-title"><a href="http://wanli.org/article/5"><span style="background-color: #ccc;margin: 0 5px 0 0;padding: 0 5px;    border-radius: 2px;font-size: 14px;color:beige;">7</span>将二维数组按着时间进行分组</a></h5>
-                       <h5 class="timeline-v2-news-title"><a href="http://wanli.org/article/5"><span style="background-color: #ccc;margin: 0 5px 0 0;padding: 0 5px;    border-radius: 2px;font-size: 14px;color:beige;">8</span>将二维数组按着时间进行分组</a></h5>
+                       <h5 class="timeline-v2-news-title"><a href="http://wanli.org/article/5"><span style="background-color: #ccc;margin: 0 5px 0 0;padding: 0 5px;    border-radius: 2px;font-size: 14px;color:beige;">8</span>将二维数组按着时间进行分组</a></h5>-->
 
 
 
