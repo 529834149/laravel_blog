@@ -43,6 +43,21 @@ class ArticleController extends Controller
      */
     public function  index()
     {
+        $infomation = DB::table('articles')
+                     ->select(DB::raw('count(*) as user_count, time_infomation'))
+                     ->groupBy('time_infomation')
+                     ->get();
+        $list = [];
+        foreach($infomation as $k=>$v){
+            $list[$k]['article_count'] = $v->user_count;
+            $list[$k]['time_infomation'] = date('Y-m',intval($v->time_infomation));
+
+        }
+       return $this->returnCode(200,'',$list);
+        
+    }
+    public function infomation_list($time)
+    {
         
     }
     /**

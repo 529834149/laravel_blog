@@ -42,16 +42,6 @@
                        @foreach($order_sort_article as $ar)
                         {!!$ar!!}
                        @endforeach
-<!--                       <h5 class="timeline-v2-news-title"><a href="http://wanli.org/article/5"><span style="background-color: red;margin: 0 5px 0 0;padding: 0 5px;    border-radius: 2px;font-size: 14px;color:beige;">1</span>将二维数组按着时间进行分组</a></h5>
-                       <h5 class="timeline-v2-news-title"><a href="http://wanli.org/article/5"><span style="background-color: red;margin: 0 5px 0 0;padding: 0 5px;    border-radius: 2px;font-size: 14px;color:beige;">2</span>将二维数组按着时间进行分组</a></h5>
-                       <h5 class="timeline-v2-news-title"><a href="http://wanli.org/article/5"><span style="background-color: red;margin: 0 5px 0 0;padding: 0 5px;    border-radius: 2px;font-size: 14px;color:beige;">3</span>将二维数组按着时间进行分组</a></h5>
-                       <h5 class="timeline-v2-news-title"><a href="http://wanli.org/article/5"><span style="background-color: #ccc;margin: 0 5px 0 0;padding: 0 5px;    border-radius: 2px;font-size: 14px;color:beige;">4</span>将二维数组按着时间进行分组</a></h5>
-                       <h5 class="timeline-v2-news-title"><a href="http://wanli.org/article/5"><span style="background-color: #ccc;margin: 0 5px 0 0;padding: 0 5px;    border-radius: 2px;font-size: 14px;color:beige;">5</span>将二维数组按着时间进行分组</a></h5>
-                       <h5 class="timeline-v2-news-title"><a href="http://wanli.org/article/5"><span style="background-color: #ccc;margin: 0 5px 0 0;padding: 0 5px;    border-radius: 2px;font-size: 14px;color:beige;">6</span>将二维数组按着时间进行分组</a></h5>
-                       <h5 class="timeline-v2-news-title"><a href="http://wanli.org/article/5"><span style="background-color: #ccc;margin: 0 5px 0 0;padding: 0 5px;    border-radius: 2px;font-size: 14px;color:beige;">7</span>将二维数组按着时间进行分组</a></h5>
-                       <h5 class="timeline-v2-news-title"><a href="http://wanli.org/article/5"><span style="background-color: #ccc;margin: 0 5px 0 0;padding: 0 5px;    border-radius: 2px;font-size: 14px;color:beige;">8</span>将二维数组按着时间进行分组</a></h5>-->
-
-
 
                    </div>
 
@@ -64,23 +54,11 @@
                       <i class="icon ion-clock"></i>
                       <h4 class="blog-sidebar-heading-title">归档</h4>
                   </div>
-                  <div class="blog-sidebar-content">
-                    <h3>2018</h3>
-                    <ul style="list-style: none;">
-                        <li><i class="icon ion-ios-plus-outline"></i>12月<span style="color: #999;margin-left:15px; ">2篇</span></li>
-                        <li><i class="icon ion-ios-plus"></i>11月<span style="color: #999;margin-left:15px;">2篇</span></li>
-                        <li><i class="icon ion-ios-minus-outline"></i>10月<span style="color: #999;margin-left:15px; ">2篇</span></li>
-                    </ul>
-                    <h3>2017</h3>
-                    <ul style="list-style: none;">
-                        <li>12月<span style="color: #999;margin-left:15px; ">2篇</span></li>
-                        <li>11月<span style="color: #999;margin-left:15px;">2篇</span></li>
-                        <li>10月<span style="color: #999;margin-left:15px; ">2篇</span></li>
-                    </ul>
-           <!--           <li>12月<a href="//zhangge.net/5115.html" target="_blank">利用HSTS安全协议柔性解决全站HTTPS的兼容性问题</a></li>
-                        <li>11月<a href="//zhangge.net/5115.html" target="_blank">利用HSTS安全协议柔性解决全站HTTPS的兼容性问题</a></li>
-                        <li>10月<a href="//zhangge.net/5115.html" target="_blank">利用HSTS安全协议柔性解决全站HTTPS的兼容性问题</a></li>-->
+                   <div class="blog-sidebar-content" id="information">
+                       <ul class="infomation_list" >
+                       </ul>
 
+                      <!--归档文件-->
                   </div>
 
                </div>
@@ -121,6 +99,33 @@
 <script type="text/javascript" src="/public/default/js/app-5faadcb028.js"></script>
 <script src="/public/default/share/dist/js/jquery.share.min.js"></script>
     <script src="/public/default/rose/js/snowfall.jquery.js"></script> 
+    <script>
+        $(function(){
+            $.ajax({
+                type : "get",
+                url: '/file_information',
+                cache:false,//不缓存数据
+                data:{},
+                dataType : "json",//数据类型为json
+                //jsonp: "callback",//服务端用于接收callback调用的function名的参数
+                success : function(msg){
+                    var meta = msg.meta;
+                    if(meta.code == 200){
+                        var data_list = msg.data;
+                        var html = '';
+                        for (var value of data_list) {
+                            console.log(value);
+                            html+='<li class="catListItem"> <a id="CatList_LinkList_1_Link_0" class="listitem" href="/date_article/'+value['time_infomation']+'">'+value['time_infomation']+' ('+value['article_count']+')</a></li>';
+                        }
+                          $('.infomation_list').append(html);
+                    }else{
+                        
+                        return false;
+                    }
+                }
+            })  
+        })
+    </script>
     <script>
             $(document).snowfall('clear');
             $(document).snowfall({
