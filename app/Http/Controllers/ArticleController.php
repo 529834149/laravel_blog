@@ -50,15 +50,15 @@ class ArticleController extends Controller
         $list = [];
         foreach($infomation as $k=>$v){
             $list[$k]['article_count'] = $v->user_count;
-            $list[$k]['time_infomation'] = date('Y-m',intval($v->time_infomation));
-
+            $list[$k]['year'] = date('Y',intval($v->time_infomation));
+            $list[$k]['month'] = date('m',intval($v->time_infomation));
         }
        return $this->returnCode(200,'',$list);
         
     }
-    public function infomation_list($time)
+    public function infomation_list($infomation_month)
     {
-        
+        dd($infomation_month);
     }
     /**
      * 

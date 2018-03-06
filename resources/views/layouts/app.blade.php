@@ -114,8 +114,11 @@
                         var data_list = msg.data;
                         var html = '';
                         for (var value of data_list) {
-                            console.log(value);
-                            html+='<li class="catListItem"> <a id="CatList_LinkList_1_Link_0" class="listitem" href="/date_article/'+value['time_infomation']+'">'+value['time_infomation']+' ('+value['article_count']+')</a></li>';
+                            if(value['year'] && value['month']){
+                               html+='<li class="catListItem"> <a id="CatList_LinkList_1_Link_0" class="listitem" href="/file_infomation/list/'+value['year']+'-'+value['month']+'">'+value['year']+'-'+value['month']+' ('+value['article_count']+'篇'+')</a></li>';
+                            }else{
+                               html+='<li class="catListItem"> <a id="CatList_LinkList_1_Link_0" class="listitem" href="/file_infomation/list/'+value['year']+'-'+value['month']+'">'+value['year']+'-'+value['month']+' (暂无数据)</a></li>';
+                            }
                         }
                           $('.infomation_list').append(html);
                     }else{

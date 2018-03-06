@@ -32,5 +32,5 @@ Route::post('readability_success ', 'ReadabilityController@index');//文章抓�
 Route::any('webchat', 'EasyChatController@wx');//用户支付信息
 Route::any('info', 'EasyChatController@wxtest');//用户支付信息
 //归档文件 请求路由
-Route::resource('file_information', 'ArticleController');//讨论
+Route::get('file_information', 'ArticleController@index');//讨论
 Route::get('date_article', 'ArticleController@infomation_list');//归档月份文章列表
