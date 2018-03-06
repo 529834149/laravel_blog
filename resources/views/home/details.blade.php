@@ -35,12 +35,26 @@
                        {!!$details->content!!}
 
             <p></p>
+            <ol>
+<!--                <li class="row" style="padding: 20px 0 0 20px;list-style-type:none;">
+                    <div class="social-share">分享:</div>
+                </li>-->
+<!--                    <li class="row" style="padding: 20px 0 0 20px;list-style-type:none;">
+                    <div class="social-share" data-mode="prepend" >
+                      <a href="javascript:" class="social-share-icon icon-heart"></a>
+                    </div>
+                  </li>-->
+                  <li class="row" style="padding: 20px 0 0 20px;list-style-type:none;">
+                    <div id="share-2"></div>
+                  </li>
+            </ol>
+            
             <!--上一篇文章下一篇文章-->
             <!--<p>Laravel5.5新特性-前端模板上一篇文章</p>-->
             <hr>
             <h1 style="color:green">推荐文章</h1>
-                 <p style="color:green">上一篇文章：<a href="{{ route('article.show', [$top_article['aid']]) }}" title="{{$top_article['article_title']}}" style="color:red">{{$top_article['article_title']}}</a></p>
-                 <p style="color:green">下一篇文章：<a href="{{ route('article.show', [$next_article['aid']]) }}" title="{{$next_article['article_title']}}" style="color:red">{{$next_article['article_title']}}</a></p>
+            <p style="color:green">上一篇文章：<a href="{{ route('article.show', [$top_article['aid']]) }}" title="{{$top_article['article_title']}}" style="color:red">{{$top_article['article_title']}}</a></p>
+            <p style="color:green">下一篇文章：<a href="{{ route('article.show', [$next_article['aid']]) }}" title="{{$next_article['article_title']}}" style="color:red">{{$next_article['article_title']}}</a></p>
 
         </div>
     </article>
@@ -48,12 +62,83 @@
     <div id="SOHUCS" sid="{{$top_article['aid']}}" ></div> 
 </div>
 
-<script type="text/javascript"> 
-(function(){ 
-var appid = 'cyttVmRbA'; 
-var conf = 'prod_6ce43aaeddc102a52b1dec1ff3d2f652'; 
-var width = window.innerWidth || document.documentElement.clientWidth; 
-if (width < 960) { 
-window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+<script type="text/javascript" src="/public/default/share/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="/public/default/share/jquery.min.js"></script>
+<script> 
+    $(function(){
+        $('#share-2').share({
+            sites: ['qzone', 'qq', 'weibo','wechat'],
+            url                 : 'http://wanli.org/article/1', // 网址，默认使用 window.location.href
+            source              : '', // 来源（QQ空间会用到）, 默认读取head标签：<meta name="site" content="http://overtrue" />
+            title               : $('.breadcrumbs-v5-post').text(), // 标题，默认读取 document.title 或者 <meta name="title" content="share.js" />
+            origin              : '', // 分享 @ 相关 twitter 账号
+            description         : '', // 描述, 默认读取head标签：<meta name="description" content="PHP弱类型的实现原理分析" />
+            image               : '', // 图片, 默认取网页中第一个img标签
+            disabled            : ['google', 'facebook', 'twitter'], // 禁用的站点
+            wechatQrcodeTitle   : '微信扫一扫：分享', // 微信二维码提示文字
+            wechatQrcodeHelper  : '<p>微信里点“发现”，扫一下</p><p>二维码便可将本文分享至朋友圈。</p>'
+        
+        });
+        var contenturl =window.location.href;  //获取当前网站的url
+        var titles = $('.breadcrumbs-v5-post').text();//获取当前网站的title信息
+        var logoId =  'http://www.bodys.top/public/default/picture/ico.ico';
+        var logo = 'http://www.bodys.top/public/default/images/simg.jpg';//获取网站Logo信息
+        var content = $('.breadcrumbs-v5-divider').text();//获取分享好友title中的|后面的信息 
+        $.ajax({
+//            url:'http://bot.blogchina.com/bee/weixinapi',
+            url:'http://post.blogchina.com/weixinapi',
+            data:{article_url:contenturl},
+            type:'get',
+            dataType:'jsonp',
+            jsonp: 'callback',
+            success:function(msg){ 
+                if(msg.code == 'A0200'){ 
+                    wx.config({
+                        debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                        appId: msg.data.appid, // 必填，公众号的唯一标识
+                        timestamp: msg.data.timestamp, // 必填，生成签名的时间戳
+                        nonceStr: msg.data.noncestr, // 必填，生成签名的随机串
+                        signature: msg.data.signature,// 必填，签名，见附录1
+                        jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+                    });
 
+                    wx.ready(function(){ 
+                            wx.error(function (res) {
+                              //console.log(res.errMsg);
+                            });
+                            //分享朋友圈
+                           wx.onMenuShareTimeline({
+                                title: title,
+                                link: contenturl,
+                                imgUrl: logo, 
+                                success: function () {  
+                                },
+                                cancel: function () {
+                                }
+                            }); 
+                            //分享好友
+                           wx.onMenuShareAppMessage({
+                                title: title, 						// 分享标题
+                                desc: content, 						// 分享描述
+                                link: contenturl, 							// 分享链接
+                                imgUrl: logo, 							// 分享图标
+                                type: '', 									// 分享类型,music、video或link，不填默认为link
+                                dataUrl: '', 								// 如果type是music或video，则要提供数据链接，默认为空
+                                success: function () { 
+                                    // 用户确认分享后执行的回调函数
+                                },
+                                cancel: function () { 
+                                    // 用户取消分享后执行的回调函数
+                                }
+                            }); 
+                    }); 	
+
+                } 
+            },
+            error:function(){}
+        })
+        
+       
+    })
+</script>
 @endsection

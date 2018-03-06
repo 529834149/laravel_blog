@@ -13,6 +13,8 @@
 <link href="/public/default/css/all-271888b423.css" rel="stylesheet" type="text/css"/>
 <link href="/public/default/css/app-9b5eb9253b.css" rel="stylesheet" type="text/css"/>
 <link rel="shortcut icon" href="/public/default/picture/ico.ico"/>
+<link rel="stylesheet" href="/public/default/share/dist/css/share.min.css">
+<meta name="site" content="http://www.bodys.top" />
 <!--文章详情页轮播-->
 <!--<link rel="stylesheet" href="/public/default/css/reset.css"/>
 <link rel="stylesheet" href="/public/default/css/index.css"/>-->
@@ -68,6 +70,7 @@
 
 <script type="text/javascript" src="/public/default/js/all-afcbcb8afd.js"></script>
 <script type="text/javascript" src="/public/default/js/app-5faadcb028.js"></script>
+<script src="/public/default/share/dist/js/jquery.share.min.js"></script>
     <script src="/public/default/rose/js/snowfall.jquery.js"></script> 
     <script>
             $(document).snowfall('clear');
@@ -77,6 +80,13 @@
                 minSize: 5,
                 maxSize: 22
             });
+            
+    </script>
+    <script>
+        $('#share-1').share();
+        $('#share-2').share({sites: ['qzone', 'qq', 'weibo','wechat']});
+        $('#share-3').share();
+        $('#share-4').share();
     </script>
 </body>
 </html>
