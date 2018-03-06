@@ -35,20 +35,22 @@
                        {!!$details->content!!}
 
             <p></p>
-            <ol>
-<!--                <li class="row" style="padding: 20px 0 0 20px;list-style-type:none;">
+<!--            <ol>
+                <li class="row" style="padding: 20px 0 0 20px;list-style-type:none;">
                     <div class="social-share">分享:</div>
-                </li>-->
-<!--                    <li class="row" style="padding: 20px 0 0 20px;list-style-type:none;">
+                </li>
+                    <li class="row" style="padding: 20px 0 0 20px;list-style-type:none;">
                     <div class="social-share" data-mode="prepend" >
                       <a href="javascript:" class="social-share-icon icon-heart"></a>
                     </div>
-                  </li>-->
+                  </li>
                   <li class="row" style="padding: 20px 0 0 20px;list-style-type:none;">
                     <div id="share-2"></div>
                   </li>
-            </ol>
-            
+                  
+            </ol>-->
+            <!--<div class="share-component" data-disabled="google,twitter,facebook" data-description="Share.js - 一键分享到微博，QQ空间，腾讯微博，人人，豆瓣"></div>-->
+            <div class="social-share" data-mobile-sites="weibo,qq,qzone,tencent" data-disabled="google,twitter,facebook"  data-weibo-title="Body博客致力于提供优质学习资源,分享个人笔记,工作遇见的问题和比较好的文章进行分享的平台" data-qq-title="{{$details->article_title}}">分享:</div>
             <!--上一篇文章下一篇文章-->
             <!--<p>Laravel5.5新特性-前端模板上一篇文章</p>-->
             <hr>
@@ -72,8 +74,8 @@
             source              : '', // 来源（QQ空间会用到）, 默认读取head标签：<meta name="site" content="http://overtrue" />
             title               : $('.breadcrumbs-v5-post').text(), // 标题，默认读取 document.title 或者 <meta name="title" content="share.js" />
             origin              : '', // 分享 @ 相关 twitter 账号
-            description         : '', // 描述, 默认读取head标签：<meta name="description" content="PHP弱类型的实现原理分析" />
-            image               : '', // 图片, 默认取网页中第一个img标签
+            description         : '语言需要时间的积累和磨练才能掌握好它', // 描述, 默认读取head标签：<meta name="description" content="PHP弱类型的实现原理分析" />
+            image               : 'http://www.bodys.top/public/default/picture/ico.ico', // 图片, 默认取网页中第一个img标签
             disabled            : ['google', 'facebook', 'twitter'], // 禁用的站点
             wechatQrcodeTitle   : '微信扫一扫：分享', // 微信二维码提示文字
             wechatQrcodeHelper  : '<p>微信里点“发现”，扫一下</p><p>二维码便可将本文分享至朋友圈。</p>'
