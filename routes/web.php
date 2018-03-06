@@ -13,6 +13,7 @@
 
 
 Route::get('/', 'ArticleController@homes');//首页
+//Route::resource('demo', 'DemoController');
 Route::resource('demo', 'DemoController');
 Route::get('home', 'ArticleController@homes');//首页
 Route::get('update_click', 'ArticleController@update_click');//首页
@@ -30,10 +31,6 @@ Route::resource('readability ', 'ReadabilityController');//文章抓取
 Route::post('readability_success ', 'ReadabilityController@index');//文章抓取
 Route::any('webchat', 'EasyChatController@wx');//用户支付信息
 Route::any('info', 'EasyChatController@wxtest');//用户支付信息
-
-Route::get('test', function(){
-    dd(session('wechat.oauth_user.default'));
-})->middleware('wechat.oauth:default');//
-
-Route::get('auth/weixin', 'Auth\WeixinController@redirectToProvider');
-Route::get('auth/weixin/callback', 'Auth\WeixinController@handleProviderCallback');
+//归档文件 请求路由
+Route::resource('file_information', 'ArticleController');//讨论
+Route::get('date_article', 'ArticleController@infomation_list');//归档月份文章列表
