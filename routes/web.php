@@ -34,3 +34,6 @@ Route::any('info', 'EasyChatController@wxtest');//用户支付信息
 //归档文件 请求路由
 Route::get('file_information', 'ArticleController@index');//讨论
 Route::resource('file_infomation/list', 'InfomationController');//文章抓取
+
+//每日采集
+Route::get('readbility_list', 'ReadabilityController@read_list');//每日采集
