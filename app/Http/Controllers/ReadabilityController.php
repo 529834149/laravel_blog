@@ -83,6 +83,8 @@ class ReadabilityController extends Controller
             $arr['is_show'] = 1;
             $arr['read_time'] = 0;
             $arr['click_num'] = time();
+            $arr['source'] = $source;
+            
             $coll = Collection::insert($arr);
             if($coll){
                 return back()->withInput()->with('success', '抓取成功！');
