@@ -41,7 +41,11 @@
                 </div>
                 <div class="form-group" action>
                   <label for="exampleInputEmail1">文章作者</label>
-                  <input type="text"  name="author" class="form-control" placeholder="非原文作者,当前谁操作的,选填">
+                  <input type="text"  name="author" class="form-control" placeholder="非原文作者,当前谁操作的,必填">
+                </div>
+                <div class="form-group" action>
+                  <label for="exampleInputEmail1">来源于:</label>
+                  <input type="text"  name="source" class="form-control" placeholder="来源于哪个网站,必填">
                 </div>
                 <button type="submit" id="submit" class="btn btn-default">采集</button>
             </form>

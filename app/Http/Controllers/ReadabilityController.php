@@ -25,16 +25,16 @@ class ReadabilityController extends Controller
      */
     public function index()
     {
-        $article_list = \DB::connection('mysql')
-                ->table('articles')
-                ->select('tags.name as tage_name','tags.tid','articles.cate_id','articles.aid','articles.article_title','articles.desc','articles.publish_time','articles.sort_num','articles.tags_id','categories.cate_id','categories.title')
-                ->leftJoin('categories','articles.cate_id','=','categories.cate_id')
-                ->leftJoin('tags','tags.tid','=','articles.tags_id')
-                ->where('articles.is_show',1)
-                ->where('articles.cate_id',2)
-                ->paginate(20);
+//        $article_list = \DB::connection('mysql')
+//                ->table('articles')
+//                ->select('tags.name as tage_name','tags.tid','articles.cate_id','articles.aid','articles.article_title','articles.desc','articles.publish_time','articles.sort_num','articles.tags_id','categories.cate_id','categories.title')
+//                ->leftJoin('categories','articles.cate_id','=','categories.cate_id')
+//                ->leftJoin('tags','tags.tid','=','articles.tags_id')
+//                ->where('articles.is_show',1)
+//                ->where('articles.cate_id',2)
+//                ->paginate(20);
 //        return view('home.list', ['article_list' => $article_list]);
-        return view('read.list', compact('article_list'));
+        return view('read.list');
     }
 
     /**
@@ -58,13 +58,23 @@ class ReadabilityController extends Controller
     {
         $url = $request->input('url');
         $author = $request->input('author');
+        $source = $request->input('source');
+        $validator = \Validator::make($request->all(), [
+            'url' => 'required',
+            'author' => 'required',
+            'source' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+             return back()->withInput()->with('danger', '参数错误！');
+        }
         $readability = new Readability(new Configuration());
 //        $html = file_get_contents($url);
         $html = Article::https_request($url);
         try {
             $arr = [];
             $readability->parse($html);
-            $arr['article_title'] = $readability->getTitle() ? $readability->getTitle() :'' ;//获取文章标题
+            $arr['title'] = $readability->getTitle() ? $readability->getTitle() :'' ;//获取文章标题
 //            $arr['author'] = $readability->getAuthor() ? $readability->getAuthor() :'' ;//获取文章作者
             $arr['author'] = $author ? $author :'' ;//当前谁操作的
             $arr['content'] = $readability->getContent() ? $readability->getContent() :'' ;//获取文章内容

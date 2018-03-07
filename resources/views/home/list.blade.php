@@ -16,8 +16,10 @@
                             </span>
                             <span class="blog-grid-supplemental-title pull-right">
                                 <i class="fa fa-fire"></i> {{ $list->sort_num}}
+                                
                             </span>
                         </div>
+                        
                     </div>
                 </article>
             </div>
