@@ -74,7 +74,7 @@ class ReadabilityController extends Controller
             $arr['title'] = $this->replace_diffNotes($arr['title']);
             $arr['is_show'] = 1;
             $arr['read_time'] = 0;
-            $arr['click_num'] = time();
+            $arr['click_num'] = 0;
             $arr['source'] = $source;
             
             $coll = Collection::insert($arr);
