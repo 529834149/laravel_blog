@@ -1,13 +1,13 @@
 @extends('layouts.app')
 @section('titles')
     <!--文章标题-->
-    <h1 class='breadcrumbs-v5-post' align="center">{{$details->article_title}}</h1>
+    <h1 class='breadcrumbs-v5-post' align="center">{{$details->title}}</h1>
 @endsection
 @section('items_info')
     每日新闻
 @endsection
 @section('desc')
-    <p class="breadcrumbs-v5-divider" align="center"> {{$details->motto}}</p>
+<p class="breadcrumbs-v5-divider" align="center">作者：{{$details->author}}&nbsp;发表于:<?php echo date('Y-m-d H:i:s',$details['read_time']);?></p>
    
 @endsection
 @section('content')
