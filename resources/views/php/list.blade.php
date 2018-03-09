@@ -10,7 +10,7 @@
                     <article class="blog-grid">
                         <div class="blog-grid-box-shadow">
                             <div class="blog-grid-content">
-                                <h2 class="blog-grid-title-md" onclick="onclicks({{$list->aid}});" id="{{$list->aid}}"><a href="{{ route('article.show', [$list->aid]) }}">{{ $list->article_title}}</a></h2>
+                                <h2 class="blog-grid-title-md" onclick="onclicks({{$list->aid}});" id="{{$list->aid}}"><a href="phplist/{{$list->aid}}">{{ $list->article_title}}</a></h2>
                                 <p><span>{{ $list->desc}}</span></p>
                             </div>
                             <div class="blog-grid-supplemental">

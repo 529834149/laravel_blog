@@ -55,9 +55,24 @@ class PhplistController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request,$id)
     {
-        //
+        $where = array(
+          'is_show'=>1,
+        );
+        $details = Article::where($where)->where('aid',intval($id))->first();
+        //获取上一条
+        $top_article = Article::where($where)->where('publish_time','<',$details['publish_time'])->where('cate_id',$details['cate_id'])->first();
+        if(!$top_article){
+            $top_article['article_title'] = '无';
+            $top_article['aid'] = '';
+        }
+        $next_article = Article::where($where)->where('publish_time','>',$details['publish_time'])->where('cate_id',$details['cate_id'])->first();
+         if(!$next_article){
+            $next_article['article_title'] = '无';
+            $next_article['aid'] = '';
+        }
+        return view('php.details', compact('details','top_article','next_article'));
     }
 
     /**
