@@ -130,13 +130,13 @@
         })
     </script>
     <script>
-            $(document).snowfall('clear');
-            $(document).snowfall({
-                image: "/public/default/rose/images/huaban.png",
-                flakeCount:50,
-                minSize: 5,
-                maxSize: 22
-            });
+//            $(document).snowfall('clear');
+//            $(document).snowfall({
+//                image: "/public/default/rose/images/huaban.png",
+//                flakeCount:50,
+//                minSize: 5,
+//                maxSize: 22
+//            });
             
     </script>
     <script>
