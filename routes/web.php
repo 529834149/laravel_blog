@@ -37,3 +37,4 @@ Route::resource('file_infomation/list', 'InfomationController');//文章抓取
 
 //每日采集
 Route::get('readbility_list', 'ReadabilityController@read_list');//每日采集
+Route::get('readbility_list/{id}', 'ReadabilityController@show');//每日采集

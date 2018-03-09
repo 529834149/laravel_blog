@@ -15,7 +15,8 @@ class ReadabilityController extends Controller
     {
           $read_list = \DB::connection('mysql')
                 ->table('collection')
-                ->get();
+                ->orderBy('click_num','DESC')
+                ->paginate(10);
         return view('readability.list',  compact('read_list'));
     }
     /**
@@ -25,16 +26,7 @@ class ReadabilityController extends Controller
      */
     public function index()
     {
-//        $article_list = \DB::connection('mysql')
-//                ->table('articles')
-//                ->select('tags.name as tage_name','tags.tid','articles.cate_id','articles.aid','articles.article_title','articles.desc','articles.publish_time','articles.sort_num','articles.tags_id','categories.cate_id','categories.title')
-//                ->leftJoin('categories','articles.cate_id','=','categories.cate_id')
-//                ->leftJoin('tags','tags.tid','=','articles.tags_id')
-//                ->where('articles.is_show',1)
-//                ->where('articles.cate_id',2)
-//                ->paginate(20);
-//        return view('home.list', ['article_list' => $article_list]);
-        return view('read.list');
+        
     }
 
     /**
@@ -112,7 +104,9 @@ class ReadabilityController extends Controller
      */
     public function show($id)
     {
-        //
+        $id = intval($id);
+        $details = Collection::where('id',$id)->where('is_show',1)->first();
+        return view('readability.details',  compact('details'));
     }
 
     /**
@@ -123,7 +117,7 @@ class ReadabilityController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**
