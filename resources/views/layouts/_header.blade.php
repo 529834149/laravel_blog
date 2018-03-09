@@ -9,9 +9,9 @@
             </button>
             <div class="navbar-actions">
                 <div class="navbar-actions-shrink search-fullscreen search-fullscreen-trigger-white">
-                    <div class="search-fullscreen-trigger">
+<!--                    <div class="search-fullscreen-trigger">
                         <i class="search-fullscreen-trigger-icon fa fa-search"></i>
-                    </div>
+                    </div>-->
                     <div class="search-fullscreen-overlay">
                         <form action="http://blog.iwanli.me/search" method="post">
                             <input type="hidden" name="_token" value="WRAEOgj6LBnDYSALDTEITdIiSijtwIgc9KXhRPYd">
