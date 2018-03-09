@@ -26,7 +26,7 @@ class ReadabilityController extends Controller
      */
     public function index()
     {
-        
+        return view('readability.create');
     }
 
     /**
