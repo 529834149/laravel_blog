@@ -16,7 +16,7 @@ class ReadabilityController extends Controller
           $read_list = \DB::connection('mysql')
                 ->table('collection')
                 ->orderBy('click_num','DESC')
-                ->paginate(10);
+                ->paginate(35);
         return view('readability.list',  compact('read_list'));
     }
     /**
