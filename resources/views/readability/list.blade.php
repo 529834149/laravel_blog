@@ -19,9 +19,11 @@
        <div class="panel-footer">
                 <nav style="text-align:center;">
                         <ul class="pagination">
+                                <li><a href="javascript:;" onclick="page(this,1)">首页</a></li>
                                 @for($i=1;$i<=$page;$i++)
                                         <li><a href="javascript:;" onclick="page(this,{{$i}})">{{$i}}</a></li>
                                 @endfor
+                                <li><a href="javascript:;" onclick="page(this,{{$page}})">末页</a></li>
                                 <!-- <li><a href="#">&laquo;</a></li>
                                 <li><a href="#">1</a></li>
                                 <li><a href="#">2</a></li>
