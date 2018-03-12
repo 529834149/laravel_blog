@@ -73,7 +73,7 @@ class ReadabilityController extends Controller
             //匹配文章中的第一场图片
             $arr['title'] = $this->replace_diffNotes($arr['title']);
             $arr['is_show'] = 1;
-            $arr['read_time'] = 0;
+            $arr['read_time'] = time();
             $arr['click_num'] = 0;
             $arr['source'] = $source;
             
