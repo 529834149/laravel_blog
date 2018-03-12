@@ -4987,7 +4987,7 @@ a.label:focus,a.label:hover {
 .badge {
 	display: inline-block;
 	min-width: 10px;
-	padding: 3px 7px;
+	padding: 10px 7px;
 	font-size: 12px;
 	color: #fff;
 	vertical-align: middle;

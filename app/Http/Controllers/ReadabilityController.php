@@ -9,15 +9,76 @@ use andreskrey\Readability\Readability;
 use App\Model\Article;
 use App\Model\Categories;
 use App\Model\Collection;
+use Illuminate\Support\Facades\Cache;
 class ReadabilityController extends Controller
 {
-    public function read_list()
+    /**
+     * 实现点击标题 阅读数量+1
+     */
+    public function read_num(Request $request)
     {
-          $read_list = \DB::connection('mysql')
-                ->table('collection')
-                ->orderBy('click_num','DESC')
-                ->paginate(35);
-        return view('readability.list',  compact('read_list'));
+       $id = $request->input('id');
+       $key = 'file_read_'.intval($id);
+       //判断key是否存在，存在+1
+       if(Cache::has($key)){
+           $get_key = Cache::get($key);
+           $num = intval($get_key) +1;
+           Cache::forever($key,$num);
+           
+       }else{
+           Cache::forever($key,'1');
+       }
+       return $this->returnCode(200);
+       
+    }
+    public function read_list(Request $request)
+    {
+        //1、计算数据总条数
+        $tot = Collection::where('is_show',1)->count();
+        //每页展示几条数据
+        $length = 10;
+        //2、计算总页数
+        $page = ceil($tot/$length);
+        //3、判断地址栏的参数是否存在
+        if($request->input('page')){
+           $page = $request->input('page')?$request->input('page'):1;
+           $offset = ($page-1)*$length;
+           //sql数据查询
+            $data = Collection::where('is_show',1)
+                ->orderBy('read_time','DESC')
+                ->skip($offset)
+                ->take($length)
+                ->get();
+            foreach($data as $k=>$v){
+               $key = 'file_read_'.intval($v->id);
+               $read_num = Cache::get($key);
+               if(!$read_num){
+                   $read_num = 0;
+               }
+               $data[$k]->read_num =$read_num;
+            }
+            if($data){
+                 return $this->returnCode(200,'',$data);
+            }else{
+                 return $this->returnCode(400);
+            }
+           
+            return $data;
+        }
+        //4、查询数据库获取数据
+        $data = Collection::where('is_show',1)
+                ->orderBy('read_time','DESC')
+                ->take($length)
+                ->get();
+          foreach($data as $k=>$v){
+               $key = 'file_read_'.intval($v->id);
+               $read_num = Cache::get($key);
+               if(!$read_num){
+                   $read_num = 0;
+               }
+               $data[$k]->read_num =$read_num;
+          }
+        return view('readability.list',  compact('data','page'));
     }
     /**
      * Display a listing of the resource.
@@ -48,6 +109,8 @@ class ReadabilityController extends Controller
      */
     public function store(Request $request)
     {
+        
+        
         $url = $request->input('url');
         $author = $request->input('author');
         $source = $request->input('source');

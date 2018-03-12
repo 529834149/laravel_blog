@@ -9,13 +9,15 @@
 <meta name="description" content="Body博客致力于提供优质学习资源,分享个人笔记、视频教程。,php 爬虫 ">
 <meta name="author" content="陈宝金">
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="/public/default/fonts/font-awesome-4.7.0/css/font-awesome.css">
 <link href="/public/default/css/all-271888b423.css" rel="stylesheet" type="text/css"/>
 <link href="/public/default/css/app-9b5eb9253b.css" rel="stylesheet" type="text/css"/>
 <link rel="shortcut icon" href="/public/default/picture/ico.ico"/>
 <link rel="stylesheet" href="/public/default/share/dist/css/share.min.css">
 <link rel="stylesheet" href="https://cdn.bootcss.com/ionicons/2.0.1/css/ionicons.min.css">
-
 <meta name="site" content="http://www.bodys.top" />
 <!--文章详情页轮播-->
 <!--<link rel="stylesheet" href="/public/default/css/reset.css"/>
