@@ -10,7 +10,7 @@
              @foreach($data as $k=>$v)
             <li class="list-group-item" >
                 <span class="badge" style="color:#ccc;background-color: #fff"><i class="fa fa-book"></i>{{$v->read_num}}</span>
-                <span class="badge" style="color:#ccc;background-color: #fff">发布时间：2018-07-08</span>
+                <span class="badge" style="color:#ccc;background-color: #fff">发布时间：<?php echo date('Y-m-d H:i',$v['read_time']);?></span>
                 <a href="readbility_list/{{$v->id}}" style="color:#4f4f4f" onclick="onclicks({{$v->id}});"> {{$v->title}}</a>
             </li>
              @endforeach
@@ -56,7 +56,7 @@
                         for(var i=0;i<data.length;i++){
                                 html +='<li class="list-group-item" >';
                                 html+= '<span class="badge" style="color:#ccc;background-color: #fff"><i class="fa fa-book"></i>'+data[i].read_num+'</span>';
-                                html+='<span class="badge" style="color:#ccc;background-color: #fff">发布时间：'+data[i].read_time+'</span>';
+                                html+='<span class="badge" style="color:#ccc;background-color: #fff">发布时间：'+getLocalTime(data[i].read_time)+'</span>';
                                 html+='<a href="readbility_list/'+data[i].id+'" style="color:#4f4f4f" onclick="onclicks('+data[i].id+');">'+data[i].title+'</a>';
                                 html +='</li>'
 			}
@@ -69,6 +69,9 @@
                 }
            })
         }
+        function getLocalTime(nS) {
+            return new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/,' '); 
+         }  
         function onclicks(id){
             $.ajax({
                 url:'read_num/',
