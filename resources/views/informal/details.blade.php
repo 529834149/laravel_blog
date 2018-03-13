@@ -4,25 +4,7 @@
     <h1 class='breadcrumbs-v5-post' align="center">{{$details->article_title}}</h1>
 @endsection
 @section('items_info')
-    @if ($details->cate_id === 1)
-        首页
-    @elseif ($details->cate_id === 2)
-        PHP
-    @elseif ($details->cate_id === 3)
-        讨论
-    @elseif ($details->cate_id === 4)
-        数据库
-    @elseif ($details->cate_id === 5)
-        前端
-    @elseif ($details->cate_id === 6)
-        版本控制器
-    @elseif ($details->cate_id === 7)
-        Github
-    @elseif ($details->cate_id === 8)
-        laravel学院
-    @else
-        大杂烩
-    @endif
+       版本控制器
 @endsection
 @section('desc')
     <p class="breadcrumbs-v5-divider" align="center"> {{$details->motto}}</p>

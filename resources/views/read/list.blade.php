@@ -1,6 +1,9 @@
 @extends('layouts.app')
 @section('items_info')
-    文章抓取
+       每日资讯
+@endsection
+@section('items')
+       每日资讯
 @endsection
 @section('content')
     @if (Session::has('message'))

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('items_info')
-    采集
+    采集文章详情
 @endsection
 @section('content')
 

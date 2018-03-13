@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('items_info')
+       版本控制器
+@endsection
 @section('content')
     <div class="col-xs-12 col-md-9 no-space" >
         
