@@ -16,6 +16,8 @@ class PhplistController extends Controller
      */
     public function index()
     {
+        var_dump(phpinfo());die;
+        
         $article_list = \DB::connection('mysql')
                 ->table('articles')
                 ->select('tags.name as tage_name','tags.tid','articles.cate_id','articles.aid','articles.article_title','articles.desc','articles.publish_time','articles.sort_num','articles.tags_id','categories.cate_id','categories.title')
