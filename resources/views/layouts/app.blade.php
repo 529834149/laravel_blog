@@ -76,7 +76,7 @@
                <div class="blog-sidebar margin-b-30">
                    <div class="blog-sidebar-heading">
                        <i class="icon ion-calendar"></i>
-                       <h4 class="blog-sidebar-heading-title">广告栏</h4>
+                       <h4 class="blog-sidebar-heading-title">精彩一瞬间</h4>
                    </div>
                    <div class="blog-sidebar-content">
                        @include('layouts._advertisement')
