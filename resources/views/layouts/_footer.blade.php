@@ -6,7 +6,7 @@
                     <h3 class="footer-title">About Me</h3>
                     <p class="footer-address-text">互相学习,互相辅助.知识互通,利己利他.</p>
                     <p class="footer-address-text">Laravel 学习交流群：643890530</p>
-                    <a class="footer-address-text" href="mailto:709344897@qq.com">709344897@qq.com</a>
+                    <a class="footer-address-text" href="mailto:709344897@qq.com">chen2018php@163.com</a>
                 </div>
             </div>
             <div class="col-sm-6">
