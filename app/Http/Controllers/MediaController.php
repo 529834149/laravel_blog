@@ -14,7 +14,7 @@ class MediaController extends Controller
      */
     public function index(Media $media,Categories $categories)
     {
-        $media = $media->get();
+        $media = $media->paginate(10);
         return view('media.list', compact('media'));
     }
 

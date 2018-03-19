@@ -3,7 +3,6 @@
        自媒体
 @endsection
 @section('content')
-  
     <div class="col-xs-12 col-md-9 no-space" >
         @foreach($media as $v)
         <section>
@@ -19,13 +18,12 @@
                     <small class="post-footer fr">
                         <span><i class="glyphicon glyphicon-calendar"></i><?php echo date('Y-m-d h:i:s',$v->add_time)?></span><span><i class="glyphicon glyphicon-comment"></i>  667 </span>
                     </small>
-                    
               </div>
-
             </div>
         </section>
         @endforeach
+         {{ $media->links() }}
     </div>
-    
+     
     <script type="text/javascript" src="/public/default/js/jquery-3.1.0.min.js"></script>
 @endsection
