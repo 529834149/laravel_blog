@@ -36,7 +36,7 @@ class ReadabilityController extends Controller
         //1、计算数据总条数
         $tot = Collection::where('is_show',1)->count();
         //每页展示几条数据
-        $length = 10;
+        $length = 35;
         //2、计算总页数
         $page = ceil($tot/$length);
         //3、判断地址栏的参数是否存在
