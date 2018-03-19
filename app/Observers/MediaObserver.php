@@ -13,4 +13,5 @@ class MediaicObserver
     {
         $media->excerpt = make_excerpt($media->body);
     }
+    
 }
