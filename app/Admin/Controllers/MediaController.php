@@ -74,10 +74,10 @@ class MediaController extends Controller
         return Admin::grid(Media::class, function (Grid $grid) {
 
             $grid->id('ID')->sortable();
-            $grid->body('内容')->sortable();
+            $grid->title('标题')->sortable();
+            $grid->tags_id('标签')->sortable();
             $grid->excerpt('描述');
-            $grid->created_at();
-            $grid->updated_at();
+           
         });
     }
 
