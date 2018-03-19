@@ -5,7 +5,6 @@
 @section('content')
   
     <div class="col-xs-12 col-md-9 no-space" >
-        <h4 class="cata-nav"><a href="http://www.mrszhao.com/"><span class="glyphicon glyphicon-cloud-upload"></span>采集</a></h4>
         @foreach($media as $v)
         <section>
             <div class="post multi">
