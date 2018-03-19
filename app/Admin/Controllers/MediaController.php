@@ -95,7 +95,13 @@ class MediaController extends Controller
             $form->select('is_show','是否显示')->options([1 => '显示', 2 => '不显示']); 
             $form->editor('body')->attribute(['rows' => '20']);
             $form->display('excerpt','摘要');
-           
+            $form->text('tags_id','标签');//,多个已,分开
+            $form->saving(function (Form $form) {
+                $form->model()->excerpt  = make_excerpt($form->body);
+                $form->model()->add_time  = time();
+                
+            });
+            
         });
     }
 }
