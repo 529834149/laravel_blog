@@ -8,13 +8,21 @@
 
 @section('content')
 <div class=" col-xs-12 col-md-9 no-space">
-    <div class="post-single-title w1200">
-        <h1 class="post-title" style="font-size:24px;text-align: center;">如何把codepen上面的代码嵌入个人网站中？</h1>
-        <small class="post-footer" >
-            <span ><i class="glyphicon glyphicon-calendar" ></i><?php echo date('Y-m-d h:i:s',$media->add_time)?></span><span><i class="glyphicon glyphicon-comment"></i>  203 </span>
-        </small>
-    </div>
-    <hr>
-    <main>{!!$media->body!!}</main>
+    <article class="blog-grid">
+        
+        <div class="blog-grid-content article margin-b-30">
+             <h3>{{$media->title}}</h3>
+             <p>
+                <small class="post-footer fr">
+                   <span><i class="glyphicon glyphicon-calendar"></i><?php echo date('Y-m-d h:i:s',$media->add_time)?></span><span><i class="glyphicon glyphicon-comment"></i>  667 </span>
+                </small>
+             </p>
+             <hr>
+             {!!$media->body!!}
+            <p></p>
+            <div class="social-share" data-mobile-sites="weibo,qq,qzone,tencent" data-disabled="google,twitter,facebook"  data-weibo-title="Body博客致力于提供优质学习资源,分享个人笔记,工作遇见的问题和比较好的文章进行分享的平台" data-qq-title="{{$media->title}}">分享:</div>
+            <hr>
+        </div>
+    </article>
 </div>
 @endsection
