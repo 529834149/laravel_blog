@@ -10,7 +10,10 @@ class Media extends Model
     protected $primaryKey = 'mid';//定义主键
 //    public $timestamps = false;//类似addtime updatetime  
     public $timestamps = false;
-   
+    public function link($params = [])
+    {
+        return route('media.show', array_merge([$this->mid, $this->slug], $params));
+    }
 
 
 }

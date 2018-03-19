@@ -41,4 +41,5 @@ Route::get('readbility_list/{id}', 'ReadabilityController@show');//每日采集
 Route::get('read_num', 'ReadabilityController@read_num');//每日采集
 
 //自媒体
-Route::resource('media', 'MediaController');//文章抓取
+Route::resource('/media', 'MediaController');//文章抓取
+Route::get('/media/{media}/{slug?}', 'MediaController@show');
