@@ -11,5 +11,5 @@ Route::group([
 ], function (Router $router) {
     $router->resource('category_list','CategoriesController'); 
     $router->resource('article_list','ArticleController'); 
-    
+    $router->resource('media','MediaController'); 
 });

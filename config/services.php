@@ -35,13 +35,17 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
     'weixin' => [
-        'client_id'     => env('WEIXIN_KEY'),
-        'client_secret' => env('WEIXIN_SECRET'),
-        'redirect'      => env('WEIXIN_REDIRECT_URI'),
+        'client_id'     => 'wxd984f6acfdde0f54',
+        'client_secret' => '8f7d6e98269c068681fc00070979d922',
+        'redirect'      => 'http://www.bodys.top/oauth/callback/driver/wechat',
 
         # 这一行配置非常重要，必须要写成这个地址。
         'auth_base_uri' => 'https://open.weixin.qq.com/connect/qrconnect',
      ],
+    'baidu_translate' => [
+        'appid' => env('BAIDU_TRANSLATE_APPID'),
+        'key'   => env('BAIDU_TRANSLATE_KEY'),
+    ],
 
 ];
 
