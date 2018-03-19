@@ -18,10 +18,27 @@
 <link rel="shortcut icon" href="/public/default/picture/ico.ico"/>
 <link rel="stylesheet" href="/public/default/share/dist/css/share.min.css">
 <link rel="stylesheet" href="https://cdn.bootcss.com/ionicons/2.0.1/css/ionicons.min.css">
+<link rel="stylesheet" href="/public/default/css/self.css">
 <meta name="site" content="http://www.bodys.top" />
+ <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!--<link rel="stylesheet" rev="stylesheet" href="/public/default/css/iconfont.css" type="text/css" media="all"/>-->
 <!--文章详情页轮播-->
 <!--<link rel="stylesheet" href="/public/default/css/reset.css"/>
 <link rel="stylesheet" href="/public/default/css/index.css"/>-->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
 </head>
 <body class="animsition">
 <div class="wrapper">
