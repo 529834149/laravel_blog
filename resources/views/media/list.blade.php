@@ -20,6 +20,7 @@
                     <small class="post-footer fr">
                         <span><i class="glyphicon glyphicon-calendar"></i><?php echo date('Y-m-d h:i:s',$v->add_time)?></span><span><i class="glyphicon glyphicon-comment"></i>  667 </span>
                     </small>
+                    
               </div>
 
             </div>
