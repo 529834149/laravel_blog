@@ -19,7 +19,7 @@
                         <header>
                             <h4 class="post-category">
                               
-                                <a href="{{ $article->link() }}" target="_blank" onclick="read({{$v->aid}});">{{$v->title}}</a></h4>
+                                <a href="/article/{{$v->aid}}" target="_blank" onclick="read({{$v->aid}});">{{$v->title}}</a></h4>
                             <h2 class="post-title">
                                 <a href="/article/{{$v->aid}}" target="_blank" onclick="read({{$v->aid}});">{{$v->article_title}}</a></h2>
                         </header>
@@ -65,7 +65,11 @@
                     @include('layouts._tag')
                     <div class="function" id="Tblogpublished">
                         <h3 class="function_t">案例集精选</h3>
-                        <div class="function_c"></div>
+                        <div class="function_c">
+                        @include('layouts._case')
+                        
+
+                        </div>
                     </div>
                 </div>
             </aside>

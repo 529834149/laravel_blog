@@ -8,6 +8,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Model\Categories;
 use App\Model\Article;
+use App\Model\Tag;
 use Illuminate\Http\Request;
 use App\Handlers\SlugTranslateHandler;
 class Controller extends BaseController
@@ -26,7 +27,7 @@ class Controller extends BaseController
         $this->getCategory($request);
         $this->get_More_Article($request);//获取更多当前点击量最多的文章
         $this->seoUrl($request);//对文章标题生成seo友好连接
-        
+        $this->case_list($request);//经典推荐
     }
     /**
      * 
@@ -41,7 +42,7 @@ class Controller extends BaseController
     /**
      * 获取最新的两篇文章
      */
-    public function get_More_Article()
+    public function get_More_Article(Request $request)
     {
         $get_hot_article = Article::where('is_show',1)->orderBy('publish_time','desc')->take(2)->get();
         \View::share('get_hot_article',$get_hot_article);
@@ -51,12 +52,27 @@ class Controller extends BaseController
      */
     public function seoUrl()
     {
+        $list = Tag::where('is_show',1)->orderBy('tid','desc')->get();
+        $tag = [];
+        foreach($list as $k=>$v){
+           $tag[$k] = $v;
+           $tag[$k]['count'] = Article::where('tags_id',intval($v['tid']))->count();
+        }
+        \View::share('tag',$tag);
 //        $re = Article::get();
 //        foreach($re as $v){
 //           $seo =  app(SlugTranslateHandler::class)->translate($v->article_title);
 //           Article::where('aid',intval($v->aid))->update(['slug'=>$seo]);
 //        }
         
+    }
+    /**
+     * 生成标签
+     */
+    public function case_list()
+    {
+        $case_article = Article::where('is_show',1)->orderby('publish_time','desc')->take(5)->get();
+        \View::share('case_article',$case_article);
     }
     /**
      * 

@@ -16,7 +16,6 @@ class ArticleController extends Controller
      */
     public function index(Request $request, Article $article)
     {
-        
        //获取列表信息
         $data = \DB::table('articles')
             ->leftJoin('categories', 'articles.cate_id', '=', 'categories.cate_id')
