@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Model\Article;
 use Cache;
+
 class ArticleController extends Controller
 {
     
@@ -13,23 +14,17 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request, Article $article)
     {
+        
        //获取列表信息
         $data = \DB::table('articles')
             ->leftJoin('categories', 'articles.cate_id', '=', 'categories.cate_id')
             ->where('articles.is_show',1)
             ->orderBy('articles.publish_time','DESC')
             ->paginate(10);
-//  
-////       $data = [];
-//       foreach($list['item'] as $k=>$v){
-//          $data[$k] = $v;
-//          $read_key = 'article_read_aid'.$v['aid'];
-//          $data[$k]['read_num']=Cache::get($read_key) ?Cache::get($read_key) :0;
-//       }
-//       dd($list);
-       return view('article.list',  compact('data'));
+
+       return view('article.list',  compact('data','article'));
     }
 
     /**
@@ -59,8 +54,12 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request, Article $article)
     {
+         // URL 矫正
+        if ( ! empty($article->slug) && $article->slug != $request->slug) {
+            return redirect($article->link(), 301);
+        }
         return view('article.details');
     }
 

@@ -41,5 +41,9 @@ class Article extends Model
         } 
         return $output;
     }
+    public function link($params = [])
+    {
+        return route('article.show', array_merge([$this->aid, $this->slug], $params));
+    }
     
 }

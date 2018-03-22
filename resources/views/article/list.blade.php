@@ -18,7 +18,8 @@
                     <div class="post multi">
                         <header>
                             <h4 class="post-category">
-                                <a href="/article/{{$v->aid}}" target="_blank" onclick="read({{$v->aid}});">{{$v->title}}</a></h4>
+                              
+                                <a href="{{ $article->link() }}" target="_blank" onclick="read({{$v->aid}});">{{$v->title}}</a></h4>
                             <h2 class="post-title">
                                 <a href="/article/{{$v->aid}}" target="_blank" onclick="read({{$v->aid}});">{{$v->article_title}}</a></h2>
                         </header>
@@ -32,7 +33,7 @@
                                     <?php 
                                     $read_key = 'article_read_aid_'.$v->aid;
                                     echo \Cache::get($read_key) ?\Cache::get($read_key) :0;
-                                    
+                                      
                                     ?></span>
                             </small>
                         </div>

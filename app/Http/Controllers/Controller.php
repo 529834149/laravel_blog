@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Model\Categories;
 use App\Model\Article;
 use Illuminate\Http\Request;
+use App\Handlers\SlugTranslateHandler;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
@@ -24,6 +25,7 @@ class Controller extends BaseController
     private function init(Request $request) {
         $this->getCategory($request);
         $this->get_More_Article($request);//获取更多当前点击量最多的文章
+        $this->seoUrl($request);//对文章标题生成seo友好连接
         
     }
     /**
@@ -43,6 +45,18 @@ class Controller extends BaseController
     {
         $get_hot_article = Article::where('is_show',1)->orderBy('publish_time','desc')->take(2)->get();
         \View::share('get_hot_article',$get_hot_article);
+    }
+    /**
+     * 生成seo友好连接
+     */
+    public function seoUrl()
+    {
+//        $re = Article::get();
+//        foreach($re as $v){
+//           $seo =  app(SlugTranslateHandler::class)->translate($v->article_title);
+//           Article::where('aid',intval($v->aid))->update(['slug'=>$seo]);
+//        }
+        
     }
     /**
      * 
