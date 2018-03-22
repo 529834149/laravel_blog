@@ -33,7 +33,7 @@
                         <ul>
                             @foreach($v['children'] as $chil)
                             <li id="navbar-category-15">
-                                <a href="http://www.mrszhao.com/category-15.html">
+                                <a href="{{$chil['url']}}">
                                     {{$chil['title']}}
                                 </a>
                             </li>
