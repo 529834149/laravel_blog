@@ -3,68 +3,26 @@
                         <div class="function_c">
                             <nav>
                                 <ul>
+                                    @foreach($menuAll as $k=>$v)
                                     <li class="li-cate">
-                                        <a href="http://www.mrszhao.com/category-12.html" class="qianduan">
-                                            <i class="iconfont icon-wenjian"></i>前端教程
-                                            <i class="iconfont icon-add"></i></a>
+                                        <a href="{{$v['url']}}" class="qianduan">
+                                            <i class="iconfont icon-wenjian"></i> {{$v['title']}} 
+                                            @if(!empty($v['children']))
+                                            <i class="iconfont icon-add"></i>
+                                            @endif
+                                        </a>
+                                        @if(!empty($v['children']))
                                         <ul class="ul-subcates">
+                                            @foreach($v['children'] as $chil)
                                             <li class="li-subcate">
-                                                <a href="http://www.mrszhao.com/category-1.html">
-                                                    <i class="iconfont icon-dot"></i>HTML教程</a>
+                                                <a href="{{$chil['url']}}">
+                                                    <i class="iconfont icon-dot"></i> {{$chil['title']}}</a>
                                             </li>
-                                            <li class="li-subcate">
-                                                <a href="http://www.mrszhao.com/category-2.html">
-                                                    <i class="iconfont icon-dot"></i>CSS教程</a>
-                                            </li>
-                                            <li class="li-subcate">
-                                                <a href="http://www.mrszhao.com/category-3.html">
-                                                    <i class="iconfont icon-dot"></i>JavaScript教程</a>
-                                            </li>
-                                            <li class="li-subcate">
-                                                <a href="http://www.mrszhao.com/category-4.html">
-                                                    <i class="iconfont icon-dot"></i>jQuery教程</a>
-                                            </li>
-                                            <li class="li-subcate">
-                                                <a href="http://www.mrszhao.com/category-7.html">
-                                                    <i class="iconfont icon-dot"></i>界面设计</a>
-                                            </li>
+                                             @endforeach
                                         </ul>
+                                         @endif
                                     </li>
-                                    <li class="li-cate">
-                                        <a href="http://www.mrszhao.com/category-13.html">
-                                            <i class="iconfont icon-shipin"></i>教学视频</a>
-                                    </li>
-                                    <li class="li-cate">
-                                        <a href="http://www.mrszhao.com/category-10.html">
-                                            <i class="iconfont icon-shoucang1"></i>案例集</a>
-                                    </li>
-                                    <li class="li-cate">
-                                        <a href="http://www.mrszhao.com/category-8.html">
-                                            <i class="iconfont icon-fenlei1"></i>zblog建站</a>
-                                    </li>
-                                    <li class="li-cate">
-                                        <a href="http://www.mrszhao.com/category-11.html" class="ziyuan">
-                                            <i class="iconfont icon-liwu"></i>前端资源
-                                            <i class="iconfont icon-add"></i></a>
-                                        <ul class="ul-subcates">
-                                            <li class="li-subcate">
-                                                <a href="http://www.mrszhao.com/category-14.html">
-                                                    <i class="iconfont icon-dot"></i>素材</a>
-                                            </li>
-                                            <li class="li-subcate">
-                                                <a href="http://www.mrszhao.com/category-15.html">
-                                                    <i class="iconfont icon-dot"></i>工具</a>
-                                            </li>
-                                            <li class="li-subcate">
-                                                <a href="http://www.mrszhao.com/category-6.html">
-                                                    <i class="iconfont icon-dot"></i>书籍</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="li-cate">
-                                        <a href="http://www.mrszhao.com/category-9.html">
-                                            <i class="iconfont icon-chabei"></i>杂谈</a>
-                                    </li>
+                                    @endforeach
                                 </ul>
                             </nav>
                         </div>

@@ -41,4 +41,5 @@ class Article extends Model
         } 
         return $output;
     }
+    
 }

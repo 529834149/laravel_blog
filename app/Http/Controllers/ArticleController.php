@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Model\Article;
 class ArticleController extends Controller
 {
     
@@ -14,8 +14,13 @@ class ArticleController extends Controller
      */
     public function index()
     {
-
-       return view('article.list');
+       //获取列表信息
+        $data = \DB::table('articles')
+            ->leftJoin('categories', 'articles.cate_id', '=', 'categories.cate_id')
+            ->where('articles.is_show',1)
+            ->orderBy('articles.publish_time','DESC')
+            ->paginate(10);
+       return view('article.list',  compact('data'));
     }
 
     /**
