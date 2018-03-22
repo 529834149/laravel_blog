@@ -16,70 +16,34 @@
             <div class="divNavBar">
                 <ul class="clearfix">
                     <li id="nvabar-item-index">
-                        <a href="http://www.mrszhao.com">
+                        <a href="/article">
                             首页
                         </a>
                     </li>
-                    <li id="navbar-category-12">
-                        <a href="http://www.mrszhao.com/category-12.html">
-                            前端教程
+                    @foreach($menuAll as $k=>$v)
+                    <li id="navbar-category-{{$k+1}}">
+                        <a href="{{$v['url']}}">
+                            {{$v['title']}} 
+                            @if(!empty($v['children']))
+                            ↓
+                            @endif
                         </a>
+                       
+                        @if(!empty($v['children']))
                         <ul>
-                            <li id="navbar-category-1">
-                                <a href="http://www.mrszhao.com/category-1.html">
-                                    HTML教程
-                                </a>
-                            </li>
-                            <li id="navbar-category-2">
-                                <a href="http://www.mrszhao.com/category-2.html">
-                                    CSS教程
-                                </a>
-                            </li>
-                            <li id="navbar-category-3">
-                                <a href="http://www.mrszhao.com/category-3.html">
-                                    JavaScript教程
-                                </a>
-                            </li>
-                            <li id="navbar-category-4">
-                                <a href="http://www.mrszhao.com/category-4.html">
-                                    jQuery教程
-                                </a>
-                            </li>
-                            <li id="navbar-category-7">
-                                <a href="http://www.mrszhao.com/category-7.html">
-                                    界面设计
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li id="navbar-category-10">
-                        <a href="http://www.mrszhao.com/category-10.html">
-                            案例集
-                        </a>
-                    </li>
-                    <li id="navbar-category-8">
-                        <a href="http://www.mrszhao.com/category-8.html">
-                            zblog建站
-                        </a>
-                    </li>
-                    <li id="navbar-category-11">
-                        <a href="http://www.mrszhao.com/category-11.html">
-                            前端资源
-                        </a>
-                        <ul>
+                            @foreach($v['children'] as $chil)
                             <li id="navbar-category-15">
                                 <a href="http://www.mrszhao.com/category-15.html">
-                                    工具
+                                    {{$chil['title']}}
                                 </a>
                             </li>
-                            <li id="navbar-category-6">
-                                <a href="http://www.mrszhao.com/category-6.html">
-                                    书籍
-                                </a>
-                            </li>
+                            @endforeach
+                           
                         </ul>
+                        @endif
                     </li>
-                    <li id="navbar-category-9">
+                    @endforeach
+<!--                    <li id="navbar-category-9">
                         <a href="http://www.mrszhao.com/category-9.html">
                             杂谈
                         </a>
@@ -93,7 +57,7 @@
                         <a href="http://www.mrszhao.com/all.html">
                             文章归档
                         </a>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
             <div class="baidusearch">

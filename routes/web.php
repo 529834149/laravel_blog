@@ -11,8 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('/','ArticleController');
 Route::resource('demo', 'DemoController');
 Route::resource('article', 'ArticleController');

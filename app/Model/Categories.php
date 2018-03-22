@@ -20,5 +20,6 @@ class Categories extends Model
         $this->setOrderColumn('order');
         $this->setTitleColumn('title');
     }
-
+    
+    
 }

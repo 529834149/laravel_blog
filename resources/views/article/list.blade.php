@@ -6,6 +6,7 @@
 @endsection
 @section('content')
 <!--列表页-->
+
 <div class="divMiddle w1200 mt20 clearfix">
             <div class="divMain fl">
                 <h4 class="cata-nav">
