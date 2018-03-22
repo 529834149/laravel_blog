@@ -3,33 +3,34 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Model\Article;
 use Cache;
-class ArticleController extends Controller
+class CacheController extends Controller
 {
-    
     /**
      * Display a listing of the resource.
-     *
+     * 获取单个文章的访问量
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-       //获取列表信息
-        $data = \DB::table('articles')
-            ->leftJoin('categories', 'articles.cate_id', '=', 'categories.cate_id')
-            ->where('articles.is_show',1)
-            ->orderBy('articles.publish_time','DESC')
-            ->paginate(10);
-//  
-////       $data = [];
-//       foreach($list['item'] as $k=>$v){
-//          $data[$k] = $v;
-//          $read_key = 'article_read_aid'.$v['aid'];
-//          $data[$k]['read_num']=Cache::get($read_key) ?Cache::get($read_key) :0;
-//       }
-//       dd($list);
-       return view('article.list',  compact('data'));
+        $aid = $request->input('aid');
+        $type = $request->input('type');
+        if($type =='articles'){
+            $read_key = 'article_read_aid_'.$aid;
+            //当前key是否存在
+            if (Cache::has($read_key)) {
+    //            Cache::increment($read_key);
+                $value = Cache::get($read_key);
+                $nums = intval($value)+1;
+                Cache::forever($read_key,$nums);
+            }else{
+                Cache::forever($read_key,1);
+            }
+            $value = Cache::get($read_key);
+            return $this->returnCode(200,'',$value);
+        }
+        
+        
     }
 
     /**
@@ -59,9 +60,9 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request,$aid)
     {
-        return view('article.details');
+        
     }
 
     /**
@@ -72,7 +73,7 @@ class ArticleController extends Controller
      */
     public function edit($id)
     {
-       
+        //
     }
 
     /**

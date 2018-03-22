@@ -2,7 +2,7 @@
     <div class="divTop w1200 clearfix">
         <div class="logo fl">
             <h1 class="BlogTitle">
-                <a href="http://www.mrszhao.com/">
+                <a href="">
                     <span>
                         PHPer-陈宝金博客
                     </span>

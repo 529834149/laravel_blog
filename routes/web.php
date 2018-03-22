@@ -14,3 +14,6 @@
 Route::resource('/','ArticleController');
 Route::resource('demo', 'DemoController');
 Route::resource('article', 'ArticleController');
+
+//阅读数量及当前点赞个数
+Route::resource('cache', 'CacheController');

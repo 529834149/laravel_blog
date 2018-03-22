@@ -7,6 +7,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Model\Categories;
+use App\Model\Article;
 use Illuminate\Http\Request;
 class Controller extends BaseController
 {
@@ -22,6 +23,8 @@ class Controller extends BaseController
      */
     private function init(Request $request) {
         $this->getCategory($request);
+        $this->get_More_Article($request);//获取更多当前点击量最多的文章
+        
     }
     /**
      * 
@@ -32,6 +35,14 @@ class Controller extends BaseController
         $get_cate = Categories::where('is_show',1)->orderBy('order','asc')->get()->toArray();
         $menuAll = $this->get_cate_recursion($get_cate);
         \View::share('menuAll',$menuAll);
+    }
+    /**
+     * 获取最新的两篇文章
+     */
+    public function get_More_Article()
+    {
+        $get_hot_article = Article::where('is_show',1)->orderBy('publish_time','desc')->take(2)->get();
+        \View::share('get_hot_article',$get_hot_article);
     }
     /**
      * 
