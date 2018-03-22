@@ -58,7 +58,6 @@ class SlugTranslateHandler
         ]
 
         **/
-
         // 尝试获取获取翻译结果
         if (isset($result['trans_result'][0]['dst'])) {
             return str_slug($result['trans_result'][0]['dst']);
