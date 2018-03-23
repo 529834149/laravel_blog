@@ -18,16 +18,13 @@
         <!--网站关键词、描述添加结束-->
         <link rel="shortcut icon" href="/public/default/picture/favicon.ico" />
         <link rel="stylesheet" rev="stylesheet" href="/public/default/css/normalize_1.css" type="text/css" media="all" />
-        <link rel="stylesheet" rev="stylesheet" href="//at.alicdn.com/t/font_597522_qcw2jp9cceuerk9.css" type="text/css" media="all" />
+        <link rel="stylesheet" rev="stylesheet" href="//at.alicdn.com/t/font_597522_g3p97azttsksm7vi.css" type="text/css" media="all" />
         <link rel="stylesheet" rev="stylesheet" href="/public/default/css/style_1.css" type="text/css" media="all" />
         
         <link rel="stylesheet" href="/public/default/css/lightbox_1.css" type="text/css" media="screen" />
        
         <link rel="stylesheet" href="/public/default/css/newlypublished_1.css" type="text/css" />
-    
-        
        
-    
     </head>
     
     
