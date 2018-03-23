@@ -12,12 +12,12 @@
             <header class="single-title-wrap">
                 <div class="post-single-title w1200" id="mobile_pc_change">
                     <h4 class="cata-nav">
-                        <a href="http://www.mrszhao.com/">首页</a>>
+                        <a href="/">首页</a>>
                         @if(!$article['cate_info']['parent_id'])
-                            <a href="http://www.mrszhao.com/category-12.html">{{$article['cate_info']['title']}}</a>
+                            <a href="{{$article['url']}}">{{$article['cate_info']['title']}}</a>
                         @else
-                            ><a href="http://www.mrszhao.com/category-12.html">{{$article['cate_info']['parent_name']}}</a>>
-                            <a href="http://www.mrszhao.com/category-2.html">{{$article['cate_info']['title']}}</a></h4>
+                            ><a href="{{$article['url']}}">{{$article['cate_info']['parent_name']}}</a>>
+                            <a href="{{$article['url']}}">{{$article['cate_info']['title']}}</a></h4>
                         @endif
                         
                     <h1 class="post-title">{{$article['article_title']}}</h1>
@@ -40,12 +40,13 @@
                             {!!$article->content!!}
                         </div>
                     </main>
-                    <div class="dianzan sf-praise-sdk" sfa='click' data-postid='110' data-value="1" data-ok='zijiqugemingzi'>
+                    <div class="dianzan sf-praise-sdk"  data-postid='110' data-value="1" >
                         <span>
-                            <i class="iconfont icon-dianzan"></i>
+                            <i class="iconfont icon-dianzan" onclick="click_zan({{$article['aid']}});"></i>
                         </span>
                         <br />（
-                        <span class="sf-praise-sdk" sfa='num' data-value='1' data-postid='110'>16</span>）</div>
+                        <span class="sf-praise-sdk" id="click_num" sfa='num' data-value='1' data-postid='110'>{{$article['click']}}</span>）
+                    </div>
                     <div class="post-share">
 <!--                        <i class="iconfont icon-fenxiang"></i>保存到：
                         百度分享代码开始
@@ -204,11 +205,36 @@
         
         <script charset="utf-8" type="text/javascript" src="/public/default/js/jquery-1.8.3.min.js"></script>
         <script charset="utf-8" type="text/javascript">
+            //                哪个Ip进行点攒了，每个Ip只能点一次
+                function click_zan(aid){
+                   $.ajax({
+                        type:'get',
+                        url: '/cache',
+                        data:{
+                            aid: aid,
+                            type:'click_zan'
+                        },
+                        dataType:'json',
+                        success:function(data){
+                            if(data.meta.code ==200){
+                                //成功
+                              var num =$('#click_num').text();
+                              var zong_num = parseInt(num)+1
+                              $('#click_num').html(zong_num);
+                            }
+                            if(data.meta.code == 400){
+                                alert('已经点过了')
+                            }
+                           
+                        }
+                    });
+                }
             $(function(){
                 if(navigator.userAgent.match(/mobile/i)) {  
                     var r = $('.post').removeClass("w1200");
                     console.log(r)
                 }  
+
             })
             
         </script>

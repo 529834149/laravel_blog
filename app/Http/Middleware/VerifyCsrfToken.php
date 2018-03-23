@@ -14,6 +14,7 @@ class VerifyCsrfToken extends BaseVerifier
     protected $except = [
        '*update_click*',
         '*readability*',
-        '*webchat*'
+        '*webchat*',
+        '*clicks_zan*'
     ];
 }
