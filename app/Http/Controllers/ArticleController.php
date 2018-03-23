@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Model\Article;
+use App\Model\Tag;
+use App\Model\Categories;
 use Cache;
 
 class ArticleController extends Controller
@@ -59,7 +61,19 @@ class ArticleController extends Controller
         if ( ! empty($article->slug) && $article->slug != $request->slug) {
             return redirect($article->link(), 301);
         }
-        return view('article.details');
+        //获取当前分类信息和tag标签信息
+       $aid = $article['aid'];
+       $article['tag_info'] = Tag::where('tid',intval($article['tags_id']))->get()->toarray();
+       $re = Categories::where('cate_id',intval($article['cate_id']))->first();
+       if($re['parent_id']){
+           $re['parent_name'] = Categories::where('parent_id',intval($re['parent_id']))->first();
+       }else{
+            $re['parent_name'] = '';
+       }
+       $article['cate_info'] = $re;
+//       Categories
+        //获取当前aid详细内容
+        return view('article.details',  compact('article'));
     }
 
     /**

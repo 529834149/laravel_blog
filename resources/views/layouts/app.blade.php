@@ -7,6 +7,8 @@
         <meta name="generator" content="Z-BlogPHP 1.5.1 Zero" />
         <meta name="renderer" content="webkit">
         <meta name="viewport" content="width=device-width,initial-scale=1" />
+        
+        
         <!--百度统计代码 -->
         <!--网站关键词、描述添加-->
         <title>bodys</title>
@@ -16,12 +18,19 @@
         <!--网站关键词、描述添加结束-->
         <link rel="shortcut icon" href="/public/default/picture/favicon.ico" />
         <link rel="stylesheet" rev="stylesheet" href="/public/default/css/normalize_1.css" type="text/css" media="all" />
-        <link rel="stylesheet" rev="stylesheet" href="//at.alicdn.com/t/font_597522_0zb9pefj1t6gvi.css" type="text/css" media="all" />
+        <link rel="stylesheet" rev="stylesheet" href="//at.alicdn.com/t/font_597522_qcw2jp9cceuerk9.css" type="text/css" media="all" />
         <link rel="stylesheet" rev="stylesheet" href="/public/default/css/style_1.css" type="text/css" media="all" />
         
         <link rel="stylesheet" href="/public/default/css/lightbox_1.css" type="text/css" media="screen" />
        
-        <link rel="stylesheet" href="/public/default/css/newlypublished_1.css" type="text/css" /></head>
+        <link rel="stylesheet" href="/public/default/css/newlypublished_1.css" type="text/css" />
+    
+        
+       
+    
+    </head>
+    
+    
     <link rel="stylesheet" href="/public/default/css/page.css" type="text/css" /></head>
     <body class="multi category">
         <!--导航-->
@@ -39,7 +48,7 @@
         <!--<script type="text/javascript" src="/public/default/js/lightbox.pack.js"></script>-->
         <script type="text/javascript" src="/public/default/js/plugins.count.js"></script>
         <script src="/public/default/js/tags.js" type="text/javascript"></script>
-        <script type="text/javascript" src="/public/default/js/sf_praise_sdk_1.js"></script>
+        <!--<script type="text/javascript" src="/public/default/js/sf_praise_sdk_1.js"></script>-->
         <script id="cy_cmt_num" src="/public/default/js/plugins.list.count.js"></script>
         <script src="/public/default/js/nav.js" type="text/javascript"></script>
         <script src="/public/default/js/backtotop.js" type="text/javascript"></script>
