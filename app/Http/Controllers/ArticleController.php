@@ -10,7 +10,7 @@ use Cache;
 
 class ArticleController extends Controller
 {
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -35,18 +35,21 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+       
     }
 
     /**
      * Store a newly created resource in storage.
-     *
+     * @搜索功能
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+
+        $q = $request->input('q');
+        
+    
     }
 
     /**

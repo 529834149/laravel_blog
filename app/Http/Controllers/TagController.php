@@ -48,10 +48,18 @@ class TagController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Request $request, Article $article)
+    public function show(Request $request,$tid)
     {
-        
-        
+        //获取当前标签ID
+        $tid = intval($tid);
+        //获取当前标签下的文章内容
+        $data = \DB::table('articles')
+            ->leftJoin('categories', 'articles.cate_id', '=', 'categories.cate_id')
+            ->where('articles.is_show',1)
+            ->where('articles.tags_id',$tid)
+            ->orderBy('articles.publish_time','DESC')
+            ->paginate(10);
+       return view('article.list',  compact('data','article'));
     }
 
     /**

@@ -53,7 +53,7 @@
                     <div class="function" id="divSearchPanel">
                         <h3 class="function_t">站内搜索</h3>
                         <div class="function_c">
-                            <form name="search" method="post" action="http://www.mrszhao.com/zb_system/cmd.php?act=search">
+                            <form name="search" method="post" action="/article">
                                 <input type="text" name="q" size="11" placeholder="一定要学会用我！" />
                                 <input type="submit" value="搜索" /></form>
                         </div>
