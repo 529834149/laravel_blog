@@ -80,12 +80,13 @@
                         <h3>相关文章</h3>
                         <nav>
                             <ul>
+                                @foreach($article_uid_love_article as $about)
                                 <li>
                                     <span class="title">
-                                        <a href="http://www.mrszhao.com/post/109.html" title="CSS3第三课：伪类选择器，为什么有一个伪字？">CSS3第三课：伪类选择器，为什么有一个伪字？</a></span>
-                                    <span class="time">02-08</span>
+                                        <a href="article/{{$about->aid}}" title="{{$about->article_title}}">{{$about->article_title}}</a></span>
+                                    <span class="time">{{date('Y-m-d',intval($about->publish_time))}}</span>
                                 </li>
-                                
+                                @endforeach
                             </ul>
                         </nav>
                     </div>

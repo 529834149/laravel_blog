@@ -18,3 +18,6 @@ Route::get('article/{article}/{slug?}', 'ArticleController@show')->name('article
 
 //阅读数量及当前点赞个数
 Route::resource('cache', 'CacheController');
+
+//测试已结算账单显示：订单号、结算人、结算金额、结算时间、结算去向（代理商）
+Route::resource('search', 'SearchController');
