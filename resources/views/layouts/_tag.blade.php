@@ -4,11 +4,17 @@
         <nav>
             <ul>
                 @foreach($tag as $v)
-
+                
                 <li>
-                    <a href="javascript:void(0);">{{$v->name}}
+                    @if($v->count)
+                    <a href="/article/tag/{{$v->tid}}">{{$v->name}}
                         <span class="tag-count">({{$v->count}})</span>
                     </a>
+                    @else
+                    <a href="javascript:void(0)">{{$v->name}}
+                        <span class="tag-count">({{$v->count}})</span>
+                    </a>
+                    @endif
                 </li>
                @endforeach 
             </ul>
