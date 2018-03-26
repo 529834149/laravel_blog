@@ -50,6 +50,11 @@
         <script src="/public/default/js/backtotop.js" type="text/javascript"></script>
         <script src="/public/default/js/mrszhao.js" type="text/javascript"></script>
         <script>
+            /**
+             * 
+             * @param {type} aid
+             * @returns 当前点击增加阅读数量，存入缓存中
+             */
             function read(aid){
                     $.ajax({
                        type:'get',
