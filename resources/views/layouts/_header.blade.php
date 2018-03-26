@@ -25,7 +25,7 @@
                         <a href="{{$v['url']}}">
                             {{$v['title']}} 
                             @if(!empty($v['children']))
-                            ↓
+                             <i class="iconfont icon-add1"></i>
                             @endif
                         </a>
                        
@@ -75,7 +75,6 @@
                         <a href="{{$v['url']}}">
                             {{$v['title']}} 
                             @if(!empty($v['children']))
-                            ↓
                             @endif
                         </a>
                        
