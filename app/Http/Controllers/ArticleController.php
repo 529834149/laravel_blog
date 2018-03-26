@@ -77,7 +77,7 @@ class ArticleController extends Controller
         * 2、根据分类查找当前分类下的感觉不错的文章推荐给用户
         */
        $aid_get_cate = Article::where('aid',intval($aid))->first();//获取文章分类
-       $article_uid_love_article = Article::where('cate_id',intval($aid_get_cate['cate_id']))->take(5)->get();
+       $article_uid_love_article = Article::where('cate_id',intval($aid_get_cate['cate_id']))->take(3)->get();
        
 //       Categories
         //获取当前aid详细内容
