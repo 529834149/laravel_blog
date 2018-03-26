@@ -69,7 +69,7 @@ class ArticleController extends Controller
            $re['parent_name'] = Categories::where('parent_id',intval($re['parent_id']))->first();
        }else{
             $re['parent_name'] = '';
-       }
+       }   
        $article['cate_info'] = $re;
        //才你喜欢的
        /*
@@ -77,11 +77,10 @@ class ArticleController extends Controller
         * 2、根据分类查找当前分类下的感觉不错的文章推荐给用户
         */
        $aid_get_cate = Article::where('aid',intval($aid))->first();//获取文章分类
-       
-       
+       $article_uid_love_article = Article::where('cate_id',intval($aid_get_cate['cate_id']))->take(5)->get();
 //       Categories
         //获取当前aid详细内容
-        return view('article.details',  compact('article'));
+        return view('article.details',  compact('article','article_uid_love_article'));
     }
 
     /**

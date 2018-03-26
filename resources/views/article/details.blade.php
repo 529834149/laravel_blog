@@ -126,9 +126,9 @@
 //                                            dd($v);
                                         ?>
                                         <li>
-                                            <a href="/article/{{$v->aid}}" class="picbox" rel="bookmark">
+                                            <a href="/article/{{$v->aid}}" class="picbox" rel="bookmark" onclick="read({{$v->aid}});">
                                                 <img src="/public/default/picture/201712151513320803698191.jpg" class="thumb" width="94" height="64" alt="{{$v->article_title}}" /></a>
-                                            <h4 class="title">
+                                            <h4 class="title" onclick="read({{$v->aid}});">
                                                 <a href="/article/{{$v->aid}}" title="{{$v->article_title}}">{{$v->article_title}}</a></h4>
                                             <p class="postmeta">
                                                 <span class="time">{{date('Y-m-d',intval($v->publish_time))}}</span>
@@ -148,15 +148,21 @@
                             <div class="function_c">
                                 <nav>
                                     <ul>
+                                        @foreach($article_uid_love_article as $love)
                                         <li>
-                                            <a href="/article" class="picbox" rel="bookmark">
+                                            <a href="/article/{{$love->aid}}" class="picbox" rel="bookmark" onclick="read({{$love->aid}});">
                                                 <img src="/public/default/picture/201712151513320803698191.jpg" class="thumb" width="94" height="64" alt="JavaScriptDOM编程艺术" /></a>
-                                            <h4 class="title">
-                                                <a href="/article" title="JavaScriptDOM编程艺术">JavaScriptDOM编程艺术</a></h4>
+                                            <h4 class="title" onclick="read({{$love->aid}});">
+                                                <a href="/article/{{$love->aid}}" title="{{$love->article_title}}">{{$love->article_title}}</a></h4>
                                             <p class="postmeta">
-                                                <span class="time">2017-12-15</span>
-                                                <span class="eye">阅读（193）</span></p>
+                                                <span class="time">{{date('Y-m-d',intval($love->publish_time))}}</span>
+                                                <span class="eye">阅读（<?php 
+                                    $read_key = 'article_read_aid_'.$love->aid;
+                                    echo \Cache::get($read_key) ?\Cache::get($read_key) :0;
+                                    
+                                    ?>）</span></p>
                                         </li>
+                                        @endforeach
                                        
                                     </ul>
                                 </nav>
@@ -171,6 +177,7 @@
         
         <script charset="utf-8" type="text/javascript" src="/public/default/js/jquery-1.8.3.min.js"></script>
         <script charset="utf-8" type="text/javascript">
+            
             //                哪个Ip进行点攒了，每个Ip只能点一次
                 function click_zan(aid){
                    $.ajax({
@@ -195,6 +202,8 @@
                         }
                     });
                 }
+                
+
             $(function(){
                 if(navigator.userAgent.match(/mobile/i)) {  
                     var r = $('.post').removeClass("w1200");
