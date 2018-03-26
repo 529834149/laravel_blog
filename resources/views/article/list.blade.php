@@ -75,26 +75,5 @@
             </aside>
         </div>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script>
-     function read(aid){
-         $.ajax({
-            type:'get',
-            url: '/cache',
-            data:{
-                aid: aid,
-                type:'articles'
-            },
-            dataType:'json',
-            success:function(data){
-                var cons = console;
-                    if (cons){
-                        cons.log("%c\n","font-size:41px;background:url('http://cdn.iknow.bdimg.com/static/common/pkg/module_zed9cd9fd.png')no-repeat -135px -1px");
-                        cons.log('想和PHPer共同打造世界最大自媒体平台吗？\n想让自己的成就在亿万用户面前展现吗？想让世界看得你的光芒吗？想让自己的技术提升更快吗？\n加入QQ群:643890530，在这里不仅是工作，投入你的时间和热情，滴滴汗水终会汇聚成不平凡的成果。\n期待你的加盟。（大神在这里！）');
-                        cons.log("本人邮件chen2018php@163.com有不懂的问题可以发邮件哦");
-                    }
-            }
-        });
-     }
 
-</script>
 @endsection
