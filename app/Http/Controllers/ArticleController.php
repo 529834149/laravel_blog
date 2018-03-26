@@ -79,9 +79,12 @@ class ArticleController extends Controller
        $aid_get_cate = Article::where('aid',intval($aid))->first();//获取文章分类
        $article_uid_love_article = Article::where('cate_id',intval($aid_get_cate['cate_id']))->take(3)->get();
        
+       //相关文章当前文章的往后10条数据
+       $article_uid_labout_article = Article::where('cate_id',intval($aid_get_cate['cate_id']))->take(10)->get();
+       
 //       Categories
         //获取当前aid详细内容
-        return view('article.details',  compact('article','article_uid_love_article'));
+        return view('article.details',  compact('article','article_uid_love_article','article_uid_labout_article'));
     }
 
     /**
