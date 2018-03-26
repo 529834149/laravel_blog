@@ -14,6 +14,7 @@
 Route::resource('/','ArticleController');
 Route::resource('demo', 'DemoController');
 Route::resource('article', 'ArticleController');
+Route::resource('article/tag', 'TagController');
 Route::get('article/{article}/{slug?}', 'ArticleController@show')->name('article.show');
 
 //阅读数量及当前点赞个数

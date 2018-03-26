@@ -64,8 +64,9 @@
                         <p>继续阅读与本文标签相同的文章</p>
                         <h5 class="post-tags">
                             <i class="iconfont icon-label_fill"></i>标签:
-                            <a href="http://www.mrszhao.com/tags-4.html">css3</a>
-                            <a href="http://www.mrszhao.com/tags-146.html">伪对象选择器</a></h5>
+                            @foreach($article['tag_info'] as $tag)
+                            <a href="/article/tag/{{$tag['tid']}}">{{$tag['name']}}</a>
+                            @endforeach
                     </div>
                     <!--PC和WAP自适应版-->
                     <div id="SOHUCS" sid="{{$article['aid']}}" ></div> 
