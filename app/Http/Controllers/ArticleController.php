@@ -71,6 +71,14 @@ class ArticleController extends Controller
             $re['parent_name'] = '';
        }
        $article['cate_info'] = $re;
+       //才你喜欢的
+       /*
+        * 1、根据当前文章id获取当前文章分类
+        * 2、根据分类查找当前分类下的感觉不错的文章推荐给用户
+        */
+       $aid_get_cate = Article::where('aid',intval($aid))->first();//获取文章分类
+       
+       
 //       Categories
         //获取当前aid详细内容
         return view('article.details',  compact('article'));

@@ -2,6 +2,17 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group name="E:Xampp"/>
+        <group name="E:Xampp">
+            <file>file:/E:/xampp/htdocs/final_blog/resources/views/article/details.blade.php</file>
+            <file>file:/E:/xampp/htdocs/final_blog/resources/views/layouts/app.blade.php</file>
+            <file>file:/E:/xampp/htdocs/final_blog/app/Http/Controllers/Controller.php</file>
+            <file>file:/E:/xampp/htdocs/final_blog/resources/views/layouts/_case.blade.php</file>
+            <file>file:/E:/xampp/htdocs/final_blog/app/Http/Controllers/CacheController.php</file>
+            <file>file:/E:/xampp/htdocs/final_blog/routes/web.php</file>
+            <file>file:/E:/xampp/htdocs/final_blog/app/Model/Click_zan.php</file>
+            <file>file:/E:/xampp/htdocs/final_blog/resources/views/article/list.blade.php</file>
+            <file>file:/E:/xampp/htdocs/final_blog/app/Http/Controllers/ArticleController.php</file>
+            <file>file:/E:/xampp/htdocs/final_blog/resources/views/layouts/_hot.blade.php</file>
+        </group>
     </open-files>
 </project-private>

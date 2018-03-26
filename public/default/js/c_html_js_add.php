@@ -1,5 +1,5 @@
 var zbp = new ZBP({
-	bloghost: "http://www.mrszhao.com/",
+	bloghost: "http://www.bodys.com/",
 	ajaxurl: "http://www.mrszhao.com/zb_system/cmd.php?act=ajax&src=",
 	cookiepath: "/",
 	lang: {
