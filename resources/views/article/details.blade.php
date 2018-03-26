@@ -127,11 +127,11 @@
                             </div>
                         </div>
                         <div class="function" id="divPrevious">
-                            <h3 class="function_t">排行榜</h3>
+                            <h3 class="function_t">与我最新文章</h3>
                             <div class="function_c">
                                 <nav>
                                     <ul>
-                                        @foreach($get_hot_article as $v)
+                                        @foreach($article_uid_new_article as $v)
                                         <?php
 //                                            dd($v);
                                         ?>
