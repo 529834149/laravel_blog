@@ -80,12 +80,11 @@
                     <div class="post-related">
                         <h3>相关文章</h3>
                         <nav>
-                            
                             <ul>
                                 @foreach($article_uid_labout_article as $about)
                                 <li>
                                     <span class="title">
-                                        <a href="/article/{{$about->aid}}" title="{{$about->article_title}}">{{$about->article_title}}</a></span>
+                                        <a href="article/{{$about->aid}}" title="{{$about->article_title}}">{{$about->article_title}}</a></span>
                                     <span class="time">{{date('Y-m-d',intval($about->publish_time))}}</span>
                                 </li>
                                 @endforeach
