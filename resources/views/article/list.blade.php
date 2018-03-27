@@ -53,8 +53,8 @@
                     <div class="function" id="divSearchPanel">
                         <h3 class="function_t">站内搜索</h3>
                         <div class="function_c">
-                            <form name="search" method="post" action="/article">
-                                <input type="text" name="q" size="11" placeholder="一定要学会用我！" />
+                            <form name="search" method="post" action="/search">
+                                <input type="text" name="content" size="11" placeholder="一定要学会用我！" />
                                 <input type="submit" value="搜索" /></form>
                         </div>
                     </div>
@@ -75,5 +75,14 @@
             </aside>
         </div>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
+<script>
+    $("form").submit(function(e){
+       var content = $("input[name='content']").val();
+       if(!content){
+           return false;
+       }else{
+           return true;
+       }
+    });
+</script>
 @endsection

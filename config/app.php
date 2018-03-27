@@ -179,7 +179,7 @@ return [
 //        Jenssegers\Mongodb\MongodbServiceProvider::class,
         Encore\Admin\Providers\AdminServiceProvider::class,
          Overtrue\LaravelWeChat\ServiceProvider::class,
-        SocialiteProviders\Manager\ServiceProvider::class,
+//        SocialiteProviders\Manager\ServiceProvider::class,
     ],
 
     /*
@@ -230,7 +230,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 //        'Moloquent' => Jenssegers\Mongodb\Eloquent\Model::class,
         'EasyWeChat' => Overtrue\LaravelWeChat\Facade::class,
-        'Socialite' => Laravel\Socialite\Facades\Socialite::class, 
+//        'Socialite' => Laravel\Socialite\Facades\Socialite::class, 
     ],
 
 ];
