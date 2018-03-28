@@ -14,7 +14,7 @@
                     <!--<a href="http://www.mrszhao.com/">首页</a>>杂谈-->
                 </h4>
                 @if(empty($is_ex))
-                <h2 style="text-align: center;margin-top:250px;color: #ccc">这家伙很懒，什么都没留下</h2>
+                <h2 style="text-align: center;margin-top:30%;color: #ccc">这家伙很懒，什么都没留下</h2>
                 @endif
                 @foreach($data as $v)
                 <section>
