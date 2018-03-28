@@ -12,6 +12,7 @@
 */
 
 Route::resource('/','ArticleController');
+Route::resource('category', 'CategoryController');
 Route::resource('demo', 'DemoController');
 Route::resource('article', 'ArticleController');
 Route::resource('article/tag', 'TagController');

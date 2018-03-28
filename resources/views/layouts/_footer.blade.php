@@ -11,10 +11,10 @@
         	<h3>链接</h3>
             <nav>
             	<ul>
-                	<li><a href="http://www.mrszhao.com/aboutmrszhao.html">关于本站</a></li>
-                    <li><a href="http://www.mrszhao.com/archive.html">全部文章</a></li>
-                    <li><a href="http://www.mrszhao.com/websource.html" rel="nofollow">前端导航</a></li>
-                    <li><a href="http://www.mrszhao.com/guestbook.html">留言本</a></li>
+                	<li><a href="javascript:void(0)">关于本站</a></li>
+                    <li><a href="/">全部文章</a></li>
+                    <li><a href="javascript:void(0)" rel="nofollow">前端导航</a></li>
+                    <li><a href="javascript:void(0)">留言本</a></li>
                 </ul>
             </nav>
         </div>

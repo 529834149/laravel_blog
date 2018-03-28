@@ -16,7 +16,7 @@
             <div class="divNavBar">
                 <ul class="clearfix">
                     <li id="nvabar-item-index">
-                        <a href="/article">
+                        <a href="/category">
                             首页
                         </a>
                     </li>
@@ -66,7 +66,7 @@
             <div class="mobile-divNavBar">
                 <ul>
                     <li id="nvabar-item-index">
-                        <a href="/">
+                        <a href="/category">
                             首页
                         </a>
                     </li>

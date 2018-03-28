@@ -29,7 +29,6 @@
         </main>
     </div>
  </div>
-        
         <script charset="utf-8" type="text/javascript" src="/public/default/js/jquery-1.8.3.min.js"></script>
        
 @endsection
