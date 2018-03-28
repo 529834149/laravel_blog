@@ -24,7 +24,7 @@ class ArticleController extends Controller
             ->where('articles.is_show',1)
             ->orderBy('articles.publish_time','DESC')
             ->paginate(10);
-
+        
        return view('article.list',  compact('data','article'));
     }
 
