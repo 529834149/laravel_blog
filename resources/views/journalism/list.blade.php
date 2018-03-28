@@ -150,7 +150,7 @@ $('#main').scroll(function() {
 //还可以基window窗口（body）来添加滚动事件, (因为布局不同,所以在这里没效果，因为[上面是基于body中的某个元素来添加滚动事的])
 $(window).scroll(function() {
     //当时滚动条离底部60px时开始加载下一页的内容
-    if (($(window).height() + $(window).scrollTop() + 60) >= $(document).height()) {
+    if (($(window).height() + $(window).scrollTop() + 100) >= $(document).height()) {
         clearTimeout(timers);
         timers = setTimeout(function() {
             page++;
