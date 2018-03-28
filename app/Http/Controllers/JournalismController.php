@@ -16,6 +16,10 @@ class JournalismController extends Controller
         $offset = intval($request->input('num'));
         $page = ($offset-1)*20;
         $data = Collection::where('is_show',1)->orderBy('read_time','desc')->skip($page)->take(20)->get();
+        
+        if(!count($data)){
+            return $this->returnCode(400);
+        }
         return $this->returnCode(200,'',$data);
     }
     /**

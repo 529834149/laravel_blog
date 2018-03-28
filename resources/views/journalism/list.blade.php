@@ -10,15 +10,14 @@
     
     
 </style>
-<div class="divMiddle w1200 mt20 clearfix">
+<div class="divMiddle w1200 mt20 clearfix" >
             <div class="divMain fl">
                 <h4 class="cata-nav">
                     <a href="article">首页</a>
                     <!--<a href="http://www.mrszhao.com/">首页</a>>杂谈-->
                 </h4>
-                <section id="main">
-                    <ul id="list_box">
-                       
+                <section id="main"  style="position:relative;">
+                    <ul id="list_box" class="loading">
                     </ul>
                    
                 </section>
@@ -49,12 +48,15 @@
                 </div>
             </aside>
         </div>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!--        <div class="loadgif" style="width:66px;height:66px;position:absolute;top:50%;left:50%;display:none">-->
+          
+       <!--</div>-->
+<script src="/public/default/js/jquery-1.8.3.min.js"></script>
 <script>
  var page = 1, //分页码
     off_on = false, //分页开关(滚动加载方法 1 中用的)
     timers = null; //定时器(滚动加载方法 2 中用的)
-
+    load_status = true;//true 还有数据 在加载   false已经没有数据了
 //加载数据
 var LoadingDataFn = function() {
     //page分页
@@ -64,12 +66,27 @@ var LoadingDataFn = function() {
         type: "GET",
         dataType: "json",
         beforeSend: function () {
-//           $('.small').show();
-//           return false;
+            if(load_status ==false){
+                return false;
+            }else{
+                var load = '<img id="loa"  style="display:none;margin-left:50%;margin-top:30%"  alt="加载中..." src="http://img.lanrentuku.com/img/allimg/1212/5-121204193R0.gif"/>';
+                $('.loading').append(load);
+                $('#loa').show();
+            }
+           
+
         },
         success: function(result){
+            if (result.meta.code == 400) {
+                var html = '<div class="downs" style="color:red;text-align: center;">已经加载到底了</div>';
+                $('.downs').remove();
+                $('#list_box').append(html);
+                off_on = true;
+                load_status = false;
+                return false;
+            }
             if (result.meta.code == 200) {
-                $('.downs').show();
+              
                 var html = '';
                 var date = result.data;
                 var dom = '';
@@ -95,15 +112,17 @@ var LoadingDataFn = function() {
                     dom+='</div>';
                     dom+='</section>';
                 }
+                load_status = true;
                 $('#list_box').append(dom);
+                
                 off_on = false; //[重要]这是使用了 {滚动加载方法1}  时 用到的 ！！！[如果用  滚动加载方法1 时：off_on 在这里不设 true的话， 下次就没法加载了哦！]
-            }else{
-                var html = '<div class="downs" style="color:#ccc;text-align: center;">已经加载到底了</div>';
-                $('#list_box').append(html);
-                off_on = true;
             }
-        }
-        
+            
+        },
+        complete:function () {
+//           $('#loa').remove();
+           $('#loa').hide();
+        },
     
     });
 };
@@ -141,7 +160,7 @@ $('#main').scroll(function() {
         //这里还可以用 [ 延时执行 ] 来控制是否加载 （这样就解决了 当上页的条件满足时，一下子加载多次的问题啦）
         timers = setTimeout(function() {
             page++;
-            console.log("第" + page + "页");
+//            console.log("第" + page + "页");
             LoadingDataFn(); //调用执行上面的加载方法
         }, 300);
     }
@@ -154,7 +173,7 @@ $(window).scroll(function() {
         clearTimeout(timers);
         timers = setTimeout(function() {
             page++;
-            console.log("第" + page + "页");
+//            console.log("第" + page + "页");
             LoadingDataFn();
         }, 300);
     }
