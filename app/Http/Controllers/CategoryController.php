@@ -21,8 +21,13 @@ class CategoryController extends Controller
             ->where('articles.is_show',1)
             ->orderBy('articles.publish_time','DESC')
             ->paginate(10);
-
-       return view('article.list',  compact('data','article'));
+        //判断是否存在
+        $is_ex = \DB::table('articles')
+            ->leftJoin('categories', 'articles.cate_id', '=', 'categories.cate_id')
+            ->where('articles.is_show',1)
+            ->orderBy('articles.publish_time','DESC')
+            ->count();
+       return view('article.list',  compact('data','article','is_ex'));
         
     }
 
@@ -63,7 +68,15 @@ class CategoryController extends Controller
             ->where('categories.cate_id',$aid)
             ->orderBy('articles.publish_time','DESC')
             ->paginate(10);
-       return view('article.list',  compact('data','article'));
+        //判断是否存在
+        $is_ex = \DB::table('articles')
+            
+            ->leftJoin('categories', 'articles.cate_id', '=', 'categories.cate_id')
+            ->where('articles.is_show',1)
+            ->where('categories.cate_id',$aid)
+            ->orderBy('articles.publish_time','DESC')
+            ->count();
+       return view('article.list',  compact('data','article','is_ex'));
     }
 
     /**
