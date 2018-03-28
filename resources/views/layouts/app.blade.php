@@ -24,7 +24,7 @@
         <link rel="stylesheet" href="/public/default/css/lightbox_1.css" type="text/css" media="screen" />
        
         <link rel="stylesheet" href="/public/default/css/newlypublished_1.css" type="text/css" />
-       
+        
     </head>
     
     

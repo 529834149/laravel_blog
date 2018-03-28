@@ -26,3 +26,4 @@ Route::resource('search', 'SearchController');
 //每日资讯
 Route::resource('journalism', 'JournalismController');
 Route::get('/load', 'JournalismController@Load');
+Route::resource('/about', 'AboutController');
