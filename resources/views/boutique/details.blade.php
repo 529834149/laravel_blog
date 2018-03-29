@@ -39,7 +39,7 @@
                     </main>
                     <div class="dianzan sf-praise-sdk"  data-postid='110' data-value="1" >
                         <span>
-                            <i class="iconfont icon-dianzan" onclick="click_zan({{$list->id}});"></i>
+                            <i class="iconfont icon-dianzan" onclick="click_zan1({{$list->id}});"></i>
                         </span>
                         <br />（
                         <span class="sf-praise-sdk" id="click_num" sfa='num' data-value='1' data-postid='110'>{{$list->click}}</span>）
@@ -179,7 +179,7 @@
         <script charset="utf-8" type="text/javascript">
             
             //                哪个Ip进行点攒了，每个Ip只能点一次
-                function click_zan(aid){
+                function click_zan1(aid){
                    $.ajax({
                         type:'get',
                         url: '/cache',
