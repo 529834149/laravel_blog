@@ -69,7 +69,7 @@ var LoadingDataFn = function() {
             if(load_status ==false){
                 return false;
             }else{
-                var load = '<img id="loa"  style="display:none;margin-left:50%;margin-top:30%"  alt="加载中..." src="http://img.lanrentuku.com/img/allimg/1212/5-121204193R0.gif"/>';
+                var load = '<img id="loa"  style="display:none;margin-left:50%;margin-top:30%"  alt="加载中..." src="http://img.lanrentuku.com/img/allimg/1212/5-121204193R0-50.gif"/>';
                 $('.loading').append(load);
                 $('#loa').show();
             }
