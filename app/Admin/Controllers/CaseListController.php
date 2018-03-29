@@ -76,7 +76,7 @@ class CaseListController extends Controller
 
             $grid->id('ID')->sortable();
             $grid->title('标题');
-            $grid->lead_image_url()->image('http://wanli.org/public/upload/',100,100);
+            $grid->lead_image_url()->image('http://www.bodys.top/public/upload/',100,100);
         });
     }
 
