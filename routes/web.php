@@ -27,3 +27,5 @@ Route::resource('search', 'SearchController');
 Route::resource('journalism', 'JournalismController');
 Route::get('/load', 'JournalismController@Load');
 Route::resource('/about', 'AboutController');
+//在线采集
+Route::resource('/rebility', 'RebilityController');
