@@ -20,7 +20,7 @@ class RebilityController extends Controller
     public function index(Request $request, CaseList $caseList)
     {
        $internat = $_SERVER['SERVER_NAME'];  
-       $caseList_info =CaseList::orderBy('created_at','desc')->paginate(12);;
+       $caseList_info =CaseList::orderBy('created_at','desc')->paginate(10);;
        return view("boutique/list",  compact('caseList','caseList_info','internat'));
     }
 
