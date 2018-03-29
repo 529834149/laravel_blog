@@ -52,7 +52,7 @@ return [
             'file'   => 'file',
         ],
 
-        'host' => 'http://wanli.org/public/upload/',
+        'host' => 'http://www.bodys.top/public/upload/',
     ],
 
     /*
