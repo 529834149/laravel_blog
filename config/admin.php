@@ -47,13 +47,12 @@ return [
     'upload'  => [
 
         'disk' => 'admin',
-
         'directory'  => [
             'image'  => 'image',
             'file'   => 'file',
         ],
 
-        'host' => 'http://localhost:8000/upload/',
+        'host' => 'http://wanli.org/public/upload/',
     ],
 
     /*

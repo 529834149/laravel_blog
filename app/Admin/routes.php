@@ -12,4 +12,5 @@ Route::group([
     $router->resource('category_list','CategoriesController'); 
     $router->resource('article_list','ArticleController'); 
     $router->resource('media','MediaController'); 
+    $router->resource('case_list','CaseListController'); 
 });

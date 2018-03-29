@@ -87,5 +87,6 @@
            return true;
        }
     });
+    
 </script>
 @endsection

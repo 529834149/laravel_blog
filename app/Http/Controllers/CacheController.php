@@ -62,8 +62,49 @@ class CacheController extends Controller
             }
             //获取当前文章下的所有文章信息
            
-        }else{
+        }else if ($type == 'combat'){
+            $read_key = 'article_read_combat_'.$aid;
+            //当前key是否存在
+            if (Cache::has($read_key)) {
+    //            Cache::increment($read_key);
+                $value = Cache::get($read_key);
+                $nums = intval($value)+1;
+                Cache::forever($read_key,$nums);
+            }else{
+                Cache::forever($read_key,1);
+            }
+            $value = Cache::get($read_key);
+            return $this->returnCode(200,'',$value);
+        }else if($type == 'combat_click'){
+            //获取当前用户点赞哪篇文章 一个Ip一天只能点击一次
+            $param = [
+                'ip'=>$_SERVER['REMOTE_ADDR'],
+                'click_time'=>time(),
+                'aid'=>$aid
+            ];
+            //判断今天是否被点击过
+            $today =  date('Y-m-d');
+            //获取当前ip时间
+            $is_ex_ip = Click_zan::where('ip',$param['ip'])->where('aid',$aid)->first();
             
+            
+            if($is_ex_ip){
+                if($today == date('Y-m-d',intval($is_ex_ip['click_time']))){
+                    return $this->returnCode('400','今天已经点击过该文章了','');
+                }else{
+                    \DB::table('articles')->where('aid',$aid)->increment('click');
+                    Click_zan::where('ip',$param['ip'])->where('aid',$aid)->update(['click_time'=>$param['click_time']]);
+                    $click_num = Article::where('aid',$aid)->first();
+                    return $this->returnCode('200','谢谢参与',$click_num['click']);
+                }
+            }else{
+                //我的di
+                \DB::table('articles')->where('aid',$aid)->increment('click');
+                Click_zan::insert($param);
+                $click_num = Article::where('aid',$aid)->first();
+                return $this->returnCode('200','谢谢参与，帅爆了',$click_num['click']);
+            }
+            //获取当前文章下的所有文章信息
         }
         
         

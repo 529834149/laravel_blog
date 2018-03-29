@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Model\Categories;
 use App\Model\Article;
 use App\Model\Tag;
+use App\Model\CaseList;
 use Illuminate\Http\Request;
 use App\Handlers\SlugTranslateHandler;
 class Controller extends BaseController
@@ -18,6 +19,11 @@ class Controller extends BaseController
      *  导航数据共享
      */
     public function __construct(Request $request) {
+//            $re = CaseList::get();
+//            foreach($re as $v){
+//               $seo =  app(SlugTranslateHandler::class)->translate($v->title);
+//               CaseList::where('id',intval($v->id))->update(['slug'=>$seo]);
+//            }
         $this->init($request);
     }
     /**
@@ -59,11 +65,7 @@ class Controller extends BaseController
            $tag[$k]['count'] = Article::where('tags_id',intval($v['tid']))->count();
         }
         \View::share('tag',$tag);
-//        $re = Article::get();
-//        foreach($re as $v){
-//           $seo =  app(SlugTranslateHandler::class)->translate($v->article_title);
-//           Article::where('aid',intval($v->aid))->update(['slug'=>$seo]);
-//        }
+
         
     }
     /**
