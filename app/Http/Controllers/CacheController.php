@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use Cache;
 use App\Model\Click_zan;
 use App\Model\Article;
+use App\Model\Combat_click;
+use App\Model\CaseList;
+
 class CacheController extends Controller
 {
     /**
@@ -15,8 +18,10 @@ class CacheController extends Controller
      */
     public function index(Request $request)
     {
+        
         $aid = $request->input('aid');
         $type = $request->input('type');
+     
         if($type =='articles'){
             $read_key = 'article_read_aid_'.$aid;
             //当前key是否存在
@@ -85,23 +90,23 @@ class CacheController extends Controller
             //判断今天是否被点击过
             $today =  date('Y-m-d');
             //获取当前ip时间
-            $is_ex_ip = Click_zan::where('ip',$param['ip'])->where('aid',$aid)->first();
-            
-            
+//            where('ip',$param['ip'])->where('id',$aid)->
+            $is_ex_ip = Combat_click::where('ip',$param['ip'])->where('aid',$aid)->first();
+           
             if($is_ex_ip){
                 if($today == date('Y-m-d',intval($is_ex_ip['click_time']))){
                     return $this->returnCode('400','今天已经点击过该文章了','');
                 }else{
-                    \DB::table('articles')->where('aid',$aid)->increment('click');
-                    Click_zan::where('ip',$param['ip'])->where('aid',$aid)->update(['click_time'=>$param['click_time']]);
-                    $click_num = Article::where('aid',$aid)->first();
+                    \DB::table('combat')->where('id',$aid)->increment('click');
+                    Combat_click::where('ip',$param['ip'])->where('id',$aid)->update(['click_time'=>$param['click_time']]);
+                    $click_num = CaseList::where('id',$aid)->first();
                     return $this->returnCode('200','谢谢参与',$click_num['click']);
                 }
             }else{
                 //我的di
-                \DB::table('articles')->where('aid',$aid)->increment('click');
-                Click_zan::insert($param);
-                $click_num = Article::where('aid',$aid)->first();
+                \DB::table('combat')->where('id',$aid)->increment('click');
+                Combat_click::insert($param);
+                $click_num = CaseList::where('id',$aid)->first();
                 return $this->returnCode('200','谢谢参与，帅爆了',$click_num['click']);
             }
             //获取当前文章下的所有文章信息
