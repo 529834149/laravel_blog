@@ -18,27 +18,27 @@ class DocumentsController extends Controller
      */
     public function index(Request $request, Article $article)
     {
-        
-      
-        $year_month = Article::selectRaw('year(created_at)  year, monthname(created_at) month ,count(*) published')
-                    ->groupBy('year','month')
-                    ->orderByRaw('min(created_at) desc')
-                    ->get();
-        $archives = array();
-        foreach($year_month as $value){
-             $archives[$value['year']][] = $value['month'];
-        }
-        $finalArr = array();
-        foreach($archives as $k=>$v){
-            $finalArr[] = array(
-                'year' => $k,
-                'month' => $v,
-            );
-            
-        }
-
-        $posts = Article::select('article_title','aid','publish_time','created_at')->latest()->get();
-        return view('documents.list',compact('posts','finalArr'));
+//        
+//      
+//        $year_month = Article::selectRaw('year(created_at)  year, monthname(created_at) month ,count(*) published')
+//                    ->groupBy('year','month')
+//                    ->orderByRaw('min(created_at) desc')
+//                    ->get();
+//        $archives = array();
+//        foreach($year_month as $value){
+//             $archives[$value['year']][] = $value['month'];
+//        }
+//        $finalArr = array();
+//        foreach($archives as $k=>$v){
+//            $finalArr[] = array(
+//                'year' => $k,
+//                'month' => $v,
+//            );
+//            
+//        }
+//
+//        $posts = Article::select('article_title','aid','publish_time','created_at')->latest()->get();
+        return view('documents.list');
     }
     function get_mon_yea(Request $request, Article $article)
     {
