@@ -45,5 +45,17 @@ class Article extends Model
     {
         return route('article.show', array_merge([$this->aid, $this->slug], $params));
     }
+    public function scopeFilter($query, $value)
+    {
+        if ($month = $value['month']) {
+            $query->whereMonth('created_at', Carbon::parse($month)->month);
+        }
+
+        if ($year = $value['year']) {
+            $query->whereYear('created_at', $year);
+        }
+    }
+
+   
     
 }
