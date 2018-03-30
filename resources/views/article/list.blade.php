@@ -10,7 +10,7 @@
 <div class="divMiddle w1200 mt20 clearfix">
             <div class="divMain fl">
                 <h4 class="cata-nav">
-                    <a href="article">首页</a>
+                    <a href="/category">首页</a>
                     <!--<a href="http://www.mrszhao.com/">首页</a>>杂谈-->
                 </h4>
                 @if(empty($is_ex))
