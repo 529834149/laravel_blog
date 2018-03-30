@@ -3,9 +3,11 @@
     	<div class="aboutsite fl mr100">
         	<h3>关于本站</h3>
                 <p>
+                   
                     本网站主要主要致力于php、python、web前端、微信、爬虫等技术提升
                     当你的才华还撑不起你的野心时，就应该静下心来学习,当你的能力还驾驭不了你的目标时，就应该沉下心来历练.
                 </p>
+                
         </div>
         <div class="footer-links fl mr100">
         	<h3>链接</h3>
