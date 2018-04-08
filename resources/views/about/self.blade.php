@@ -41,13 +41,20 @@
                 <div class="portrait">
                     <!--<img onmousemove="this.src='/public/default/about_self/images/22.png'" / onmouseout="this.src='/public/default/about_self/images/portrait1.jpg'" / src="/public/default/about_self/images/portrait1.jpg"></div>-->
                 <div class="cen_text">
-                    
-                    <h2>世上只有想不通的人，没有走不通的路。</h2>
-                    <h2>世上只有想不通的人，没有走不通的路。</h2>
-                    <h2>世上只有想不通的人，没有走不通的路。</h2>
-                    <h2>世上只有想不通的人，没有走不通的路。</h2>
-                    <h2>世上只有想不通的人，没有走不通的路。</h2>
-                    
+                    <h2>我能抽象出整个世界</h2>
+                    <h2>但是我不能抽象出你</h2>
+                    <h2>因为你在我心中是那么的具体</h2>
+                    <h2>所以我的世界并不完整</h2>
+                    <h2>我可以重载甚至覆盖这个世界里的任何一种方法</h2>
+                    <h2>但是我却不能重载对你的思念</h2>
+                    <h2>也许命中注定了 你在我的世界里永远的烙上了静态的属性</h2>
+                    <h2>而我不慎调用了爱你这个方法</h2>
+                    <h2>当我义无返顾的把自己作为参数传进这个方法时</h2>
+                    <h2>我才发现爱上你是一个死循环</h2>
+                    <h2>它不停的返回对你的思念压入我心里的堆栈</h2>
+                    <h2>在这无尽的黑夜中</h2>
+                    <h2>我的内存里已经再也装不下别人</h2>
+
                 </div>
             </div>
             <div class="down_arrow">
@@ -76,7 +83,7 @@
                                 <td>性别 | 男</td>
                                 <td>邮箱 | chen2018php@163.com</td></tr>
                             <tr>
-                                <td>职位 | php中级工程师</td>
+                                <td>职位 | php高级工程师</td>
                                 <td>年限 | 3年</td></tr>
                             <tr>
                                 <td>出生 | 1991.09.10</td>
@@ -92,7 +99,8 @@
                                 <td>工作经验 | 3年</td></tr>
                             <tr>
                                 <td colspan="3">
-                                    <p>项目：</p>
+                                    暂无求职
+<!--                                    <p>项目：</p>
                                     <br>
                                     <a href="http://www.blogchina.com/">1. 博客中国（基于laravel框架开发 查看网址：http://www.blogchina.com/）</a>
                                     <br>
@@ -103,7 +111,7 @@
                                     <a>4. 智慧阅读（基于微信公众号、蜂巢学院、smartreader、后台数据采集等4部分组成）</a>
                                     <br>
                                     <br>
-                                    <a href="http://www.blogchina.com/">5.个人博客（基于lnmp+laravel+mysql开发 查看网址：http://www.bodys.top）</a>
+                                    <a href="http://www.blogchina.com/">5.个人博客（基于lnmp+laravel+mysql开发 查看网址：http://www.bodys.top）</a>-->
                                     <br></td>
                             </tr>
                         </tbody>
@@ -191,17 +199,34 @@
                     <h2>我现在做的一切仅仅是为了不让未来的自己后悔。</h2></div>
                 <div class="work_con">
                     <div class="programe">
+                        <div class="work_time">1年
+                            <br>潘江物流(北京)有限公司</div>
+                        <div class="work_text">
+                            <div class="triangle-left"></div>
+                            <div class="exCon">
+                                <p></p>
+                                <h4>开发时间：2015-2 --2016-8</h4>
+                                <h5>暂无</h5>
+                                <p>项目描述：</p>
+                                <p>暂无</p>
+                                <p>责任描述：</p>
+                                <p>暂无</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="programe">
                         <div class="work_time">2年
                             <br>博客中国</div>
                         <div class="work_text">
                             <div class="triangle-left"></div>
                             <div class="exCon">
+                                <p></p>
                                 <h4>开发时间：2016-8--至今</h4>
-                                <h5>开发工具：IntelliJ IDEA，sublime text</h5>
+                                <h5>暂无</h5>
                                 <p>项目描述：</p>
-                                <p>............</p>
+                                <p>暂无</p>
                                 <p>责任描述：</p>
-                                <p>1. ............</p>
+                                <p>暂无</p>
                             </div>
                         </div>
                     </div>

@@ -59,7 +59,12 @@ class TagController extends Controller
             ->where('articles.tags_id',$tid)
             ->orderBy('articles.publish_time','DESC')
             ->paginate(10);
-       return view('article.list',  compact('data','article'));
+        if($data){
+            $is_ex = 1;
+        }else{
+            $is_ex = 0;
+        }
+       return view('article.list',  compact('data','article','is_ex'));
     }
 
     /**
