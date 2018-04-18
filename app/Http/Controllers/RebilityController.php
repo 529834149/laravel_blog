@@ -75,7 +75,7 @@ class RebilityController extends Controller
         
         
 
-        $list = CaseList::where('id',intval($id))->first();
+        $list = Combat::where('id',intval($id))->first();
         return view('boutique.details',  compact('list','article_uid_love_article','article_uid_labout_article','article_uid_new_article'));
     }
 
