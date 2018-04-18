@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Model\Tag;
 use App\Model\Categories;
 use Cache;
-use App\Model\CaseList;
+use App\Model\Combat;
 use App\Model\Article;
 class RebilityController extends Controller
 {
@@ -17,10 +17,10 @@ class RebilityController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request, CaseList $caseList)
+    public function index(Request $request, Combat $combat)
     {
        $internat = $_SERVER['SERVER_NAME'];  
-       $caseList_info =CaseList::orderBy('created_at','desc')->paginate(10);;
+       $caseList_info =Combat::orderBy('created_at','desc')->paginate(10);;
        return view("boutique/list",  compact('caseList','caseList_info','internat'));
     }
 
