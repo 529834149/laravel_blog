@@ -1,5 +1,5 @@
 <div class="function" id="divCatalog">
-    <h3 class="function_t">网站分类</h3>
+    <h3 class="function_t">地理坐标</h3>
     <div class="function_c" id="allmap">
        
     </div>
