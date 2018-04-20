@@ -24,7 +24,8 @@
         <link rel="stylesheet" href="/public/default/css/lightbox_1.css" type="text/css" media="screen" />
        
         <link rel="stylesheet" href="/public/default/css/newlypublished_1.css" type="text/css" />
-        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     </head>
     
     
