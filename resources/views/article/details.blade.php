@@ -39,6 +39,7 @@
                         <div class="post-body">
                             {!!$article->content!!}
                         </div>
+                        
                     </main>
                     <div class="dianzan sf-praise-sdk"  data-postid='110' data-value="1" >
                         <span>
