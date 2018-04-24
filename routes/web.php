@@ -10,7 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::resource('/','CategoryController');
 Route::resource('category', 'CategoryController');
 Route::resource('demo', 'DemoController');

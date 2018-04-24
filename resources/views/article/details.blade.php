@@ -16,7 +16,7 @@
                         @if(!$article['cate_info']['parent_id'])
                             <a href="{{$article['url']}}">{{$article['cate_info']['title']}}</a>
                         @else
-                            ><a href="{{$article['url']}}">{{$article['cate_info']['parent_name']}}</a>>
+                           
                             <a href="{{$article['url']}}">{{$article['cate_info']['title']}}</a></h4>
                         @endif
                         
@@ -46,6 +46,13 @@
                         </span>
                         <br />（
                         <span class="sf-praise-sdk" id="click_num" sfa='num' data-value='1' data-postid='110'>{{$article['click']}}</span>）
+                    </div>
+                    <hr>
+                    <div class="dianzan sf-praise-sdk"  data-postid='110' data-value="1" style="margin:0 auto;" >
+                        <div name="dashmain" id="dash-main-id-879f34" class="dash-main-2 879f34-2" style="margin:0 auto">
+                             
+                         </div>
+                        
                     </div>
                     <div class="post-share">
 <!--                        <i class="iconfont icon-fenxiang"></i>保存到：
@@ -186,6 +193,7 @@
         </div>
         <script charset="utf-8" type="text/javascript" src="/public/default/js/jquery-1.8.3.min.js"></script>
         <script type="text/javascript" src="{{asset('/public/default/js/jweixin-1.0.0.js')}}"></script> 
+         <script type="text/javascript" charset="utf-8" src="https://www.dashangcloud.com/static/ds-2.0.js"></script>
         <!--微信分享-->
         
         <script charset="utf-8" type="text/javascript">
