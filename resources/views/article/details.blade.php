@@ -251,7 +251,6 @@
             dataType:'jsonp',
             jsonp: 'callback',
             success:function(msg){ 
-                console.log(msg)
                 if(msg.code == 'A0200'){ 
                     wx.config({
                         debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
@@ -269,7 +268,7 @@
                            wx.onMenuShareTimeline({
                                 title: 'Bodys男孩-技术没有上限',
                                 link: msg.data.url,
-                                imgUrl: 'http://www.bodys.top/public/default/picture/timg.png', 
+                                imgUrl: 'http://hiveapi.blogchina.com/public/images/22.png', 
                                 success: function (res) {  
                                 },
                                 cancel: function () {
@@ -277,10 +276,10 @@
                             }); 
                             //分享好友
                            wx.onMenuShareAppMessage({
-                                title: 'Bodys男孩', 						// 分享标题
+                                title: 'Bodys男孩-技术没有上限', 						// 分享标题
                                 desc: '技术没有上限技术没有上限技术没有上限技术没有上限', 						// 分享描述
                                 link: location.href.split('#')[0],							// 分享链接
-                                imgUrl: 'http://www.bodys.top/public/default/picture/timg.png', 							// 分享图标
+                                imgUrl: 'http://hiveapi.blogchina.com/public/images/22.png', 							// 分享图标
                                 type: 'link', 									// 分享类型,music、video或link，不填默认为link
                                 dataUrl: '', 								// 如果type是music或video，则要提供数据链接，默认为空
                                 success: function (res) { 
