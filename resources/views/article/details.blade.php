@@ -194,7 +194,8 @@
         </div>
         <script charset="utf-8" type="text/javascript" src="/public/default/js/jquery-1.8.3.min.js"></script>
         <script type="text/javascript" src="{{asset('/public/default/js/jweixin-1.0.0.js')}}"></script> 
-         <script type="text/javascript" charset="utf-8" src="https://www.dashangcloud.com/static/ds-2.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="https://www.dashangcloud.com/static/ds-2.0.js"></script>
+        <script type="text/javascript" src="{{asset('public/js/jweixin-1.0.0.js')}}"></script> 
         <!--微信分享-->
         
         <script charset="utf-8" type="text/javascript">
@@ -238,4 +239,68 @@
             })
             
         </script>
+        <script>
+        $(function(){
+        var contenturl = window.location.href;  //获取当前网站的url
+        var url = location.href.split('#')[0];
+        var title = 'Bodys男孩';
+        var logo = '/public/default/picture/timg.jpg';//获取网站Logo信息
+        var content ={{$article['article_title']}} ;//获取分享好友title中的|后面的信息 
+        $.ajax({
+//            url:'http://bot.blogchina.com/bee/weixinapi',
+            url:'http://post.blogchina.com/weixinapi',
+            data:{article_url:url},
+            type:'get',
+            dataType:'jsonp',
+            jsonp: 'callback',
+            success:function(msg){ 
+                if(msg.code == 'A0200'){ 
+                    wx.config({
+                        debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                        appId: msg.data.appid, // 必填，公众号的唯一标识
+                        timestamp: msg.data.timestamp, // 必填，生成签名的时间戳
+                        nonceStr: msg.data.noncestr, // 必填，生成签名的随机串
+                        signature: msg.data.signature,// 必填，签名，见附录1
+                        jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+                    });
+                    wx.ready(function(){ 
+                            wx.error(function (res) {
+                              //console.log(res.errMsg);
+                            });
+                            //分享朋友圈
+                           wx.onMenuShareTimeline({
+                                title: 'Bodys男孩',
+                                link: msg.data.url,
+                                imgUrl: 'http://www.bodys.top/public/default/picture/timg.jpg', 
+                                success: function (res) {  
+                                },
+                                cancel: function () {
+                                }
+                            }); 
+                            //分享好友
+                           wx.onMenuShareAppMessage({
+                                title: 'Bodys男孩', 						// 分享标题
+                                desc: {{$article['article_title']}}, 						// 分享描述
+                                link: location.href.split('#')[0],							// 分享链接
+                                imgUrl: 'http://www.bodys.top/public/default/picture/timg.jpg', 							// 分享图标
+                                type: 'link', 									// 分享类型,music、video或link，不填默认为link
+                                dataUrl: '', 								// 如果type是music或video，则要提供数据链接，默认为空
+                                success: function (res) { 
+//                                   alert(res);
+                                    // 用户确认分享后执行的回调函数
+                                },
+                                cancel: function () { 
+                                    // 用户取消分享后执行的回调函数
+                                }
+                            }); 
+                    }); 	
+
+                } 
+            },
+            error:function(){}
+        })
+        
+       
+    })
+</script>
 @endsection
