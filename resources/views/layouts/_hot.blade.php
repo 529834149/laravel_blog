@@ -1,21 +1,21 @@
-<div class="function" id="Tblogpublished">
-    <h3 class="function_t">排行榜</h3>
+<div class="function" id="Tblogpublished" >
+    <h3 class="function_t">最新发表文章</h3>
     <div class="function_c">
         <nav>
-            <ul>
-                @foreach($get_hot_article as $v)
-                    <li>
-                        <a href="article/{{$v->aid}}" class="picbox" rel="bookmark" onclick="read({{$v->aid}});">
-                            <img src="/public/default/picture/201712151513320803698191.jpg" class="thumb" width="94" height="64" alt="{{$v->article_title}}" /></a>
-                        <h4 class="title">
-                            <a href="article/{{$v->aid}}" title="{{$v->article_title}}" onclick="read({{$v->aid}});">{{$v->article_title}}</a></h4>
-                        <p class="postmeta">
-                            <span class="time">{{date('Y-m-d',intval($v->publish_time))}}</span>
-                            <span class="eye">阅读（<?php 
-                                    $read_key = 'article_read_aid_'.$v->aid;
-                                    echo \Cache::get($read_key) ?\Cache::get($read_key) :0;
-                                    
-                                    ?>）</span></p>
+            <ul style="color:#FFFFFF;background-color: "  >
+                @foreach($get_hot_article as $k=>$v)
+                    <li class="list-group-item" style="padding-bottom:5px;border-bottom: 2px solid #F2F2F2;">
+                        <a href="article/{{$v->aid}}" rel="bookmark" title=" {{$v['article_title']}}" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap; width:150px;">
+                            @if($k == 0)
+                            <span class='c-index  c-index-hot1 c-gap-icon-right-small' style="display: inline-block;padding:1px 0;color:#FFFFFF;width:14px;line-height:100%;font-size:12px;text-align:center;background-color: red;">{{$k+1}}</span>&nbsp;&nbsp;&nbsp;&nbsp;{{$v['article_title']}}
+                            @elseif($k ==1)
+                            <span class='c-index  c-index-hot1 c-gap-icon-right-small' style="display: inline-block;padding:1px 0;color:#FFFFFF;width:14px;line-height:100%;font-size:12px;text-align:center;background-color: #FF8547;">{{$k+1}}</span>&nbsp;&nbsp;&nbsp;&nbsp;{{$v['article_title']}}
+                             @elseif($k ==2)
+                            <span class='c-index  c-index-hot1 c-gap-icon-right-small' style="display: inline-block;padding:1px 0;color:#FFFFFF;width:14px;line-height:100%;font-size:12px;text-align:center;background-color: #FFAC38;">{{$k+1}}</span>&nbsp;&nbsp;&nbsp;&nbsp;{{$v['article_title']}}
+                            @else
+                            <span class='c-index  c-index-hot1 c-gap-icon-right-small' style="display: inline-block;padding:1px 0;color:#FFFFFF;width:14px;line-height:100%;font-size:12px;text-align:center;background-color: #8eb9f5;">{{$k+1}}</span>&nbsp;&nbsp;&nbsp;&nbsp;{{$v['article_title']}}
+                            @endif
+                        </a>
                     </li>
                 @endforeach
             </ul>

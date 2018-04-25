@@ -50,7 +50,7 @@ class Controller extends BaseController
      */
     public function get_More_Article(Request $request)
     {
-        $get_hot_article = Article::where('is_show',1)->orderBy('publish_time','desc')->take(2)->get();
+        $get_hot_article = Article::where('is_show',1)->orderBy('publish_time','desc')->take(20)->get();
         \View::share('get_hot_article',$get_hot_article);
     }
     /**

@@ -1,9 +1,4 @@
-<div class="function" id="divCatalog">
-    <h3 class="function_t">地理坐标</h3>
-    <div class="function_c" id="allmap">
-       
-    </div>
-</div>
+
 <div class="function" id="divCatalog">
     <h3 class="function_t">网站分类</h3>
     <div class="function_c">
@@ -33,19 +28,3 @@
         </nav>
     </div>
 </div>
-<script type="text/javascript">
-	//百度地图API功能
-	function loadJScript() {
-		var script = document.createElement("script");
-		script.type = "text/javascript";
-		script.src = "http://api.map.baidu.com/api?v=2.0&ak=irv7pcwStoXIOINsXGIzy9f9MvWKekdM&callback=init";
-		document.body.appendChild(script);
-	}
-	function init() {
-		var map = new BMap.Map("allmap");            // 创建Map实例
-		var point = new BMap.Point(116.404, 39.915); // 创建点坐标
-		map.centerAndZoom(point,15);                 
-		map.enableScrollWheelZoom();                 //启用滚轮放大缩小
-	}  
-	window.onload = loadJScript;  //异步加载地图
-</script>
