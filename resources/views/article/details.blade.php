@@ -241,11 +241,8 @@
         </script>
         <script>
         $(function(){
-        var contenturl = window.location.href;  //获取当前网站的url
         var url = location.href.split('#')[0];
-        var title = 'Bodys男孩';
-        var logo = 'http://www.bodys.top/public/default/picture/timg.png';//获取网站Logo信息
-        var content ='php开发技术论坛分享' ;//获取分享好友title中的|后面的信息 
+        console.log(url);
         $.ajax({
 //            url:'http://bot.blogchina.com/bee/weixinapi',
             url:'http://post.blogchina.com/weixinapi',
@@ -266,7 +263,7 @@
                     });
                     wx.ready(function(){ 
                             wx.error(function (res) {
-                              //console.log(res.errMsg);
+                              console.log(res.errMsg);
                             });
                             //分享朋友圈
                            wx.onMenuShareTimeline({
