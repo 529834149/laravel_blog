@@ -245,7 +245,7 @@
         var url = location.href.split('#')[0];
         var title = 'Bodys男孩';
         var logo = 'http://www.bodys.top/public/default/picture/timg.png';//获取网站Logo信息
-        var content =<?php echo $article['article_title'];?> ;//获取分享好友title中的|后面的信息 
+        var content ='php开发技术论坛分享' ;//获取分享好友title中的|后面的信息 
         $.ajax({
 //            url:'http://bot.blogchina.com/bee/weixinapi',
             url:'http://post.blogchina.com/weixinapi',
