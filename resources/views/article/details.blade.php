@@ -244,7 +244,7 @@
         var contenturl = window.location.href;  //获取当前网站的url
         var url = location.href.split('#')[0];
         var title = 'Bodys男孩';
-        var logo = '/public/default/picture/timg.jpg';//获取网站Logo信息
+        var logo = 'http://www.bodys.top/public/default/picture/timg.png';//获取网站Logo信息
         var content ={{$article['article_title']}} ;//获取分享好友title中的|后面的信息 
         $.ajax({
 //            url:'http://bot.blogchina.com/bee/weixinapi',
@@ -269,9 +269,9 @@
                             });
                             //分享朋友圈
                            wx.onMenuShareTimeline({
-                                title: 'Bodys男孩',
+                                title: 'Bodys男孩-技术没有上限',
                                 link: msg.data.url,
-                                imgUrl: 'http://www.bodys.top/public/default/picture/timg.jpg', 
+                                imgUrl: 'http://www.bodys.top/public/default/picture/timg.png', 
                                 success: function (res) {  
                                 },
                                 cancel: function () {
@@ -280,9 +280,9 @@
                             //分享好友
                            wx.onMenuShareAppMessage({
                                 title: 'Bodys男孩', 						// 分享标题
-                                desc: {{$article['article_title']}}, 						// 分享描述
+                                desc: '技术没有上限技术没有上限技术没有上限技术没有上限', 						// 分享描述
                                 link: location.href.split('#')[0],							// 分享链接
-                                imgUrl: 'http://www.bodys.top/public/default/picture/timg.jpg', 							// 分享图标
+                                imgUrl: 'http://www.bodys.top/public/default/picture/timg.png', 							// 分享图标
                                 type: 'link', 									// 分享类型,music、video或link，不填默认为link
                                 dataUrl: '', 								// 如果type是music或video，则要提供数据链接，默认为空
                                 success: function (res) { 
