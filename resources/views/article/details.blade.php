@@ -203,7 +203,7 @@
         var contenturl ='http://hiveapi.blogchina.com/app_download';  //获取当前网站的url
         var url = location.href.split('#')[0];
         var title = '蜂巢学园';
-        var logo = '/public/images/22.png';//获取网站Logo信息
+        var logo = 'http://hiveapi.blogchina.com/public/images/22.png';//获取网站Logo信息
         var content ="蜂巢学园蜂巢学园蜂巢学园蜂巢学园蜂巢学园蜂巢学园蜂巢学园蜂巢学园蜂巢学园" ;//获取分享好友title中的|后面的信息 
         $.ajax({
 //            url:'http://bot.blogchina.com/bee/weixinapi',
