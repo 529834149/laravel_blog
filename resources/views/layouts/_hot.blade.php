@@ -27,11 +27,12 @@
     <div class="function_c">
         <nav>
            <script type="text/javascript">
-            var sogou_ad_id=966283;
-            var sogou_ad_height=230;
-            var sogou_ad_width=250;
-            </script>
-            <script type='text/javascript' src='http://images.sohu.com/cs/jsfile/js/c.js'></script>
+var sogou_ad_id=966284;
+var sogou_ad_height=250;
+var sogou_ad_width=250;
+</script>
+<script type='text/javascript' src='http://images.sohu.com/cs/jsfile/js/c.js'></script>
+
 
 
         </nav>
