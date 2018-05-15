@@ -5,7 +5,7 @@
             <ul style="color:#FFFFFF;background-color: "  >
                 @foreach($get_hot_article as $k=>$v)
                     <li class="list-group-item" style="padding-bottom:5px;border-bottom: 2px solid #F2F2F2;">
-                        <a href="article/{{$v->aid}}" rel="bookmark" title=" {{$v['article_title']}}" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap; width:150px;">
+                        <a href="article/{{$v->aid }}" rel="bookmark" title=" {{$v['article_title']}}" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap; width:150px;">
                             @if($k == 0)
                             <span class='c-index  c-index-hot1 c-gap-icon-right-small' style="display: inline-block;padding:1px 0;color:#FFFFFF;width:14px;line-height:100%;font-size:12px;text-align:center;background-color: red;">{{$k+1}}</span>&nbsp;&nbsp;&nbsp;&nbsp;{{$v['article_title']}}
                             @elseif($k ==1)
@@ -19,6 +19,21 @@
                     </li>
                 @endforeach
             </ul>
+        </nav>
+    </div>
+</div>
+<div class="function" id="Tblogpublished" >
+    <h3 class="function_t">广告位</h3>
+    <div class="function_c">
+        <nav>
+           <script type="text/javascript">
+            var sogou_ad_id=966283;
+            var sogou_ad_height=230;
+            var sogou_ad_width=250;
+            </script>
+            <script type='text/javascript' src='http://images.sohu.com/cs/jsfile/js/c.js'></script>
+
+
         </nav>
     </div>
 </div>
