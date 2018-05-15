@@ -7,7 +7,7 @@
         <meta name="generator" content="Z-BlogPHP 1.5.1 Zero" />
         <meta name="renderer" content="webkit">
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        
+        <meta name="baidu_union_verify" content="b8a30ea5c262a6cdcac15ca6cdbcd3c1">
         
         <!--百度统计代码 -->
         <!--网站关键词、描述添加-->
