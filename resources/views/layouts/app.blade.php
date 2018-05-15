@@ -7,14 +7,14 @@
         <meta name="generator" content="Z-BlogPHP 1.5.1 Zero" />
         <meta name="renderer" content="webkit">
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <meta name="baidu_union_verify" content="b8a30ea5c262a6cdcac15ca6cdbcd3c1">
-        
+        <meta name="baidu_union_verify" content="f0082d77a1353330b545d2d9c3aa13eb">
         <!--百度统计代码 -->
         <!--网站关键词、描述添加-->
         <title>bodys</title>
         <meta name="Keywords" content="技术、教程、解决方案、web、服务器各种疑难杂症">
         <meta name="description" content="技术、教程、解决方案、web、服务器各种疑难杂症">
         <meta name="author" content="陈宝金">
+        
         <!--网站关键词、描述添加结束-->
         <link rel="shortcut icon" href="/public/default/picture/favicon.ico" />
         <link rel="stylesheet" rev="stylesheet" href="/public/default/css/normalize_1.css" type="text/css" media="all" />
