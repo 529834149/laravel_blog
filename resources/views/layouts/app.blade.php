@@ -33,6 +33,7 @@
     <body class="multi category">
         <!--导航-->
         @include('layouts._header')
+
         <!--轮播-->
         @yield('carousel')
         <!--内容-->

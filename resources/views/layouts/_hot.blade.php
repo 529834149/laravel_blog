@@ -26,15 +26,12 @@
     <h3 class="function_t">广告位</h3>
     <div class="function_c">
         <nav>
-           <script type="text/javascript">
-var sogou_ad_id=966284;
-var sogou_ad_height=250;
-var sogou_ad_width=250;
-</script>
-<script type='text/javascript' src='http://images.sohu.com/cs/jsfile/js/c.js'></script>
-
-
-
+            <script type="text/javascript">
+            var sogou_ad_id=966345;
+            var sogou_ad_height=250;
+            var sogou_ad_width=250;
+            </script>
+            <script type='text/javascript' src='http://images.sohu.com/cs/jsfile/js/c.js'></script>
         </nav>
     </div>
 </div>
