@@ -3,7 +3,7 @@
     
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
         <meta name="generator" content="Z-BlogPHP 1.5.1 Zero" />
         <meta name="renderer" content="webkit">
         <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -26,6 +26,20 @@
         <link rel="stylesheet" href="/public/default/css/newlypublished_1.css" type="text/css" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        
+        <!--视频点播-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+        <!-- 引入播放器 css 文件 -->
+        <link href="//imgcache.qq.com/open/qcloud/video/tcplayer/tcplayer.css" rel="stylesheet">
+        <!-- 如需在IE8、9浏览器中初始化播放器，浏览器需支持Flash并在页面中引入 -->
+        <!--[if lt IE 9]>
+        <script src="//imgcache.qq.com/open/qcloud/video/tcplayer/ie8/videojs-ie8.js"></script>
+        <![endif]-->
+        <!-- 如果需要在 Chrome Firefox 等现代浏览器中通过H5播放hls，需要引入 hls.js -->
+        <script src="//imgcache.qq.com/open/qcloud/video/tcplayer/lib/hls.min.0.8.8.js"></script>
+        <!-- 引入播放器 js 文件 -->
+        <script src="//imgcache.qq.com/open/qcloud/video/tcplayer/tcplayer.min.js"></script>
+        <!-- 示例 CSS 样式可自行删除 -->
     </head>
     
     
