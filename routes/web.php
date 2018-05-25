@@ -29,4 +29,6 @@ Route::resource('/about', 'AboutController');
 //功能案例精品
 Route::resource('/boutique', 'RebilityController');
 //归档文件
-Route::resource('/documents', 'DocumentsController');
+
+Route::resource('/documents', 'SpecialController');
+//Route::resource('/documents', 'DocumentsController');
