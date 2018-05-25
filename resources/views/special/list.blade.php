@@ -69,7 +69,7 @@
 
         .fluid.card .image {
             height: 250px;
-            background-image: url('/public/special/picture/xlaz6z2hsw.png');
+            /*background-image: url('/public/special/picture/xlaz6z2hsw.png');*/
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center center;
@@ -84,7 +84,7 @@
 <div class="ui main large stackable fixed inverted menu">
     <div class="ui container">
         <a href="/" class="header item">
-            <img class="logo" src="/public/special/picture/logo.png">
+            <img class="logo" src="/public/default/images/logo.png">
             主页
         </a>
         <a href="/special" class="item">专辑</a>e
@@ -315,7 +315,7 @@
 </div>
 </body>
 <script src="/public/special/js/swiper.min.js"></script>
-<script src="/public/special/js/app.js"></script>
+<!--<script src="/public/special/js/app.js"></script>-->
 <script src="/public/special/js/main.js"></script>
 <!-- Initialize Swiper -->
 <script>
