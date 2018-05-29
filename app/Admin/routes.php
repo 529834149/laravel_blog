@@ -13,4 +13,8 @@ Route::group([
     $router->resource('article_list','ArticleController'); 
     $router->resource('media','MediaController'); 
     $router->resource('case_list','CaseListController'); 
+    
+    //专栏功能
+    $router->resource('menu','MenuController'); 
+    
 });
