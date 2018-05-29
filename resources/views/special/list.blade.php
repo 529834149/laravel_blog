@@ -23,7 +23,7 @@
                         <span class="right floated">
                         <span class="like"><i class="icon ion-heart"></i> 喜欢({{$v->like}})</span>
                         <span class="star"><i class="icon ion-ios-eye-outline"></i> 浏览({{$v->access}}) </span>
-                        <span class="wait"><i class="icon ion-ios-timer-outline"></i>发布时间:{{date('Y-m-d',$v->publish_time)}} </span>
+                        <span class="wait"><i class="icon ion-ios-timer-outline"></i>发布时间:{{$v->publish_time}} </span>
                     </span>
                     </div>
                 </div>
@@ -68,7 +68,6 @@
                         <span class="right floated">
                          <span class="like"><i class="icon ion-heart"></i> 喜欢({{$v1->like}})</span>
                         <span class="star"><i class="icon ion-ios-eye-outline"></i> 浏览({{$v1->access}}) </span>
-                        <!--<span class="wait"><i class="icon ion-ios-timer-outline"></i>发布时间:{{date('Y-m-d',$v1->publish_time)}} </span>-->
                     </span>
                     </div>
                 </div>

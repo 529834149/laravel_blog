@@ -14,7 +14,8 @@ Route::group([
     $router->resource('media','MediaController'); 
     $router->resource('case_list','CaseListController'); 
     
-    //专栏功能
+    //专栏分类功能
     $router->resource('menu','MenuController'); 
-    
+    $router->resource('menu_special','SpecialController'); //在专栏哪个分类下的的专栏
+    $router->get('zhuanlan','SpecialController@info');//内容搜索大咖
 });
