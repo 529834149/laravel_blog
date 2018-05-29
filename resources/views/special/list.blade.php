@@ -69,7 +69,7 @@
 
         .fluid.card .image {
             height: 250px;
-            /*background-image: url('/public/special/picture/xlaz6z2hsw.png');*/
+            background-image: url('/public/special/picture/xlaz6z2hsw.png');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center center;
@@ -133,14 +133,15 @@
     </div>
     <div class="ui container">
         <div class="ui two column stackable grid link cards">
+            @foreach($data as $v)
             <div class="column">
                 <div class="ui fluid card">
                     <div class="ui fluid image">
-                        <div class="ui black ribbon label"><i class="icon ion-ios-star"></i> 精选</div>
+                        <div class="ui black ribbon label"><i class="icon ion-ios-star"></i> PHP专题精选</div>
                         <a class="image"></a>
                     </div>
                     <div class="content">
-                        <a class="header">丹尼尔 路易斯111</a>
+                        <a class="header">{{$v->title}}</a>
                     </div>
                     <div class="extra content">
                         <div class="left floated author">
@@ -148,21 +149,22 @@
                                  src="https://dn-phphub.qbox.me/uploads/images/201709/10/4430/xlAZ6z2HsW.png"> Matt
                         </div>
                         <span class="right floated">
-                        <span class="like"><i class="icon ion-heart"></i> 喜欢(30)</span>
-                        <span class="star"><i class="icon ion-ios-eye-outline"></i> 浏览(30) </span>
-                        <span class="wait"><i class="icon ion-ios-timer-outline"></i>发布时间:2017-10-10 </span>
+                        <span class="like"><i class="icon ion-heart"></i> 喜欢({{$v->like}})</span>
+                        <span class="star"><i class="icon ion-ios-eye-outline"></i> 浏览({{$v->access}}) </span>
+                        <span class="wait"><i class="icon ion-ios-timer-outline"></i>发布时间:{{date('Y-m-d',$v->publish_time)}} </span>
                     </span>
                     </div>
                 </div>
             </div>
-            <div class="column">
+            @endforeach
+<!--            <div class="column">
                 <div class="ui fluid card">
                     <div class="ui fluid image">
-                        <div class="ui black ribbon label"><i class="icon ion-ios-star"></i> 精选</div>
+                        <div class="ui black ribbon label"><i class="icon ion-ios-star"></i> Mysql专题精选</div>
                         <a class="image"></a>
                     </div>
                     <div class="content">
-                        <a class="header">丹尼尔 路易斯</a>
+                        <a class="header">Mysql中的存储过程实现</a>
                     </div>
                     <div class="extra content">
                         <div class="left floated author">
@@ -176,23 +178,37 @@
                     </span>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
-        <div class="ui section horizontal divider"><i class="trophy icon"></i></div>
+        <hr><div class="ui section horizontal divider"><i class="icon ion-flag"></i>精品栏目</div><hr>
         <div class="ui grid">
             <div class="ui column tag labels">
                 <a class="ui teal label">全部</a>
-                <a class="ui label">Laravel</a>
-                <a class="ui label">Laravel</a>
-                <a class="ui label">Laravel</a>
+                @foreach($menu as $v)
+                @if($v->is_publish == 'y')
+                <a class="ui label menu_info "onclick="items({{$v->menu_id}})" id="{{$v->menu_id}}"><i class="icon ion-star"></i>{{$v->name}}</a>
+                @endif
+                @endforeach
+                <a class="ui label more">更多<i class="icon ion-chevron-down"></i></a>
+            </div>
+            
+        </div>
+        <div class="ui grid label_item" style="display:none">
+            <div class="ui column tag labels" >
+                @foreach($menu as $v)
+                    @if($v->is_publish == 'n')
+                        <a class="ui label menu_info" onclick="items({{$v->menu_id}})" id="{{$v->menu_id}}"><i class="icon ion-star"></i>{{$v->name}}</a>
+                    @endif
+                @endforeach
             </div>
         </div>
-        <div class="ui three column stackable grid link cards">
+        <div class="ui three column stackable grid link cards date_list">
+            @foreach($item_data as $v1)
             <div class="column">
                 <div class="ui fluid card">
                     <a class="image"></a>
                     <div class="content">
-                        <a class="header">丹尼尔 路易斯</a>
+                        <a class="header">{{$v1->title}}</a>
                     </div>
                     <div class="extra content">
                         <div class="left floated author">
@@ -200,54 +216,17 @@
                                  src="https://dn-phphub.qbox.me/uploads/images/201709/10/4430/xlAZ6z2HsW.png"> Matt
                         </div>
                         <span class="right floated">
-                         <span class="like"><i class="icon ion-heart"></i> 喜欢(30)</span>
-                        <span class="star"><i class="icon ion-ios-eye-outline"></i> 浏览(30) </span>
-                        <span class="wait"><i class="icon ion-ios-timer-outline"></i>发布时间:2017-10-10 </span>
+                         <span class="like"><i class="icon ion-heart"></i> 喜欢({{$v1->like}})</span>
+                        <span class="star"><i class="icon ion-ios-eye-outline"></i> 浏览({{$v1->access}}) </span>
+                        <!--<span class="wait"><i class="icon ion-ios-timer-outline"></i>发布时间:{{date('Y-m-d',$v1->publish_time)}} </span>-->
                     </span>
                     </div>
                 </div>
             </div>
-            <div class="column">
-                <div class="ui fluid card">
-                    <a class="image"></a>
-                    <div class="content">
-                        <a class="header">丹尼尔 路易斯</a>
-                    </div>
-                    <div class="extra content">
-                        <div class="left floated author">
-                            <img class="ui avatar image"
-                                 src="https://dn-phphub.qbox.me/uploads/images/201709/10/4430/xlAZ6z2HsW.png"> Matt
-                        </div>
-                        <span class="right floated">
-                         <span class="like"><i class="icon ion-heart"></i> 喜欢(30)</span>
-                        <span class="star"><i class="icon ion-ios-eye-outline"></i> 浏览(30) </span>
-                        <span class="wait"><i class="icon ion-ios-timer-outline"></i>发布时间:2017-10-10 </span>
-                    </span>
-                    </div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="ui fluid card">
-                    <a class="image"></a>
-                    <div class="content">
-                        <a class="header">丹尼尔 路易斯</a>
-                    </div>
-                    <div class="extra content">
-                        <div class="left floated author">
-                            <img class="ui avatar image"
-                                 src="https://dn-phphub.qbox.me/uploads/images/201709/10/4430/xlAZ6z2HsW.png"> Matt
-                        </div>
-                        <span class="right floated">
-                        <span class="like"><i class="icon ion-heart"></i> 喜欢(30)</span>
-                        <span class="star"><i class="icon ion-ios-eye-outline"></i> 浏览(30) </span>
-                        <span class="wait"><i class="icon ion-ios-timer-outline"></i>发布时间:2017-10-10 </span>
-                    </span>
-                    </div>
-                </div>
-            </div>
+            @endforeach
            
         </div>
-        <div class="ui container">
+<!--        <div class="ui container">
             <div class="ui pagination menu">
                 <a class="active item">
                     1
@@ -265,51 +244,48 @@
                     12
                 </a>
             </div>
-        </div>
+        </div>-->
     </div>
 </div>
 <div class="ui inverted vertical footer segment">
     <div class="ui center aligned container">
         <div class="ui stackable inverted divided grid">
             <div class="three wide column">
-                <h4 class="ui inverted header">Group 1</h4>
+                <h4 class="ui inverted header">首页</h4>
                 <div class="ui inverted link list">
-                    <a href="#" class="item">Link One</a>
-                    <a href="#" class="item">Link Two</a>
-                    <a href="#" class="item">Link Three</a>
-                    <a href="#" class="item">Link Four</a>
+                    <a href="#" class="item">前段技术</a>
+                    <a href="#" class="item">PHP</a>
+                    <a href="#" class="item">linex</a>
+                    <a href="#" class="item">版本控制器</a>
                 </div>
             </div>
             <div class="three wide column">
-                <h4 class="ui inverted header">Group 2</h4>
+                <h4 class="ui inverted header">个人履历</h4>
                 <div class="ui inverted link list">
-                    <a href="#" class="item">Link One</a>
-                    <a href="#" class="item">Link Two</a>
-                    <a href="#" class="item">Link Three</a>
-                    <a href="#" class="item">Link Four</a>
+                    <a href="#" class="item">个人简历</a>
+         
                 </div>
             </div>
             <div class="three wide column">
-                <h4 class="ui inverted header">Group 3</h4>
+                <h4 class="ui inverted header">案例</h4>
                 <div class="ui inverted link list">
-                    <a href="#" class="item">Link One</a>
-                    <a href="#" class="item">Link Two</a>
-                    <a href="#" class="item">Link Three</a>
-                    <a href="#" class="item">Link Four</a>
+                    <a href="#" class="item">案例精品</a>
+                    <a href="#" class="item">专题</a>
                 </div>
             </div>
             <div class="seven wide column">
                 <h4 class="ui inverted header">Footer Header</h4>
-                <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+                <p>生活没有眼前的苟且，还有诗和远方。</p>
             </div>
         </div>
         <div class="ui inverted section divider"></div>
-        <img src="picture/logo.png" class="ui centered mini image">
+        <img src="/public/default/images/logo.png" class="ui centered mini image">
         <div class="ui horizontal inverted small divided link list">
-            <a class="item" href="#">Site Map</a>
-            <a class="item" href="#">Contact Us</a>
-            <a class="item" href="#">Terms and Conditions</a>
-            <a class="item" href="#">Privacy Policy</a>
+            <a class="item" href="http://www.blogchina.com/">博客中国</a>
+            <a class="item" href="http://www.bokee.com/">博客网</a>
+            <a class="item" href="http://hiveapi.blogchina.com/app_download">蜂巢学园</a>
+            <a class="item" href="http://sr.blogchina.com/api/appversion">智慧阅读</a>
+            <a class="item" href="http://app.mi.com/details?id=com.blogchina.poetry&from=groupmessage">全民诵读</a>
         </div>
     </div>
 </div>
@@ -319,6 +295,20 @@
 <script src="/public/special/js/main.js"></script>
 <!-- Initialize Swiper -->
 <script>
+    var divShow = true;  
+    $(".more").click(function(){  
+        if(divShow){
+            $('.more i').removeClass('ion-chevron-down');
+            $('.more i').addClass('ion-chevron-up');
+            $(".label_item").fadeIn(300);
+            divShow = false;  
+        }else{
+            $('.more i').removeClass('ion-chevron-up');
+            $('.more i').addClass('ion-chevron-down');
+            $(".label_item").fadeOut(300);
+            divShow = true;  
+        }
+    })
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         nextButton: '.swiper-button-next',
@@ -330,5 +320,74 @@
         loop: true,
         autoplay: 2500,
     });
+    function RiQi(sj){
+       var now = new Date(sj*1000);
+       var   year=now.getFullYear();    
+         var   month=now.getMonth()+1;    
+         var   date=now.getDate();    
+         var   hour=now.getHours();    
+         var   minute=now.getMinutes();    
+         var   second=now.getSeconds();  
+         if(month<10){
+             month = '0'+month;
+         }
+        return   year+"-"+month+"-"+date; 
+//         return   year+"-"+month+"-"+date+"   "+hour+":"+minute+":"+second;    
+        
+   }
+    function items(id){
+        $('.menu_info').css('background-color','')
+        $('#'+id).css('background-color','#00b5ad')
+        $.ajax({
+            type:'get',
+            url: '/documents/'+id,
+            data:{
+                
+            },
+            dataType:'json',
+           beforeSend:function(){
+               
+           },
+            success:function(data){
+                var html='';
+                if(data.meta.code == 200){
+                    var list = data.data;
+                    if(list.length){
+                        list.forEach(function(value, index, array) {
+//                        console.log(array[index]['title']);return false;
+                            html+='<div class="column">'
+                            html+='<div class="ui fluid card">'
+                            html+='<a class="image"></a>'
+                            html+='<div class="content">'
+                            html+='<a class="header">'+array[index]['title']+'</a>'
+                            html+='</div>'
+                            html+='<div class="extra content">'
+                            html+='<div class="left floated author">'
+                            html+='<img class="ui avatar image"'
+                            html+='src="https://dn-phphub.qbox.me/uploads/images/201709/10/4430/xlAZ6z2HsW.png"> Matt'
+                            html+='</div>'
+                            html+='<span class="right floated">'
+                            html+='<span class="like"><i class="icon ion-heart"></i> 喜欢('+array[index]['like']+')</span>'
+                            html+='<span class="star"><i class="icon ion-ios-eye-outline"></i> 浏览('+array[index]['access']+') </span>'
+//                            html+='<span class="wait"><i class="icon ion-ios-timer-outline"></i>发布时间:'+RiQi(array[index]['publish_time'])+' </span>'
+                            html+='</span>'
+                            html+='</div>'
+                            html+='</div>'
+                            html+='</div>'
+                        });
+                        $('.date_list').empty();
+                        $('.date_list').html(html);
+                        return false;
+                    }else{
+                        $('.date_list').empty();
+                        $('.date_list').html('暂无专栏');
+                    }
+                }else{
+                    $('.date_list').empty();
+                    $('.date_list').html('暂无专栏');
+                }
+            }
+        });
+    }
 </script>
 </html>

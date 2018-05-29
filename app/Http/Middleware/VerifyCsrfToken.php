@@ -17,6 +17,7 @@ class VerifyCsrfToken extends BaseVerifier
         '*webchat*',
         '*clicks_zan*',
         '*article*',
-        '*search*'
+        '*search*',
+        '*signature*'
     ];
 }
