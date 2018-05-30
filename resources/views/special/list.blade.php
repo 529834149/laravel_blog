@@ -19,10 +19,10 @@
                         <div class="left floated author">
                             <a href="/documents/{{$v->id}}?status=1">
                             <img class="ui avatar image"
-                                 src="https://dn-phphub.qbox.me/uploads/images/201709/10/4430/xlAZ6z2HsW.png"></a> Matt
+                                 src="https://dn-phphub.qbox.me/uploads/images/201709/10/4430/xlAZ6z2HsW.png"></a> Chenbj
                         </div>
                         <span class="right floated">
-                        <span class="like"><i class="icon ion-heart"></i> 喜欢({{$v->like}})</span>
+                            <span class="like" onclick=""><i class="icon ion-heart"></i> 喜欢({{$v->like}})</span>
                         <span class="star"><i class="icon ion-ios-eye-outline"></i> 浏览({{$v->access}}) </span>
                         <span class="wait"><i class="icon ion-ios-timer-outline"></i>发布时间:{{$v->publish_time}} </span>
                     </span>
@@ -63,7 +63,7 @@
                     </div>
                     <div class="extra content">
                         <div class="left floated author">
-                            <img class="ui avatar image" src="https://dn-phphub.qbox.me/uploads/images/201709/10/4430/xlAZ6z2HsW.png"> Matt
+                            <img class="ui avatar image" src="https://dn-phphub.qbox.me/uploads/images/201709/10/4430/xlAZ6z2HsW.png"> Chenbj
                         </div>
                         <span class="right floated">
                          <span class="like"><i class="icon ion-heart"></i> 喜欢({{$v1->like}})</span>
