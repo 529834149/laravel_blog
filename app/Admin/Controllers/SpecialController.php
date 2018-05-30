@@ -76,7 +76,7 @@ class SpecialController extends Controller
             $grid->title('专栏题目')->sortable();
             $grid->author('作者')->sortable();
             $grid->publish_time('推荐时间')->sortable();
-            $grid->image('专栏图片')->sortable();
+            $grid->menu_id('所在专栏')->sortable();
             $grid->access('浏览数')->sortable();
             $grid->like('喜欢数')->sortable();
             $grid->is_del('是否删除')->sortable()->display(function($is_del){
