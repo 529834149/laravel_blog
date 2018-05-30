@@ -10,15 +10,16 @@
                 <div class="ui fluid card">
                     <div class="ui fluid image">
                         <div class="ui black ribbon label"><i class="icon ion-ios-star"></i> PHP专题精选</div>
-                        <a class="image" ></a>
+                        <a href="/documents/{{$v->id}}?status=1" class="image" ><img src="/public/upload/{{$v->pic}}"></a>
                     </div>
                     <div class="content">
                         <a href="/documents/{{$v->id}}?status=1" class="header">{{$v->title}}</a>
                     </div>
                     <div class="extra content">
                         <div class="left floated author">
+                            <a href="/documents/{{$v->id}}?status=1">
                             <img class="ui avatar image"
-                                 src="https://dn-phphub.qbox.me/uploads/images/201709/10/4430/xlAZ6z2HsW.png"> Matt
+                                 src="https://dn-phphub.qbox.me/uploads/images/201709/10/4430/xlAZ6z2HsW.png"></a> Matt
                         </div>
                         <span class="right floated">
                         <span class="like"><i class="icon ion-heart"></i> 喜欢({{$v->like}})</span>
@@ -56,7 +57,7 @@
             @foreach($item_data as $v1)
             <div class="column">
                 <div class="ui fluid card">
-                    <a class="image"></a>
+                    <a href="/documents/{{$v1->id}}?status=1" class="image"><img src="/public/upload/{{$v1->pic}}"></a>
                     <div class="content">
                         <a href="/documents/{{$v1->id}}?status=1" class="header">{{$v1->title}}</a>
                     </div>
@@ -74,6 +75,7 @@
             </div>
             @endforeach
         </div>
+        
     </div>
 <script>
     var divShow = true;  

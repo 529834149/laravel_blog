@@ -40,11 +40,15 @@
                     <div class="ui vertical segment">
                         <div class="row">
                             <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                                <a href="#">{{$v->title}}</a>
+                                <a href="/article_deal?aid={{$v->id}}">{{$v->title}}</a>
                             </div>
-                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                                <small>发布时间：{{$v->publish_time}}</small>
+                             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <small><i class="icon ion-clock"></i>{{$v->publish_time}}</small>
+                                <small><i class="icon ion-eye"></i>{{$v->access}}</small>
+                                <small> <i class="icon ion-chatbox"></i>11</small>
+                                <small> <i class="icon ion-thumbsup"></i></i>{{$v->zan}}</small>
                             </div>
+                           
                         </div>
                     </div>
                     @endforeach

@@ -38,6 +38,12 @@ class SpecialController extends Controller
         $menu = Menu::where('is_del','n')->get();
         return view('special.list',  compact('menu','data','item_data'));
     }
+    public function details(Request $request)
+    {
+        $aid = $request->input('aid');
+        $date = Menu_special_article::where('id',intval($aid))->first();
+        return view('special.article_apecial',  compact('date'));
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -69,6 +75,8 @@ class SpecialController extends Controller
     {
         $status = isset($request->status) ? 1 :0;
         if($status){
+            //增加一次访问次数
+            \DB::table('menu_special')->where('id',intval($id))->increment('access');
             $menu_special = Menu_special::where('id',intval($id))->first();
             $sp_article_list = Menu_special_article::where('menu_special_id',intval($id))->get();
 //            $sp_article_list = \DB::table('menu_special_article')
