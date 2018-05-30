@@ -18,4 +18,6 @@ Route::group([
     $router->resource('menu','MenuController'); 
     $router->resource('menu_special','SpecialController'); //在专栏哪个分类下的的专栏
     $router->get('zhuanlan','SpecialController@info');//内容搜索大咖
+    $router->resource('menu_special_article','Menu_special_articleController'); //文章在哪个分类下的专栏
+     $router->get('zhuanlan_special','Menu_special_articleController@info');//内容搜索大咖
 });

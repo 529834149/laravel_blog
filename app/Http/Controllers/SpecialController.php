@@ -7,12 +7,13 @@ use App\Model\Article;
 use App\Model\Tag;
 use App\Model\Menu;
 use App\Model\Menu_special;
+use App\Model\Menu_special_article;
 use App\Model\Categories;
 use Cache;
 use Carbon\Carbon;
 class SpecialController extends Controller
 {
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -37,7 +38,6 @@ class SpecialController extends Controller
         $menu = Menu::where('is_del','n')->get();
         return view('special.list',  compact('menu','data','item_data'));
     }
-    
     /**
      * Show the form for creating a new resource.
      *
@@ -67,8 +67,18 @@ class SpecialController extends Controller
      */
     public function show(Request $request,$id)
     {
-        $list = Menu_special::where('menu_id',intval($id))->where('is_del','n')->take(6)->orderBy('publish_time','desc')->get();
-        return $this->returnCode(200,'',$list);
+        $status = isset($request->status) ? 1 :0;
+        if($status){
+            $menu_special = Menu_special::where('id',intval($id))->first();
+            $sp_article_list = Menu_special_article::where('menu_special_id',intval($id))->get();
+//            $sp_article_list = \DB::table('menu_special_article')
+//                ->leftJoin('menu_special','menu_special.id','=','menu_special_article.menu_special_id')
+//                ->get();
+            return view('special.details',  compact('sp_article_list','menu_special'));
+        }else{
+            $list = Menu_special::where('menu_id',intval($id))->where('is_del','n')->take(6)->orderBy('publish_time','desc')->get();
+            return $this->returnCode(200,'',$list);
+        }
     }
 
     /**
@@ -91,7 +101,7 @@ class SpecialController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
     }
 
     /**

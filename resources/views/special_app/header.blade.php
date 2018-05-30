@@ -4,11 +4,11 @@
             <img class="logo" src="/public/default/images/logo.png">
             主页
         </a>
-        <a href="/special" class="item">专辑</a>e
-        <a href="/rank" class="item">发现</a>
+        <a href="/documents" class="item">专辑</a>e
+        <a href="/found" class="item" onclick="alert('开发中');return false;">发现</a>
         <div class="ui simple dropdown item right">
-            <img class="ui avatar image" alt="Destiny"
-                 src="/public/special/picture/4430_1481108240.jpg"> Destiny
+            <img class="ui avatar image" alt=""
+                 src="/public/special/picture/4430_1481108240.jpg"> deng
             <i class="dropdown icon"></i>
             <div class="menu">
                 <a class="item" href="/user"><i class="icon ion-android-person"></i> 个人中心</a>

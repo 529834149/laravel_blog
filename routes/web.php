@@ -30,5 +30,9 @@ Route::resource('/about', 'AboutController');
 Route::resource('/boutique', 'RebilityController');
 //归档文件
 
+
+//专栏开发
+Route::get('/documents/details', 'SpecialController@info');
 Route::resource('/documents', 'SpecialController');
+Route::resource('/settings','SettingsController');
 //Route::resource('/documents', 'DocumentsController');
