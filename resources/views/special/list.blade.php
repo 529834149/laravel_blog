@@ -4,7 +4,7 @@
 @endsection
 @section('content')
     <div class="ui container">
-        <div class="ui two column stackable grid link cards">
+<!--        <div class="ui two column stackable grid link cards">
             @foreach($data as $v)
             <div class="column">
                 <div class="ui fluid card">
@@ -30,15 +30,21 @@
                 </div>
             </div>
             @endforeach
-        </div>
-        <hr><div class="ui section horizontal divider"><i class="icon ion-flag"></i>精品栏目</div><hr>
+        </div>-->
+
+        <div class="ui section horizontal divider"><i class="icon ion-flag"></i>精品栏目</div><hr>
         <div class="ui grid">
             <div class="ui column tag labels">
-                <a class="ui teal label">全部</a>
+                <!--<a class="ui teal label">全部</a>-->
                 @foreach($menu as $v)
-                @if($v->is_publish == 'y')
-                <a class="ui label menu_info "onclick="items({{$v->menu_id}})" id="{{$v->menu_id}}"><i class="icon ion-star"></i>{{$v->name}}</a>
-                @endif
+                    @if($v->is_publish == 'y')
+                         @if($v->name == 'PHP')
+                         <!--<a class="ui teal label">全部</a>-->
+                         <a class="ui label menu_info  "onclick="items({{$v->menu_id}})" id="{{$v->menu_id}}" style="background-color: #00b5ad;"><i class="icon ion-star"></i>{{$v->name}}</a>
+                         @else
+                            <a class="ui label menu_info  "onclick="items({{$v->menu_id}})" id="{{$v->menu_id}}"><i class="icon ion-star"></i>{{$v->name}}</a>
+                         @endif
+                    @endif
                 @endforeach
                 <a class="ui label more">更多<i class="icon ion-chevron-down"></i></a>
             </div>
@@ -63,7 +69,7 @@
                     </div>
                     <div class="extra content">
                         <div class="left floated author">
-                            <img class="ui avatar image" src="https://dn-phphub.qbox.me/uploads/images/201709/10/4430/xlAZ6z2HsW.png"> Chenbj
+                            <img class="ui avatar image"  src="https://dn-phphub.qbox.me/uploads/images/201709/10/4430/xlAZ6z2HsW.png"> Chenbj
                         </div>
                         <span class="right floated">
                          <span class="like"><i class="icon ion-heart"></i> 喜欢({{$v1->like}})</span>
