@@ -116,7 +116,8 @@ class Menu_special_articleController extends Controller
              $form->date('publish_time','发布时间');
             $form->select('is_show','是否展示')->options(['n' => '隐藏', 'y' => '展示']); 
             $form->number('access', '浏览数');
-            $form->ckeditor('content','文章内容');
+            $form->editor('content','文章内容');
+            
         });
     }
     public function info(\Request $request){
