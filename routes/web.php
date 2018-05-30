@@ -34,5 +34,6 @@ Route::resource('/boutique', 'RebilityController');
 //专栏开发
 Route::get('/documents/details', 'SpecialController@info');
 Route::resource('/documents', 'SpecialController');
+Route::get('/article_deal', 'SpecialController@details');
 Route::resource('/settings','SettingsController');
 //Route::resource('/documents', 'DocumentsController');

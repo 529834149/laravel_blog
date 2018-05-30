@@ -48,7 +48,7 @@
             <div class="ui column tag labels" >
                 @foreach($menu as $v)
                     @if($v->is_publish == 'n')
-                    <a href="/documents/{{$v->id}}?status=1" class="ui label menu_info" onclick="items({{$v->menu_id}})" id="{{$v->menu_id}}"><i class="icon ion-star"></i>{{$v->name}}</a>
+                    <a  class="ui label menu_info" onclick="items({{$v->menu_id}})" id="{{$v->menu_id}}"><i class="icon ion-star"></i>{{$v->name}}</a>
                     @endif
                 @endforeach
             </div>
@@ -63,8 +63,7 @@
                     </div>
                     <div class="extra content">
                         <div class="left floated author">
-                            <img class="ui avatar image"
-                                 src="https://dn-phphub.qbox.me/uploads/images/201709/10/4430/xlAZ6z2HsW.png"> Matt
+                            <img class="ui avatar image" src="https://dn-phphub.qbox.me/uploads/images/201709/10/4430/xlAZ6z2HsW.png"> Matt
                         </div>
                         <span class="right floated">
                          <span class="like"><i class="icon ion-heart"></i> 喜欢({{$v1->like}})</span>
@@ -128,7 +127,7 @@
 //                        console.log(array[index]['title']);return false;
                             html+='<div class="column">'
                             html+='<div class="ui fluid card">'
-                            html+='<a class="image"></a>'
+                            html+='<a class="image"><img src="/public/upload/'+array[index]['pic']+'"></a>'
                             html+='<div class="content">'
                             html+='<a href="/documents/'+array[index]['id']+'?status=1" class="header">'+array[index]['title']+'</a>'
                             html+='</div>'
@@ -152,10 +151,12 @@
                     }else{
                         $('.date_list').empty();
                         $('.date_list').html('暂无专栏');
+                        return false;
                     }
                 }else{
                     $('.date_list').empty();
                     $('.date_list').html('暂无专栏');
+                    return false;
                 }
             }
         });
