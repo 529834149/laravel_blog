@@ -67,9 +67,9 @@
             cursor: pointer;
         }
 
-        .fluid.card .image {
+        .fluid.card .image img {
             height: 250px;
-            background-image: url('/public/special/picture/xlaz6z2hsw.png');
+            /*background-image: url('/public/special/picture/xlaz6z2hsw.png');*/
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center center;
