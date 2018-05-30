@@ -1,7 +1,7 @@
 <div class="ui main large stackable fixed inverted menu">
     <div class="ui container">
         <a href="/" class="header item">
-            <img class="logo" src="/public/default/images/logo.png">
+            <img class="logo" src="/public/default/picture/sex.png">
             主页
         </a>
         <a href="/documents" class="item">专辑</a>e
