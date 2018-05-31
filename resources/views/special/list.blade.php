@@ -46,6 +46,7 @@
                         <span class="right floated">
                          <span class="like"><i class="icon ion-heart"></i> 喜欢({{$v1->like}})</span>
                         <span class="star"><i class="icon ion-ios-eye-outline"></i> 浏览({{$v1->access}}) </span>
+                        <span class="like"><i class="icon ion-heart"></i> 发布于:{{mdate(strtotime($v1->publish_time))}}</span>
                     </span>
                     </div>
                 </div>
