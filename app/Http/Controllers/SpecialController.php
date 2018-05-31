@@ -50,7 +50,9 @@ class SpecialController extends Controller
     }
     public function details(Request $request)
     {
+       
         $aid = $request->input('aid');
+        \DB::table('menu_special_article')->where('id',intval($aid))->increment('access');
         $date = Menu_special_article::where('id',intval($aid))->first();
         return view('special.article_apecial',  compact('date'));
     }
