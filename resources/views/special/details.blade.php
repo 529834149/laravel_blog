@@ -22,6 +22,7 @@
                         </p>
                         <div class="description">未来的你一定会感谢现在努力的自己</div>
                     </div>
+                    
                     <div class="extra content">
                        <i class="icon ion-location"></i>现居住地:北京海淀区
                     </div>
@@ -43,7 +44,7 @@
                                 <a href="/article_deal?aid={{$v->id}}">{{$v->title}}</a>
                             </div>
                              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                                <small><i class="icon ion-clock"></i>{{$v->publish_time}}</small>
+                                <small><i class="icon ion-clock"></i>{{mdate(strtotime($v->publish_time))}}</small>
                                 <small><i class="icon ion-eye"></i>{{$v->access}}</small>
                                 <small> <i class="icon ion-chatbox"></i>11</small>
                                 <small> <i class="icon ion-thumbsup"></i></i>{{$v->zan}}</small>

@@ -17,7 +17,7 @@
                                         <big>|</big>
                                         <small>浏览数：{{$v->access}}</small>
                                         <big>|</big>
-                                        <small>发布时间：{{$v->publish_time}}</small>
+                                        <small>发布时间：{{mdate(strtotime($v->publish_time))}}</small>
                                     </div>
                                 </div>
                             </div>
