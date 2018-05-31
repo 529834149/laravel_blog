@@ -1,37 +1,9 @@
 @extends('special_app.app')
 @section('carousel')
-    @include('special_app.carousel')
+    @include('special_app.header_list')
 @endsection
 @section('content')
     <div class="ui container">
-<!--        <div class="ui two column stackable grid link cards">
-            @foreach($data as $v)
-            <div class="column">
-                <div class="ui fluid card">
-                    <div class="ui fluid image">
-                        <div class="ui black ribbon label"><i class="icon ion-ios-star"></i> PHP专题精选</div>
-                        <a href="/documents/{{$v->id}}?status=1" class="image" ><img src="/public/upload/{{$v->pic}}"></a>
-                    </div>
-                    <div class="content">
-                        <a href="/documents/{{$v->id}}?status=1" class="header">{{$v->title}}</a>
-                    </div>
-                    <div class="extra content">
-                        <div class="left floated author">
-                            <a href="/documents/{{$v->id}}?status=1">
-                            <img class="ui avatar image"
-                                 src="https://dn-phphub.qbox.me/uploads/images/201709/10/4430/xlAZ6z2HsW.png"></a> Chenbj
-                        </div>
-                        <span class="right floated">
-                            <span class="like" onclick=""><i class="icon ion-heart"></i> 喜欢({{$v->like}})</span>
-                        <span class="star"><i class="icon ion-ios-eye-outline"></i> 浏览({{$v->access}}) </span>
-                        <span class="wait"><i class="icon ion-ios-timer-outline"></i>发布时间:{{$v->publish_time}} </span>
-                    </span>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>-->
-
         <div class="ui section horizontal divider"><i class="icon ion-flag"></i>精品栏目</div><hr>
         <div class="ui grid">
             <div class="ui column tag labels">

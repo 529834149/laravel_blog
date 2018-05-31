@@ -21,6 +21,14 @@ class SpecialController extends Controller
      */
     public function index(Request $request)
     {
+        //最新文章最新文章top
+        $new_article = \DB::table('menu_special_article')
+                ->leftJoin('menu_special','menu_special.id','=','menu_special_article.menu_special_id')
+                ->select('menu_special_article.title','menu_special_article.publish_time','menu_special_article.id','menu_special_article.access','menu_special.title as cate')
+                ->orderBy('menu_special_article.publish_time','desc')
+                ->take(10)
+                ->get();
+        
         $data = \DB::table('menu_special')
                 ->where('menu_special.is_del','n')
                 ->where('menu_special.is_publish','y')
@@ -35,9 +43,10 @@ class SpecialController extends Controller
                 ->orderBy('menu_special.publish_time','desc')
                 ->take(6)
                 ->get();
+//        dd($new_article);
         // 获取当前
         $menu = Menu::where('is_del','n')->get();
-        return view('special.list',  compact('menu','data','item_data'));
+        return view('special.list',  compact('menu','data','item_data','new_article'));
     }
     public function details(Request $request)
     {
