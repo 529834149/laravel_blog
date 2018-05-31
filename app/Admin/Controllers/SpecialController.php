@@ -108,7 +108,7 @@ class SpecialController extends Controller
             $form->display('id', 'ID');
             $form->text('title','专栏题目');
             $form->text('author','作者');
-            $form->date('publish_time','发布时间');
+            $form->datetime('publish_time','发布时间')->format('YYYY-MM-DD HH:mm:ss');
             $form->image('pic','封页图片');
             $form->select('is_publish','是否推荐')->options(['n' => '不推荐', 'y' => '推荐']); 
             $form->select('is_del','是否删除')->options(['n' => '正常', 'y' => '删除']); 

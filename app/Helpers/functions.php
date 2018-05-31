@@ -357,8 +357,6 @@ function format_date($time){
     }
 }	
 	
-	
-	
  function mdate($time = NULL) {
 	    $text = '';
 	    $time = $time === NULL || $time > time() ? time() : intval($time);

@@ -113,7 +113,7 @@ class Menu_special_articleController extends Controller
                     return [$menu_special->id => $menu_special->title];
                 }
             })->ajax('/admin/zhuanlan_special','id','title')->rules('required');
-             $form->date('publish_time','发布时间');
+            $form->datetime('publish_time','发布时间')->format('YYYY-MM-DD HH:mm:ss');
             $form->select('is_show','是否展示')->options(['n' => '隐藏', 'y' => '展示']); 
             $form->number('access', '浏览数');
             $form->editor('content','文章内容');
