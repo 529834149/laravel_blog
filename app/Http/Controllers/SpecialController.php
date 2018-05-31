@@ -30,6 +30,7 @@ class SpecialController extends Controller
                 ->get();
          $item_data = \DB::table('menu_special')
                 ->where('menu_special.is_del','n')
+                ->where('menu_special.menu_id',1)
                 ->leftJoin('menu','menu.menu_id','=','menu_special.menu_id')
                 ->orderBy('menu_special.publish_time','desc')
                 ->take(6)
