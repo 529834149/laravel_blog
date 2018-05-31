@@ -21,6 +21,11 @@ class SpecialController extends Controller
      */
     public function index(Request $request)
     {
+      //获取网站各个数量数据栏目数:15 |文章数:50|分类数:50|评论数:50|总浏览数:50|喜欢数:50
+      $param['cate_num'] = Menu::where('is_del','n')->count();
+      $param['lanmu_num'] = Menu_special::where('is_del','n')->count();
+      $param['article_num'] = Menu_special_article::where('is_show','y')->count();
+        //最新文章最新文章top
         //最新文章最新文章top
         $new_article = \DB::table('menu_special_article')
                 ->leftJoin('menu_special','menu_special.id','=','menu_special_article.menu_special_id')
@@ -46,10 +51,10 @@ class SpecialController extends Controller
 //        dd($new_article);
         // 获取当前
         $menu = Menu::where('is_del','n')->get();
-        return view('special.list',  compact('menu','data','item_data','new_article'));
+        return view('special.list',  compact('menu','data','item_data','new_article','param'));
     }
     public function details(Request $request)
-    {
+    { 
        
         $aid = $request->input('aid');
         \DB::table('menu_special_article')->where('id',intval($aid))->increment('access');

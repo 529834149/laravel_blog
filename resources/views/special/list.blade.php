@@ -7,7 +7,8 @@
         <div class="ui section horizontal divider"><i class="icon ion-flag"></i>状态</div>
          <div class="ui grid">
             <div class="ui column tag labels">
-               <i class="icon ion-briefcase"></i>栏目数:15 <big>|</big><i class="icon ion-ios-book"></i>文章数:50<big>|</big><i class="icon ion-ios-browsers"></i>分类数:50<big>|</big><i class="icon ion-ios-chatbubble"></i>评论数:50<big>|</big><i class="icon ion-ios-eye-outline"></i>总浏览数:50<big>|</big><i class="icon ion-heart"></i>喜欢数:50
+
+               <i class="icon ion-briefcase"></i>栏目数:{{$param['lanmu_num']}} <big>|</big><i class="icon ion-ios-book"></i>文章数:{{$param['article_num']}}<big>|</big><i class="icon ion-ios-browsers"></i>分类数:{{$param['cate_num']}}
             </div>
             
         </div>
