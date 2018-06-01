@@ -35,5 +35,6 @@ Route::resource('/boutique', 'RebilityController');
 Route::get('/documents/details', 'SpecialController@info');
 Route::resource('/documents', 'SpecialController');
 Route::get('/article_deal', 'SpecialController@details');
+Route::post('/article_common', 'SpecialController@insertInfo');
 Route::resource('/settings','SettingsController');
 //Route::resource('/documents', 'DocumentsController');

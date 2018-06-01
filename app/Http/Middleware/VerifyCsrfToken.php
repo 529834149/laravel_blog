@@ -18,6 +18,7 @@ class VerifyCsrfToken extends BaseVerifier
         '*clicks_zan*',
         '*article*',
         '*search*',
-        '*signature*'
+        '*signature*',
+        '*article_deal*'
     ];
 }
