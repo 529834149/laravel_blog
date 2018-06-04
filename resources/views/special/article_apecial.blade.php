@@ -192,5 +192,7 @@ ul,li{list-style:none;}
             
         </div>
     </div>
+    <script src="/public/layer/layer-v3.1.1/layer/layer.js"></script>
     <script src="/public/special/js/editorlist.js?158874587744"></script>
+    <!--public\layer\layer-v3.1.1\layer-->
 @endsection

@@ -9,7 +9,7 @@ use App\Model\Menu;
 use App\Model\Menu_special;
 use App\Model\Menu_special_article;
 use App\Model\Categories;
-use App\Model\Comment;
+use App\Model\Common;
 use Cache;
 use Carbon\Carbon;
 use EndaEditor;
@@ -81,14 +81,15 @@ class SpecialController extends Controller
      */
     public function insertInfo(Request $request)
     {
-        $param['id'] = intval($request->input('aid'));
-        $param['content'] = $request->input('content');
-        $param['date'] = date('Y-m-d H:i:s',time());
-        $param['reply_id'] = intval($request->input('reply_id'));
-        $param['uid'] = intval($request->input('uid'));
-        $comont = Comment::insert($param);
-        if($comont){
-            return $this->returnCode(200,'',$param);
+       
+        $params['id'] = intval($request->input('aid'));
+        $params['content'] = $request->input('content');
+        $params['date'] = date('Y-m-d H:i:s',time());
+        $params['reply_id'] = intval($request->input('reply_id'));
+        $params['uid'] = intval($request->input('uid'));
+        $info = Common::create($params);
+        if($info){
+            return $this->returnCode(200,'',$params);
         }else{
            return $this->returnCode(400); 
         }
