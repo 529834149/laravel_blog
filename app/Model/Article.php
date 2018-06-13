@@ -3,7 +3,6 @@
 namespace App\Model;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
-use Elasticquent\ElasticquentTrait;
 class Article extends Model
 {
 //    https://laravel-china.org/docs/laravel/5.4/pagination/1260
