@@ -116,7 +116,7 @@
                     <!--主体内容-->
                     @yield('content')
                     <!--侧边栏-->
-                    @include('layouts._left_item')
+                 
                 </section>
             </div>
         </div>

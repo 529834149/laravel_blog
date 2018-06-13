@@ -39,8 +39,8 @@
                         <a href="#" title="Laravel 5 开发博客系统教程">Laravel 5 开发博客系统教程</a></div>
                 </article>
                 <article class="col-sm-3 series clearfix">
-                    <div class="series-post" style="background-image:url(images/laravel-from-logo.jpg)">
-                        <a href="#" title="Laravel 5 开发博客系统教程">PHP部分功能讲解及源码分析</a></div>
+                    <div class="series-post" style="background-image:url(images/php.jpg)">
+                        <a href="#" title="PHP部分功能讲解及源码分析">PHP部分功能讲解及源码分析</a></div>
                 </article>
             </section>
         </section>
