@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\DB;
 class Article extends Model
 {
 //    https://laravel-china.org/docs/laravel/5.4/pagination/1260
-    use ElasticquentTrait;
     protected $connection = 'mysql';
     protected $table ='articles';
     protected $primaryKey = 'aid';//定义主键
