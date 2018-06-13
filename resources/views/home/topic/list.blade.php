@@ -3,7 +3,7 @@
 @section('title',' 专题')
 
 @section('content')
-<div id="pjaxdata" class="pjaxdata">
+<!--<div id="pjaxdata" class="pjaxdata">-->
     <div class="container">
         <section class="row">
             <section class='col-md-12 well'>
@@ -45,5 +45,5 @@
             </section>
         </section>
     </div>
-</div>
+<!--</div>-->
 @stop
