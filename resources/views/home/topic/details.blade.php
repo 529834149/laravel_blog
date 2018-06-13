@@ -193,5 +193,4 @@
         </div>
     </article>
 </section>
-@include('layouts._left_item')
 @stop

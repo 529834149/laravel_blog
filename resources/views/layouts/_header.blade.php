@@ -124,7 +124,7 @@
                                 </ul>
                             </li>
                             <li id="menu-item-1634" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item ">
-                                 <a href="#">
+                                 <a href="/topic">
                                     <i class='fa fa-folder-open'>
                                     </i>
                                     专题

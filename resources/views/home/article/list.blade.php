@@ -305,4 +305,5 @@
        {{ $get_article->links() }}
     </ul>
 </section>
+@include('layouts._left_item')
 @stop
