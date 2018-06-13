@@ -1,4 +1,5 @@
 /vendor
+/resources/view/vendor
 /public/packages
 /storage
 /bootstrap
