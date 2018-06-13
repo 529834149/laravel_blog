@@ -31,26 +31,50 @@ class Controller extends BaseController
      */
     private function init(Request $request) {
         $this->getCategory($request);
-        $this->get_More_Article($request);//获取更多当前点击量最多的文章
-        $this->seoUrl($request);//对文章标题生成seo友好连接
-        $this->case_list($request);//经典推荐
+//        $this->get_More_Article($request);//获取更多当前点击量最多的文章
+//        $this->seoUrl($request);//对文章标题生成seo友好连接
+//        $this->case_list($request);//经典推荐
+        $this->getTages($request);//经典推荐
+        $this->getNewArticle($request);//经典推荐
     }
+    /**
+     * 获取文章标签内容
+     */
+    public function getTages()
+    {
+        
+            $tags = \DB::connection('mysql')
+                ->table('tags')
+                ->where('is_show',1)
+                ->get();
+            $date = [];
+            foreach($tags as $k=>$v){
+                $date[$k]['count'] = Article::where('tags_id',$v->tags_id)->count();
+                $date[$k]['tags_name'] = $v->name;
+            }
+            \View::share('date',$date);
+    }
+    
     /**
      * 
      * @return 实现获取分类方法
      */
     public function getCategory()
     {
-        $get_cate = Categories::where('is_show',1)->orderBy('order','asc')->get()->toArray();
-        $menuAll = $this->get_cate_recursion($get_cate);
-        \View::share('menuAll',$menuAll);
+        $get_cate = Categories::where('parent_id',0)->orderBy('order','asc')->get()->toArray();
+        $getCate = [];
+        foreach($get_cate as $k=>$v){
+            $getCate[$v['title']] = Categories::where('parent_id',$v['cate_id'])->get();
+        }
+        $get_cate = array_values($getCate);
+        \View::share('getCate',$getCate);
     }
     /**
      * 获取最新的两篇文章
      */
-    public function get_More_Article(Request $request)
+    public function getNewArticle(Request $request)
     {
-        $get_hot_article = Article::where('is_show',1)->orderBy('publish_time','asc')->take(20)->get();
+        $get_hot_article = Article::where('is_show',1)->orderBy('publish_time','asc')->take(5)->get();
         \View::share('get_hot_article',$get_hot_article);
     }
     /**
@@ -58,7 +82,7 @@ class Controller extends BaseController
      */
     public function seoUrl()
     {
-        $list = Tag::where('is_show',1)->orderBy('tid','desc')->get();
+        $list = Tag::where('is_show',1)->orderBy('tags_id','desc')->get();
         $tag = [];
         foreach($list as $k=>$v){
            $tag[$k] = $v;

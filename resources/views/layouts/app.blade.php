@@ -1,97 +1,142 @@
 <!DOCTYPE html>
-<html xml:lang="zh-Hans" lang="zh-Hans">
+<html>
     
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
-        <meta name="generator" content="Z-BlogPHP 1.5.1 Zero" />
-        <meta name="renderer" content="webkit">
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <meta name="baidu_union_verify" content="f0082d77a1353330b545d2d9c3aa13eb">
-        <!--百度统计代码 -->
-        <!--网站关键词、描述添加-->
-        <title>bodys</title>
-        <meta name="Keywords" content="技术、教程、解决方案、web、服务器各种疑难杂症">
-        <meta name="description" content="技术、教程、解决方案、web、服务器各种疑难杂症">
-        <meta name="author" content="陈宝金">
-        
-        <!--网站关键词、描述添加结束-->
-        <link rel="shortcut icon" href="/public/default/picture/favicon.ico" />
-        <link rel="stylesheet" rev="stylesheet" href="/public/default/css/normalize_1.css" type="text/css" media="all" />
-        <link rel="stylesheet" rev="stylesheet" href="//at.alicdn.com/t/font_597522_h25unind9rb5ipb9.css" type="text/css" media="all" />
-        <link rel="stylesheet" rev="stylesheet" href="/public/default/css/style_1.css" type="text/css" media="all" />
-        
-        <link rel="stylesheet" href="/public/default/css/lightbox_1.css" type="text/css" media="screen" />
-       
-        <link rel="stylesheet" href="/public/default/css/newlypublished_1.css" type="text/css" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-        
-        <!--视频点播-->
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
-        <!-- 引入播放器 css 文件 -->
-        <link href="//imgcache.qq.com/open/qcloud/video/tcplayer/tcplayer.css" rel="stylesheet">
-        <!-- 如需在IE8、9浏览器中初始化播放器，浏览器需支持Flash并在页面中引入 -->
+        <title>
+            @yield('title', 'IT-Bodys')
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="qc:admins" content="4200263000006375" />
+        <meta name="description" content="">
+        <meta name="keywords" content="专题Specs&#039; Blog-就爱PHP">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <script>
+            var themeConfig = {
+                fixedNav: true,
+                isPjax: false,
+                postId: 0
+            };
+        </script>
+        <!--<link rel='dns-prefetch' href='//im.9iphp.com' />-->
+        <!--<link rel='dns-prefetch' href='//s.w.org' />-->
+<!--        <link rel="alternate" type="application/rss+xml" title="Bodys&#039; Blog-就爱PHP &raquo; 专题Feed"
+        href="https://9iphp.com/series/feed/" />-->
+        <link rel='stylesheet' id='9iphp-style-css' href='/public/home/css/style.css' type='text/css'
+        media='all' />
+        <script type='text/javascript' src='/public/home/js/jquery.min.js'>
+        </script>
+        <script type='text/javascript' src='/public/home/js/9iphp.js'>
+        </script>
+        <link rel='https://api.w.org/' href='https://9iphp.com/wp-json/' />
+        <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://9iphp.com/xmlrpc.php?rsd"
+        />
+        <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://9iphp.com/wp-includes/wlwmanifest.xml"
+        />
+        <meta name="generator" content="WordPress 4.7.10" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet">
+        <style type="text/css">
+            body{ background: #ffffff; }
+        </style>
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media
+        queries -->
         <!--[if lt IE 9]>
-        <script src="//imgcache.qq.com/open/qcloud/video/tcplayer/ie8/videojs-ie8.js"></script>
+            <script src="js/html5shiv.js">
+            </script>
+            <script src="js/respond.min.js">
+            </script>
         <![endif]-->
-        <!-- 如果需要在 Chrome Firefox 等现代浏览器中通过H5播放hls，需要引入 hls.js -->
-        <script src="//imgcache.qq.com/open/qcloud/video/tcplayer/lib/hls.min.0.8.8.js"></script>
-        <!-- 引入播放器 js 文件 -->
-        <script src="//imgcache.qq.com/open/qcloud/video/tcplayer/tcplayer.min.js"></script>
-        <!-- 示例 CSS 样式可自行删除 -->
     </head>
     
-    
-    <link rel="stylesheet" href="/public/default/css/page.css" type="text/css" /></head>
-    <body class="multi category">
-        <!--导航-->
-        @include('layouts._header')
-
-        <!--轮播-->
-        @yield('carousel')
-        <!--内容-->
-        @yield('content')
-        <!--脚注-->
+    <body class="is-loading">
+        <div class="loadingBar">
+        </div>
+        <header class="metabar top-header">
+            <div id="pLoading" class="hidden">
+                <div class="spinner">
+                    <div class="rect1">
+                    </div>
+                    <div class="rect2">
+                    </div>
+                    <div class="rect3">
+                    </div>
+                    <div class="rect4">
+                    </div>
+                    <div class="rect5">
+                    </div>
+                </div>
+                <!-- <img src="picture/loading-bubbles.svg"> -->
+            </div>
+            <div id="masthead" role="banner" class="hidden-xs">
+                <div class="top-banner">
+                    <div class="container">
+                        <a class="brand brand-image" href="https://9iphp.com/" title="Specs&#039; Blog-就爱PHP"
+                        rel="home">
+                            <img src="/public/home/images/logo.png" width="200px" height="50px" alt="Specs&#039; Blog-就爱PHP">
+                            <h1 class="hidden-xs">
+                                <small>
+                                    勤能补拙，出彩自己
+                                </small>
+                            </h1>
+                            <!-- <audio class="aud" src="http://www.w3school.com.cn/i/song.mp3" controls="controls"
+                            autoplay="autoplay" loop="loop"> <p>Oops, looks like your browser doesn't support HTML 5 audio.</p> </audio> -->
+                        </a>
+                        <div class="top-social pull-right hidden-xs">
+                            <a id="s_sina_weibo" title="新浪微博" target="_blank" href="http://weibo.com/9iphp"
+                            data-toggle="tooltip" data-placement="bottom">
+                                <i class="fa fa-weibo">
+                                </i>
+                            </a>
+                            <a id="s_tencent_weibo" title="腾讯微博" target="_blank" href="http://t.qq.com/Specs_"
+                            data-toggle="tooltip" data-placement="bottom">
+                                <i class="fa fa-tencent-weibo">
+                                </i>
+                            </a>
+                            <a id="s_github" title="GITHUB" target="_blank" href="https://github.com/9IPHP"
+                            data-toggle="tooltip" data-placement="bottom">
+                                <i class="fa fa-github">
+                                </i>
+                            </a>
+                            <a id="s_rss" title="RSS" target="_blank" href="http://9iphp.com/feed"
+                            data-toggle="tooltip" data-placement="bottom">
+                                <i class="fa fa-rss-square">
+                                </i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @include('layouts._header')
+        </header>
+        <!--<div class="metabar header-holder"></div>-->
+        <div id="pjaxdata" class="pjaxdata">
+            <div class="container">
+                <section class="row">
+                    <!--主体内容-->
+                    @yield('content')
+                    <!--侧边栏-->
+                    @include('layouts._left_item')
+                </section>
+            </div>
+        </div>
+        @include('layouts._link')
         @include('layouts._footer')
-        <a href="#0" class="cd-top">Top</a>
-        <script src="/public/default/js/jquery-1.8.3.min.js" type="text/javascript"></script>
-        <script src="/public/default/js/zblogphp.js" type="text/javascript"></script>
-
-        <script type="text/javascript" src="/public/default/js/plugins.count.js"></script>
-        <script src="/public/default/js/tags.js" type="text/javascript"></script>
-
-        <script id="cy_cmt_num" src="/public/default/js/plugins.list.count.js"></script>
-        <script src="/public/default/js/nav.js" type="text/javascript"></script>
-        <script src="/public/default/js/backtotop.js" type="text/javascript"></script>
-        <script src="/public/default/js/mrszhao.js" type="text/javascript"></script>
-        <script>
-            /**
-             * 
-             * @param {type} aid
-             * @returns 当前点击增加阅读数量，存入缓存中
-             */
-            function read(aid){
-                    $.ajax({
-                       type:'get',
-                       url: '/cache',
-                       data:{
-                           aid: aid,
-                           type:'articles'
-                       },
-                       dataType:'json',
-                       success:function(data){
-                           var cons = console;
-                               if (cons){
-                                   cons.log("%c\n","font-size:41px;background:url('http://cdn.iknow.bdimg.com/static/common/pkg/module_zed9cd9fd.png')no-repeat -135px -1px");
-                                   cons.log('想和PHPer共同打造世界最大自媒体平台吗？\n想让自己的成就在亿万用户面前展现吗？想让世界看得你的光芒吗？想让自己的技术提升更快吗？\n加入QQ群:643890530，在这里不仅是工作，投入你的时间和热情，滴滴汗水终会汇聚成不平凡的成果。\n期待你的加盟。（大神在这里！）');
-                                   cons.log("本人邮件chen2018php@163.com有不懂的问题可以发邮件哦");
-                               }
-                       }
-                   });
-                }
+        <script type='text/javascript'>
+            /* <![CDATA[ */
+            var SPECS = {
+                "um_ajaxurl": "https:\/\/9iphp.com\/wp-admin\/admin-ajax.php"
+            };
+            /* ]]> */
+            
+        </script>
+        <script type='text/javascript' src='/public/home/js/comments-ajax.js'>
+        </script>
+        <script type='text/javascript' src='/public/home/js/wp-embed.min.js'>
         </script>
     </body>
 
 </html>
-<!--94.35 ms , 15 query , 5802kb memory , 0 error-->
+<!-- Dynamic page generated in 0.072 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2018-05-25 10:59:00 -->
+<!-- Compression=g zip -->

@@ -16,18 +16,12 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request, Article $article)
+    public function index(Request $request,  Article $article)
     {
-       //获取列表信息
-        $data = \DB::table('articles')
-            ->leftJoin('categories', 'articles.cate_id', '=', 'categories.cate_id')
-            ->where('articles.is_show',1)
-            ->orderBy('articles.publish_time','DESC')
-            ->paginate(10);
-        dd($data);
-       return view('article.list',  compact('data','article'));
+        $get_article = $article->get_article();
+        
+        return view('home.article.list',  compact('get_article'));
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -57,37 +51,15 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Request $request, Article $article)
+    public function show(Request $request, $id)
     {
-         // URL 矫正
-        if ( ! empty($article->slug) && $article->slug != $request->slug) {
-            return redirect($article->link(), 301);
+        $aid = intval($id);
+        if(!$aid){
+            return $this->returnCode(400,'没传必要参数');
         }
-        //获取当前分类信息和tag标签信息
-       $aid = $article['aid'];
-       $article['tag_info'] = Tag::where('tid',intval($article['tags_id']))->get()->toarray();
-       $re = Categories::where('cate_id',intval($article['cate_id']))->first();
-       if($re['parent_id']){
-           $re['parent_name'] = Categories::where('parent_id',intval($re['parent_id']))->first();
-       }else{
-            $re['parent_name'] = '';
-       }   
-       $article['cate_info'] = $re;
-       //才你喜欢的
-       /*
-        * 1、根据当前文章id获取当前文章分类
-        * 2、根据分类查找当前分类下的感觉不错的文章推荐给用户
-        */
-       $aid_get_cate = Article::where('aid',intval($aid))->first();//获取文章分类
-       $article_uid_love_article = Article::where('cate_id',intval($aid_get_cate['cate_id']))->take(3)->get();
-       
-       //相关文章当前文章的往后10条数据
-       $article_uid_labout_article = Article::where('cate_id',intval($aid_get_cate['cate_id']))->take(10)->get();
-       //最新文章  当前分类下的时间最新的2篇
-       $article_uid_new_article = Article::where('cate_id',intval($aid_get_cate['cate_id']))->orderBy('publish_time','desc')->take(2)->get();
-//       Categories
-        //获取当前aid详细内容
-        return view('article.details',  compact('article','article_uid_love_article','article_uid_labout_article','article_uid_new_article'));
+        //获取当前文章详情信息
+        $article_details = Article::get_one_article($aid);
+        return view('home.article.details',compact('article_details'));
     }
 
     /**

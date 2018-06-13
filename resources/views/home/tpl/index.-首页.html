@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            专题 | Specs&#039; Blog-就爱PHP
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="qc:admins" content="4200263000006375" />
+        <meta name="description" content="">
+        <meta name="keywords" content="专题Specs&#039; Blog-就爱PHP">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <script>
+            var themeConfig = {
+                fixedNav: true,
+                isPjax: false,
+                postId: 0
+            };
+        </script>
+        <link rel='dns-prefetch' href='//im.9iphp.com' />
+        <link rel='dns-prefetch' href='//s.w.org' />
+        <link rel="alternate" type="application/rss+xml" title="Specs&#039; Blog-就爱PHP &raquo; 专题Feed"
+        href="https://9iphp.com/series/feed/" />
+        <link rel='stylesheet' id='9iphp-style-css' href='css/style.css' type='text/css'
+        media='all' />
+        <script type='text/javascript' src='js/jquery.min.js'>
+        </script>
+        <script type='text/javascript' src='js/9iphp.js'>
+        </script>
+        <link rel='https://api.w.org/' href='https://9iphp.com/wp-json/' />
+        <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://9iphp.com/xmlrpc.php?rsd"
+        />
+        <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://9iphp.com/wp-includes/wlwmanifest.xml"
+        />
+        <meta name="generator" content="WordPress 4.7.10" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet">
+        <style type="text/css">
+            body{ background: #ffffff; }
+        </style>
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media
+        queries -->
+        <!--[if lt IE 9]>
+            <script src="js/html5shiv.js">
+            </script>
+            <script src="js/respond.min.js">
+            </script>
+        <![endif]-->
+    </head>
+    
+    <body class="is-loading">
+        <div class="loadingBar">
+        </div>
+        <header class="metabar top-header">
+            <div id="pLoading" class="hidden">
+                <div class="spinner">
+                    <div class="rect1">
+                    </div>
+                    <div class="rect2">
+                    </div>
+                    <div class="rect3">
+                    </div>
+                    <div class="rect4">
+                    </div>
+                    <div class="rect5">
+                    </div>
+                </div>
+                <!-- <img src="picture/loading-bubbles.svg"> -->
+            </div>
+            <div id="masthead" role="banner" class="hidden-xs">
+                <div class="top-banner">
+                    <div class="container">
+                        <a class="brand brand-image" href="https://9iphp.com/" title="Specs&#039; Blog-就爱PHP"
+                        rel="home">
+                            <img src="./images/logo.png" width="200px" height="50px" alt="Specs&#039; Blog-就爱PHP">
+                            <h1 class="hidden-xs">
+                                <small>
+                                    勤能补拙，出彩自己
+                                </small>
+                            </h1>
+                            <!-- <audio class="aud" src="http://www.w3school.com.cn/i/song.mp3" controls="controls"
+                            autoplay="autoplay" loop="loop"> <p>Oops, looks like your browser doesn't support HTML 5 audio.</p> </audio> -->
+                        </a>
+                        <div class="top-social pull-right hidden-xs">
+                            <a id="s_sina_weibo" title="新浪微博" target="_blank" href="http://weibo.com/9iphp"
+                            data-toggle="tooltip" data-placement="bottom">
+                                <i class="fa fa-weibo">
+                                </i>
+                            </a>
+                            <a id="s_tencent_weibo" title="腾讯微博" target="_blank" href="http://t.qq.com/Specs_"
+                            data-toggle="tooltip" data-placement="bottom">
+                                <i class="fa fa-tencent-weibo">
+                                </i>
+                            </a>
+                            <a id="s_github" title="GITHUB" target="_blank" href="https://github.com/9IPHP"
+                            data-toggle="tooltip" data-placement="bottom">
+                                <i class="fa fa-github">
+                                </i>
+                            </a>
+                            <a id="s_rss" title="RSS" target="_blank" href="http://9iphp.com/feed"
+                            data-toggle="tooltip" data-placement="bottom">
+                                <i class="fa fa-rss-square">
+                                </i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav id="nav" class="navbar navbar-default container-fluid" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="fa fa-bars">
+                            </span>
+                        </button>
+                        <a class="navbar-brand visible-xs" href="https://9iphp.com/" style='padding:2px 10px'>
+                            <img src="picture/logo_mini.png" width="150px" height="50px" alt="Specs&#039; Blog-就爱PHP">
+                        </a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom">
+                                <a href="/">
+                                    <i class="fa fa-home">
+                                    </i>
+                                    首页
+                                </a>
+                            </li>
+                            <li id="menu-item-880" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class='fa fa-th'>
+                                    </i>
+                                    分类
+                                    <b class="caret">
+                                    </b>
+                                    <i class="icon-angle-down">
+                                    </i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li id="menu-item-74" class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                                        <a href="https://9iphp.com/./web/html">
+                                            <i class='fa fa-html5'>
+                                            </i>
+                                            HTML/CSS
+                                        </a>
+                                    </li>
+                                    <li id="menu-item-8" class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                                        <a href="https://9iphp.com/./web/php">
+                                            <i class='fa fa-code'>
+                                            </i>
+                                            PHP
+                                        </a>
+                                    </li>
+                                    <li id="menu-item-75" class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                                        <a href="https://9iphp.com/./web/database">
+                                            <i class='fa fa-database'>
+                                            </i>
+                                            Database
+                                        </a>
+                                    </li>
+                                    <li id="menu-item-77" class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                                        <a href="https://9iphp.com/./web/javascript">
+                                            <i class='fa fa-edit'>
+                                            </i>
+                                            JS/jQuery
+                                        </a>
+                                    </li>
+                                    <li id="menu-item-1301" class="divider menu-item menu-item-type-custom menu-item-object-custom">
+                                        <a>
+                                            分割线
+                                        </a>
+                                    </li>
+                                    <li id="menu-item-44" class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                                        <a href="https://9iphp.com/./opensystem/dede">
+                                            <i class='fa fa-folder'>
+                                            </i>
+                                            DEDE
+                                        </a>
+                                    </li>
+                                    <li id="menu-item-9" class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                                        <a href="https://9iphp.com/./opensystem/wordpress">
+                                            <i class='fa fa-wordpress'>
+                                            </i>
+                                            WordPress
+                                        </a>
+                                    </li>
+                                    <li id="menu-item-1584" class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                                        <a href="https://9iphp.com/./web/laravel">
+                                            <i class='fa fa-gbp'>
+                                            </i>
+                                            Laravel
+                                        </a>
+                                    </li>
+                                    <li id="menu-item-1003" class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                                        <a href="https://9iphp.com/./opensystem/thinkphp">
+                                            <i class='fa fa-bookmark'>
+                                            </i>
+                                            ThinkPHP
+                                        </a>
+                                    </li>
+                                    <li id="menu-item-1302" class="divider menu-item menu-item-type-custom menu-item-object-custom">
+                                        <a>
+                                            分割线
+                                        </a>
+                                    </li>
+                                    <li id="menu-item-125" class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                                        <a href="https://9iphp.com/./linux">
+                                            <i class='fa fa-linux'>
+                                            </i>
+                                            Linux
+                                        </a>
+                                    </li>
+                                    <li id="menu-item-299" class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                                        <a href="https://9iphp.com/./events">
+                                            <i class='fa fa-info-circle'>
+                                            </i>
+                                            虾扯蛋
+                                        </a>
+                                    </li>
+                                    <!--.dropdown-->
+                                </ul>
+                            </li>
+                            <li id="menu-item-1634" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item active">
+                                <a href="/series">
+                                    <i class='fa fa-folder-open'>
+                                    </i>
+                                    专题
+                                </a>
+                            </li>
+                            <li id="menu-item-840" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                <a href="https://9iphp.com/archives">
+                                    <i class='fa fa-archive'>
+                                    </i>
+                                    归档文章
+                                </a>
+                            </li>
+                            <li id="menu-item-881" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                <a href="https://9iphp.com/tags">
+                                    <i class='fa fa-tags'>
+                                    </i>
+                                    标签页
+                                </a>
+                            </li>
+                            <li id="menu-item-882" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                <a href="https://9iphp.com/guestbook">
+                                    <i class='fa fa-comments-o'>
+                                    </i>
+                                    留言板
+                                </a>
+                            </li>
+                            <li id="menu-item-891" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                <a href="https://9iphp.com/about">
+                                    <i class='fa fa-user'>
+                                    </i>
+                                    关于
+                                </a>
+                            </li>
+                            <li id="menu-item-1147" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                <a href="https://9iphp.com/fa-icons">
+                                    <i class='fa fa-font'>
+                                    </i>
+                                    字体图标
+                                </a>
+                            </li>
+                            <li id="menu-item-1493" class="menu-item menu-item-type-custom menu-item-object-custom">
+                                <a target="_blank" href="http://webres.wang/">
+                                    <i class="fa fa-link">
+                                    </i>
+                                    WEB资源网
+                                </a>
+                            </li>
+                        </ul>
+                        <form action="https://9iphp.com/" method="get" id="searchform" class="navbar-form navbar-right visible-lg"
+                        role="search">
+                            <div class="form-group">
+                                <input type="text" name='s' id='s' class="form-control" placeholder="这里有你想要的"
+                                x-webkit-speech>
+                                <button class="btn btn-danger" type="submit">
+                                    <i class="fa fa-search">
+                                    </i>
+                                </button>
+                            </div>
+                            <!--<button type="submit" class="btn btn-primary">Submit</button>-->
+                        </form>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+        </header>
+        <!--<div class="metabar header-holder"></div>-->
+        <div id="pjaxdata" class="pjaxdata">
+            <div class="container">
+                <section class="row">
+                    <!--[if lt IE 9]>
+                        <div id="ie-warning" class="alert alert-danger fade in visible-lg">
+                            <button type="button" class="close" data-dismiss="alert">
+                                &times;
+                            </button>
+                            <i class="fa fa-warning">
+                            </i>
+                            请注意，本博客不支持低于IE9的浏览器，为了获得最佳效果，请下载最新的浏览器，推荐下载
+                            <a href="http://www.google.cn/intl/zh-CN/chrome/" target="_blank">
+                                <i class="fa fa-compass">
+                                </i>
+                                Chrome
+                            </a>
+                        </div>
+                    <![endif]-->
+                    <section id="main" class="col-md-8">
+                        <!--首页幻灯片-->
+                        <div id="slide" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#slide" data-slide-to="0" class="active">
+                                </li>
+                            </ol>
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <a href="https://promotion.aliyun.com/ntms/act/group/team.html?group=PoAxQCV8Sb"
+                                    data-original-title="" title="">
+                                        <img src="https://static.9iphp.com/wp-content/uploads/2018/06/aliyun-promotion-2.png">
+
+                                    </a>
+                                    
+                                </div>
+
+                            </div>
+                            <a class="left carousel-control" href="#slide" role="button" data-slide="prev"
+                            data-original-title="" title="">
+                                <span class="fa fa-arrow-circle-left">
+                                </span>
+                                <span class="sr-only">
+                                    Previous
+                                </span>
+                            </a>
+                            <a class="right carousel-control" href="#slide" role="button" data-slide="next"
+                            data-original-title="" title="">
+                                <span class="fa fa-arrow-circle-right">
+                                </span>
+                                <span class="sr-only">
+                                    Next
+                                </span>
+                            </a>
+                        </div>
+                        <!--首页文章列表模块-->
+                        <article class="well post clearfix">
+                            <header class="entry-header">
+                                <h1 class="entry-title">
+                                    <a href="https://9iphp.com/web/php/view-first-in-blade.html" title=""
+                                    data-original-title="通过 View::first 使用 Laravel Blade 的动态模板">
+                                        通过 View::first 使用 Laravel Blade 的动态模板
+                                    </a>
+                                </h1>
+                                <div class="clearfix entry-meta">
+                                    <span class="pull-left">
+                                        <time class="entry-date fa fa-calendar" datetime="2017/09/19 12:58:29">
+                                            &nbsp;2017/09/19
+                                        </time>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="categories-links fa fa-folder-o">
+                                            <a href="https://9iphp.com/./web/php" rel="category tag" data-original-title=""
+                                            title="">
+                                                PHP
+                                            </a>
+                                        </span>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="fa fa-comments-o comments-link">
+                                            <a href="https://9iphp.com/web/php/view-first-in-blade.html#comments"
+                                            data-original-title="" title="">
+                                                2 条评论
+                                            </a>
+                                        </span>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="rating tip" title="" data-original-title="平均得分 4,满分 5 分">
+                                            <span class="percent" style="width:80%">
+                                            </span>
+                                        </span>
+                                        (
+                                        <span class="starNum">
+                                            8评
+                                        </span>
+                                        )
+                                    </span>
+                                    <!-- <span class="hidden-xs pull-left"> <span class="dot">|</span> <span class="fa fa-user"> <a href="https://9iphp.com/author/specs" title="由Specs发布" rel="author">Specs</a></span> <span class="dot">|</span> <span class="fa fa-eye"> 732 views</span> </span> -->
+                                </div>
+                            </header>
+                            <div class="entry-summary entry-content clearfix">
+                                <a class="hidden-xs thumbLink" href="https://9iphp.com/web/php/view-first-in-blade.html"
+                                title="" data-original-title="通过 View::first 使用 Laravel Blade 的动态模板">
+                                    <img class="thumb pull-left lazyLoad" src="https://static.9iphp.com/wp-content/uploads/2017/09/view-first.png-w2"
+                                    data-original="https://static.9iphp.com/wp-content/uploads/2017/09/view-first.png-w2"
+                                    alt="通过 View::first 使用 Laravel Blade 的动态模板" style="display: block;">
+                                </a>
+                                <p>
+                                    当创建动态组件或者页面的时候，有时候我们想当自定义模版存在的时候展示它，否则展示默认的模版。
+                                </p>
+                            </div>
+                            <footer class="entry-footer clearfix hidden-xs">
+                                <div class="pull-left footer-tag">
+                                    <a href="https://9iphp.com/tag/blade" rel="tag" data-original-title=""
+                                    title="">
+                                        Blade
+                                    </a>
+                                    <a href="https://9iphp.com/tag/laravel" rel="tag" data-original-title=""
+                                    title="">
+                                        Laravel
+                                    </a>
+                                    <a href="https://9iphp.com/tag/%e6%a8%a1%e7%89%88" rel="tag" data-original-title=""
+                                    title="">
+                                        模版
+                                    </a>
+                                    <a href="https://9iphp.com/tag/%e8%a7%86%e5%9b%be" rel="tag" data-original-title=""
+                                    title="">
+                                        视图
+                                    </a>
+                                </div>
+                                <a class="pull-right more-link" href="https://9iphp.com/web/php/view-first-in-blade.html"
+                                title="" data-original-title="阅读全文">
+                                    阅读全文»
+                                </a>
+                            </footer>
+                        </article>
+                        <article class="well post clearfix">
+                            <header class="entry-header">
+                                <a href="https://9iphp.com/web/php/less-known-useful-carbon-functions.html"
+                                class="entry-cover" data-original-title="" title="">
+                                    <img width="800" height="240" src="https://static.9iphp.com/wp-content/uploads/2017/09/time-carbon.jpeg"
+                                    class="attachment-full size-full wp-post-image" alt="">
+                                </a>
+                                <h1 class="entry-title">
+                                    <a href="https://9iphp.com/web/php/less-known-useful-carbon-functions.html"
+                                    title="" data-original-title="7 个非常有用却很少人知道的 Carbon 方法">
+                                        7 个非常有用却很少人知道的 Carbon 方法
+                                    </a>
+                                </h1>
+                                <div class="clearfix entry-meta">
+                                    <span class="pull-left">
+                                        <time class="entry-date fa fa-calendar" datetime="2017/09/18 22:57:42">
+                                            &nbsp;2017/09/18
+                                        </time>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="categories-links fa fa-folder-o">
+                                            <a href="https://9iphp.com/./web/laravel" rel="category tag" data-original-title=""
+                                            title="">
+                                                Laravel
+                                            </a>
+                                            ,
+                                            <a href="https://9iphp.com/./web/php" rel="category tag" data-original-title=""
+                                            title="">
+                                                PHP
+                                            </a>
+                                        </span>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="fa fa-comments-o comments-link">
+                                            <a href="https://9iphp.com/web/php/less-known-useful-carbon-functions.html#comments"
+                                            data-original-title="" title="">
+                                                5 条评论
+                                            </a>
+                                        </span>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="rating tip" title="" data-original-title="平均得分 4,满分 5 分">
+                                            <span class="percent" style="width:80%">
+                                            </span>
+                                        </span>
+                                        (
+                                        <span class="starNum">
+                                            4评
+                                        </span>
+                                        )
+                                    </span>
+                                    <!-- <span class="hidden-xs pull-left"> <span class="dot">|</span> <span class="fa fa-user"> <a href="https://9iphp.com/author/specs" title="由Specs发布" rel="author">Specs</a></span> <span class="dot">|</span> <span class="fa fa-eye"> 696 views</span> </span> -->
+                                </div>
+                            </header>
+                            <div class="entry-summary entry-content clearfix">
+                                <p>
+                                    我们在很多时候使用 Carbon 来处理日期和时间，对吗？但是又有多少人完整的阅读过文档了解它有那些方法呢？除了众所周知的 now() 和
+                                    format() 方法，Carbon 还有很多其他有用的方法。下面我们一起来看看吧。
+                                </p>
+                            </div>
+                            <footer class="entry-footer clearfix hidden-xs">
+                                <div class="pull-left footer-tag">
+                                    <a href="https://9iphp.com/tag/carbon" rel="tag" data-original-title=""
+                                    title="">
+                                        Carbon
+                                    </a>
+                                    <a href="https://9iphp.com/tag/%e6%96%b9%e6%b3%95" rel="tag" data-original-title=""
+                                    title="">
+                                        方法
+                                    </a>
+                                    <a href="https://9iphp.com/tag/%e6%97%b6%e9%97%b4" rel="tag" data-original-title=""
+                                    title="">
+                                        时间
+                                    </a>
+                                </div>
+                                <a class="pull-right more-link" href="https://9iphp.com/web/php/less-known-useful-carbon-functions.html"
+                                title="" data-original-title="阅读全文">
+                                    阅读全文»
+                                </a>
+                            </footer>
+                        </article>
+                        <article class="well post clearfix">
+                            <header class="entry-header">
+                                <a href="https://9iphp.com/web/laravel/new-laravel-string-helpers-in-laravel-55.html"
+                                class="entry-cover" data-original-title="" title="">
+                                    <img width="1798" height="598" src="https://static.9iphp.com/wp-content/uploads/2017/08/laravel_new_string_helpers.png"
+                                    class="attachment-full size-full wp-post-image" alt="">
+                                </a>
+                                <h1 class="entry-title">
+                                    <a href="https://9iphp.com/web/laravel/new-laravel-string-helpers-in-laravel-55.html"
+                                    title="" data-original-title="Laravel 5.4 及 5.5 中新的字符串辅助方法介绍">
+                                        Laravel 5.4 及 5.5 中新的字符串辅助方法介绍
+                                    </a>
+                                </h1>
+                                <div class="clearfix entry-meta">
+                                    <span class="pull-left">
+                                        <time class="entry-date fa fa-calendar" datetime="2017/08/22 08:29:35">
+                                            &nbsp;2017/08/22
+                                        </time>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="categories-links fa fa-folder-o">
+                                            <a href="https://9iphp.com/./web/laravel" rel="category tag" data-original-title=""
+                                            title="">
+                                                Laravel
+                                            </a>
+                                        </span>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="fa fa-comments-o comments-link">
+                                            <a href="https://9iphp.com/web/laravel/new-laravel-string-helpers-in-laravel-55.html#comments"
+                                            data-original-title="" title="">
+                                                暂无评论
+                                            </a>
+                                        </span>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="rating tip" title="" data-original-title="平均得分 3.2,满分 5 分">
+                                            <span class="percent" style="width:64%">
+                                            </span>
+                                        </span>
+                                        (
+                                        <span class="starNum">
+                                            5评
+                                        </span>
+                                        )
+                                    </span>
+                                    <!-- <span class="hidden-xs pull-left"> <span class="dot">|</span> <span class="fa fa-user"> <a href="https://9iphp.com/author/specs" title="由Specs发布" rel="author">Specs</a></span> <span class="dot">|</span> <span class="fa fa-eye"> 613 views</span> </span> -->
+                                </div>
+                            </header>
+                            <div class="entry-summary entry-content clearfix">
+                                <p>
+                                    随着 Laravel 5.5 大版本发布时间的临近（预计为 2017 Laracon EU (8.28 – 8.30)期间发布），Laravel
+                                    带来了一些新的字符串辅助方法。下面介绍 String 辅助类中一些非常有亮点的新方法。
+                                </p>
+                            </div>
+                            <footer class="entry-footer clearfix hidden-xs">
+                                <div class="pull-left footer-tag">
+                                    <a href="https://9iphp.com/tag/laravel" rel="tag" data-original-title=""
+                                    title="">
+                                        Laravel
+                                    </a>
+                                    <a href="https://9iphp.com/tag/%e8%be%85%e5%8a%a9%e6%96%b9%e6%b3%95" rel="tag"
+                                    data-original-title="" title="">
+                                        辅助方法
+                                    </a>
+                                </div>
+                                <a class="pull-right more-link" href="https://9iphp.com/web/laravel/new-laravel-string-helpers-in-laravel-55.html"
+                                title="" data-original-title="阅读全文">
+                                    阅读全文»
+                                </a>
+                            </footer>
+                        </article>
+                        <article class="well post clearfix">
+                            <header class="entry-header">
+                                <a href="https://9iphp.com/web/laravel/laravel-mailables-notfiications-as-event-listeners.html"
+                                class="entry-cover" data-original-title="" title="">
+                                    <img width="800" height="240" src="https://static.9iphp.com/wp-content/uploads/2017/08/email-laravel-notification.png"
+                                    class="attachment-full size-full wp-post-image" alt="">
+                                </a>
+                                <h1 class="entry-title">
+                                    <a href="https://9iphp.com/web/laravel/laravel-mailables-notfiications-as-event-listeners.html"
+                                    title="" data-original-title="使用 Laravel 的邮件和消息通知作为事件监听者">
+                                        使用 Laravel 的邮件和消息通知作为事件监听者
+                                    </a>
+                                </h1>
+                                <div class="clearfix entry-meta">
+                                    <span class="pull-left">
+                                        <time class="entry-date fa fa-calendar" datetime="2017/08/14 23:52:31">
+                                            &nbsp;2017/08/14
+                                        </time>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="categories-links fa fa-folder-o">
+                                            <a href="https://9iphp.com/./web/laravel" rel="category tag" data-original-title=""
+                                            title="">
+                                                Laravel
+                                            </a>
+                                        </span>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="fa fa-comments-o comments-link">
+                                            <a href="https://9iphp.com/web/laravel/laravel-mailables-notfiications-as-event-listeners.html#comments"
+                                            data-original-title="" title="">
+                                                暂无评论
+                                            </a>
+                                        </span>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="rating tip" title="" data-original-title="平均得分 4.6,满分 5 分">
+                                            <span class="percent" style="width:92%">
+                                            </span>
+                                        </span>
+                                        (
+                                        <span class="starNum">
+                                            5评
+                                        </span>
+                                        )
+                                    </span>
+                                    <!-- <span class="hidden-xs pull-left"> <span class="dot">|</span> <span class="fa fa-user"> <a href="https://9iphp.com/author/specs" title="由Specs发布" rel="author">Specs</a></span> <span class="dot">|</span> <span class="fa fa-eye"> 575 views</span> </span> -->
+                                </div>
+                            </header>
+                            <div class="entry-summary entry-content clearfix">
+                                <p>
+                                    多数情况下，当某个特定事件发生时我们会给用户发生通知，例如当有购买行为时我们会发送发票，或者当用户注册时发送一个欢迎邮件，为了实现这个功能，我们需要这样监听事件：
+                                </p>
+                            </div>
+                            <footer class="entry-footer clearfix hidden-xs">
+                                <div class="pull-left footer-tag">
+                                    <a href="https://9iphp.com/tag/laravel" rel="tag" data-original-title=""
+                                    title="">
+                                        Laravel
+                                    </a>
+                                    <a href="https://9iphp.com/tag/%e4%ba%8b%e4%bb%b6" rel="tag" data-original-title=""
+                                    title="">
+                                        事件
+                                    </a>
+                                    <a href="https://9iphp.com/tag/%e7%9b%91%e5%90%ac%e8%80%85" rel="tag"
+                                    data-original-title="" title="">
+                                        监听者
+                                    </a>
+                                    <a href="https://9iphp.com/tag/%e9%80%9a%e7%9f%a5" rel="tag" data-original-title=""
+                                    title="">
+                                        通知
+                                    </a>
+                                    <a href="https://9iphp.com/tag/%e9%82%ae%e4%bb%b6" rel="tag" data-original-title=""
+                                    title="">
+                                        邮件
+                                    </a>
+                                </div>
+                                <a class="pull-right more-link" href="https://9iphp.com/web/laravel/laravel-mailables-notfiications-as-event-listeners.html"
+                                title="" data-original-title="阅读全文">
+                                    阅读全文»
+                                </a>
+                            </footer>
+                        </article>
+                        <article class="well post clearfix">
+                            <header class="entry-header">
+                                <a href="https://9iphp.com/web/laravel/resourceful-controllers-overriding-route-names-parameters.html"
+                                class="entry-cover" data-original-title="" title="">
+                                    <img width="1500" height="498" src="https://static.9iphp.com/wp-content/uploads/2017/07/resourceful_routes.jpg"
+                                    class="attachment-full size-full wp-post-image" alt="">
+                                </a>
+                                <h1 class="entry-title">
+                                    <a href="https://9iphp.com/web/laravel/resourceful-controllers-overriding-route-names-parameters.html"
+                                    title="" data-original-title="资源控制器：覆盖默认的路由名称和参数">
+                                        资源控制器：覆盖默认的路由名称和参数
+                                    </a>
+                                </h1>
+                                <div class="clearfix entry-meta">
+                                    <span class="pull-left">
+                                        <time class="entry-date fa fa-calendar" datetime="2017/07/25 23:09:13">
+                                            &nbsp;2017/07/25
+                                        </time>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="categories-links fa fa-folder-o">
+                                            <a href="https://9iphp.com/./web/laravel" rel="category tag" data-original-title=""
+                                            title="">
+                                                Laravel
+                                            </a>
+                                        </span>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="fa fa-comments-o comments-link">
+                                            <a href="https://9iphp.com/web/laravel/resourceful-controllers-overriding-route-names-parameters.html#comments"
+                                            data-original-title="" title="">
+                                                1 条评论
+                                            </a>
+                                        </span>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="rating tip" title="" data-original-title="暂无评分,满分 5 分">
+                                            <span class="percent" style="width:0%">
+                                            </span>
+                                        </span>
+                                        (
+                                        <span class="starNum">
+                                            0评
+                                        </span>
+                                        )
+                                    </span>
+                                    <!-- <span class="hidden-xs pull-left"> <span class="dot">|</span> <span class="fa fa-user"> <a href="https://9iphp.com/author/specs" title="由Specs发布" rel="author">Specs</a></span> <span class="dot">|</span> <span class="fa fa-eye"> 454 views</span> </span> -->
+                                </div>
+                            </header>
+                            <div class="entry-summary entry-content clearfix">
+                                <p>
+                                    Laravel 资源路由可以将典型的「CURD」路由指定到一个控制器上，仅需一行代码就可以实现，是一个非常神奇的工具。但是如果默认的方法不能
+                                    100% 的适用于你的需求，你需要覆盖它的话该怎么办呢？我们来看看你可以如何实现。
+                                </p>
+                            </div>
+                            <footer class="entry-footer clearfix hidden-xs">
+                                <div class="pull-left footer-tag">
+                                    <a href="https://9iphp.com/tag/laravel" rel="tag" data-original-title=""
+                                    title="">
+                                        Laravel
+                                    </a>
+                                    <a href="https://9iphp.com/tag/%e6%8e%a7%e5%88%b6%e5%99%a8" rel="tag"
+                                    data-original-title="" title="">
+                                        控制器
+                                    </a>
+                                    <a href="https://9iphp.com/tag/%e8%b5%84%e6%ba%90%e6%8e%a7%e5%88%b6%e5%99%a8"
+                                    rel="tag" data-original-title="" title="">
+                                        资源控制器
+                                    </a>
+                                </div>
+                                <a class="pull-right more-link" href="https://9iphp.com/web/laravel/resourceful-controllers-overriding-route-names-parameters.html"
+                                title="" data-original-title="阅读全文">
+                                    阅读全文»
+                                </a>
+                            </footer>
+                        </article>
+                        <article class="well post clearfix">
+                            <header class="entry-header">
+                                <a href="https://9iphp.com/web/laravel/what-packages-do-you-install-on-every-laravel-application-you-create.html"
+                                class="entry-cover" data-original-title="" title="">
+                                    <img width="800" height="240" src="https://static.9iphp.com/wp-content/uploads/2017/07/question-leader-blue.png"
+                                    class="attachment-full size-full wp-post-image" alt="">
+                                </a>
+                                <h1 class="entry-title">
+                                    <a href="https://9iphp.com/web/laravel/what-packages-do-you-install-on-every-laravel-application-you-create.html"
+                                    title="" data-original-title="你的每一个 Laravel 应用中都安装的包有哪些？">
+                                        你的每一个 Laravel 应用中都安装的包有哪些？
+                                    </a>
+                                </h1>
+                                <div class="clearfix entry-meta">
+                                    <span class="pull-left">
+                                        <time class="entry-date fa fa-calendar" datetime="2017/07/20 08:31:19">
+                                            &nbsp;2017/07/20
+                                        </time>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="categories-links fa fa-folder-o">
+                                            <a href="https://9iphp.com/./web/laravel" rel="category tag" data-original-title=""
+                                            title="">
+                                                Laravel
+                                            </a>
+                                        </span>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="fa fa-comments-o comments-link">
+                                            <a href="https://9iphp.com/web/laravel/what-packages-do-you-install-on-every-laravel-application-you-create.html#comments"
+                                            data-original-title="" title="">
+                                                暂无评论
+                                            </a>
+                                        </span>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="rating tip" title="" data-original-title="平均得分 5,满分 5 分">
+                                            <span class="percent" style="width:100%">
+                                            </span>
+                                        </span>
+                                        (
+                                        <span class="starNum">
+                                            2评
+                                        </span>
+                                        )
+                                    </span>
+                                    <!-- <span class="hidden-xs pull-left"> <span class="dot">|</span> <span class="fa fa-user"> <a href="https://9iphp.com/author/specs" title="由Specs发布" rel="author">Specs</a></span> <span class="dot">|</span> <span class="fa fa-eye"> 542 views</span> </span> -->
+                                </div>
+                            </header>
+                            <div class="entry-summary entry-content clearfix">
+                                <p>
+                                    Matt Stauffer 在 Twitter 中对关注者问了一个下面的问题：“Laravel dev：你每一个应用中都安装的包是哪些？”，下面是根据收到的回复整理出来的一个列表。
+                                </p>
+                            </div>
+                            <footer class="entry-footer clearfix hidden-xs">
+                                <div class="pull-left footer-tag">
+                                    <a href="https://9iphp.com/tag/laravel" rel="tag" data-original-title=""
+                                    title="">
+                                        Laravel
+                                    </a>
+                                    <a href="https://9iphp.com/tag/package" rel="tag" data-original-title=""
+                                    title="">
+                                        Package
+                                    </a>
+                                    <a href="https://9iphp.com/tag/%e5%8c%85" rel="tag" data-original-title=""
+                                    title="">
+                                        包
+                                    </a>
+                                </div>
+                                <a class="pull-right more-link" href="https://9iphp.com/web/laravel/what-packages-do-you-install-on-every-laravel-application-you-create.html"
+                                title="" data-original-title="阅读全文">
+                                    阅读全文»
+                                </a>
+                            </footer>
+                        </article>
+                        <article class="well post clearfix">
+                            <header class="entry-header">
+                                <a href="https://9iphp.com/web/laravel/laravel-5-5-custom-validator-rules.html"
+                                class="entry-cover" data-original-title="" title="">
+                                    <img width="800" height="280" src="https://static.9iphp.com/wp-content/uploads/2017/06/laravel-5.5-validator-rules.png"
+                                    class="attachment-full size-full wp-post-image" alt="">
+                                </a>
+                                <h1 class="entry-title">
+                                    <a href="https://9iphp.com/web/laravel/laravel-5-5-custom-validator-rules.html"
+                                    title="" data-original-title="Laravel 5.5 自定义验证规则">
+                                        Laravel 5.5 自定义验证规则
+                                    </a>
+                                </h1>
+                                <div class="clearfix entry-meta">
+                                    <span class="pull-left">
+                                        <time class="entry-date fa fa-calendar" datetime="2017/06/04 12:43:29">
+                                            &nbsp;2017/06/04
+                                        </time>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="categories-links fa fa-folder-o">
+                                            <a href="https://9iphp.com/./web/laravel" rel="category tag" data-original-title=""
+                                            title="">
+                                                Laravel
+                                            </a>
+                                        </span>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="fa fa-comments-o comments-link">
+                                            <a href="https://9iphp.com/web/laravel/laravel-5-5-custom-validator-rules.html#comments"
+                                            data-original-title="" title="">
+                                                2 条评论
+                                            </a>
+                                        </span>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="rating tip" title="" data-original-title="平均得分 5,满分 5 分">
+                                            <span class="percent" style="width:100%">
+                                            </span>
+                                        </span>
+                                        (
+                                        <span class="starNum">
+                                            2评
+                                        </span>
+                                        )
+                                    </span>
+                                    <!-- <span class="hidden-xs pull-left"> <span class="dot">|</span> <span class="fa fa-user"> <a href="https://9iphp.com/author/specs" title="由Specs发布" rel="author">Specs</a></span> <span class="dot">|</span> <span class="fa fa-eye"> 819 views</span> </span> -->
+                                </div>
+                            </header>
+                            <div class="entry-summary entry-content clearfix">
+                                <p>
+                                    Laravel 5.5 新增的一个功能是自定义验证规则，关于这个功能，Taylor 还写了一个快速教程。这里是验证规则的一个简单用例：
+                                </p>
+                            </div>
+                            <footer class="entry-footer clearfix hidden-xs">
+                                <div class="pull-left footer-tag">
+                                    <a href="https://9iphp.com/tag/laravel" rel="tag" data-original-title=""
+                                    title="">
+                                        Laravel
+                                    </a>
+                                    <a href="https://9iphp.com/tag/laravel-5-5" rel="tag" data-original-title=""
+                                    title="">
+                                        Laravel 5.5
+                                    </a>
+                                    <a href="https://9iphp.com/tag/%e8%87%aa%e5%ae%9a%e4%b9%89" rel="tag"
+                                    data-original-title="" title="">
+                                        自定义
+                                    </a>
+                                    <a href="https://9iphp.com/tag/%e8%a1%a8%e5%8d%95%e9%aa%8c%e8%af%81" rel="tag"
+                                    data-original-title="" title="">
+                                        表单验证
+                                    </a>
+                                </div>
+                                <a class="pull-right more-link" href="https://9iphp.com/web/laravel/laravel-5-5-custom-validator-rules.html"
+                                title="" data-original-title="阅读全文">
+                                    阅读全文»
+                                </a>
+                            </footer>
+                        </article>
+                        <article class="well post clearfix">
+                            <header class="entry-header">
+                                <a href="https://9iphp.com/web/php/zttp-a-guzzle-wrapper.html" class="entry-cover"
+                                data-original-title="" title="">
+                                    <img width="800" height="260" src="https://static.9iphp.com/wp-content/uploads/2017/05/zttp-leader.png"
+                                    class="attachment-full size-full wp-post-image" alt="">
+                                </a>
+                                <h1 class="entry-title">
+                                    <a href="https://9iphp.com/web/php/zttp-a-guzzle-wrapper.html" title=""
+                                    data-original-title="Zttp – 一个 Guzzle 简化常见用例的封装">
+                                        Zttp – 一个 Guzzle 简化常见用例的封装
+                                    </a>
+                                </h1>
+                                <div class="clearfix entry-meta">
+                                    <span class="pull-left">
+                                        <time class="entry-date fa fa-calendar" datetime="2017/05/26 22:10:33">
+                                            &nbsp;2017/05/26
+                                        </time>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="categories-links fa fa-folder-o">
+                                            <a href="https://9iphp.com/./web/php" rel="category tag" data-original-title=""
+                                            title="">
+                                                PHP
+                                            </a>
+                                        </span>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="fa fa-comments-o comments-link">
+                                            <a href="https://9iphp.com/web/php/zttp-a-guzzle-wrapper.html#comments"
+                                            data-original-title="" title="">
+                                                2 条评论
+                                            </a>
+                                        </span>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="rating tip" title="" data-original-title="暂无评分,满分 5 分">
+                                            <span class="percent" style="width:0%">
+                                            </span>
+                                        </span>
+                                        (
+                                        <span class="starNum">
+                                            0评
+                                        </span>
+                                        )
+                                    </span>
+                                    <!-- <span class="hidden-xs pull-left"> <span class="dot">|</span> <span class="fa fa-user"> <a href="https://9iphp.com/author/specs" title="由Specs发布" rel="author">Specs</a></span> <span class="dot">|</span> <span class="fa fa-eye"> 345 views</span> </span> -->
+                                </div>
+                            </header>
+                            <div class="entry-summary entry-content clearfix">
+                                <p>
+                                    Zttp 是一个 Adam Wathan 新发布的 PHP 包，是对 Guzzle 的一个封装，目的是带来丰富的语法和简化常见的用例，而Guzzle
+                                    本身使用起来还是相对比较麻烦的。下面是一个带有自定义 Header 的 POST 请求：
+                                </p>
+                            </div>
+                            <footer class="entry-footer clearfix hidden-xs">
+                                <div class="pull-left footer-tag">
+                                    <a href="https://9iphp.com/tag/guzzle" rel="tag" data-original-title=""
+                                    title="">
+                                        Guzzle
+                                    </a>
+                                    <a href="https://9iphp.com/tag/http" rel="tag" data-original-title=""
+                                    title="">
+                                        HTTP
+                                    </a>
+                                    <a href="https://9iphp.com/tag/php" rel="tag" data-original-title="" title="">
+                                        PHP
+                                    </a>
+                                    <a href="https://9iphp.com/tag/zttp" rel="tag" data-original-title=""
+                                    title="">
+                                        Zttp
+                                    </a>
+                                </div>
+                                <a class="pull-right more-link" href="https://9iphp.com/web/php/zttp-a-guzzle-wrapper.html"
+                                title="" data-original-title="阅读全文">
+                                    阅读全文»
+                                </a>
+                            </footer>
+                        </article>
+                        <article class="well post clearfix">
+                            <header class="entry-header">
+                                <a href="https://9iphp.com/web/laravel/laravel-5_5-throw_if-throw_unless.html"
+                                class="entry-cover" data-original-title="" title="">
+                                    <img width="800" height="260" src="https://static.9iphp.com/wp-content/uploads/2017/05/throw_if.png"
+                                    class="attachment-full size-full wp-post-image" alt="">
+                                </a>
+                                <h1 class="entry-title">
+                                    <a href="https://9iphp.com/web/laravel/laravel-5_5-throw_if-throw_unless.html"
+                                    title="" data-original-title="Laravel throw_if 和 throw_unless 辅助函数">
+                                        Laravel throw_if 和 throw_unless 辅助函数
+                                    </a>
+                                </h1>
+                                <div class="clearfix entry-meta">
+                                    <span class="pull-left">
+                                        <time class="entry-date fa fa-calendar" datetime="2017/05/17 08:14:29">
+                                            &nbsp;2017/05/17
+                                        </time>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="categories-links fa fa-folder-o">
+                                            <a href="https://9iphp.com/./web/laravel" rel="category tag" data-original-title=""
+                                            title="">
+                                                Laravel
+                                            </a>
+                                        </span>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="fa fa-comments-o comments-link">
+                                            <a href="https://9iphp.com/web/laravel/laravel-5_5-throw_if-throw_unless.html#comments"
+                                            data-original-title="" title="">
+                                                暂无评论
+                                            </a>
+                                        </span>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="rating tip" title="" data-original-title="暂无评分,满分 5 分">
+                                            <span class="percent" style="width:0%">
+                                            </span>
+                                        </span>
+                                        (
+                                        <span class="starNum">
+                                            0评
+                                        </span>
+                                        )
+                                    </span>
+                                    <!-- <span class="hidden-xs pull-left"> <span class="dot">|</span> <span class="fa fa-user"> <a href="https://9iphp.com/author/specs" title="由Specs发布" rel="author">Specs</a></span> <span class="dot">|</span> <span class="fa fa-eye"> 330 views</span> </span> -->
+                                </div>
+                            </header>
+                            <div class="entry-summary entry-content clearfix">
+                                <p>
+                                    即将发布的 Laravel 5.5 中将带来两个新的辅助函数：throw_if 和 throw_unless，两者的目的都是为了简化抛出异常。
+                                </p>
+                            </div>
+                            <footer class="entry-footer clearfix hidden-xs">
+                                <div class="pull-left footer-tag">
+                                    <a href="https://9iphp.com/tag/laravel" rel="tag" data-original-title=""
+                                    title="">
+                                        Laravel
+                                    </a>
+                                    <a href="https://9iphp.com/tag/laravel-5-5" rel="tag" data-original-title=""
+                                    title="">
+                                        Laravel 5.5
+                                    </a>
+                                    <a href="https://9iphp.com/tag/%e8%be%85%e5%8a%a9%e5%87%bd%e6%95%b0" rel="tag"
+                                    data-original-title="" title="">
+                                        辅助函数
+                                    </a>
+                                </div>
+                                <a class="pull-right more-link" href="https://9iphp.com/web/laravel/laravel-5_5-throw_if-throw_unless.html"
+                                title="" data-original-title="阅读全文">
+                                    阅读全文»
+                                </a>
+                            </footer>
+                        </article>
+                        <article class="well post clearfix">
+                            <header class="entry-header">
+                                <h1 class="entry-title">
+                                    <a href="https://9iphp.com/web/laravel/laravel-5-5-error-views.html" title=""
+                                    data-original-title="Laravel 5.5 中将对默认的错误页面进行一些改进">
+                                        Laravel 5.5 中将对默认的错误页面进行一些改进
+                                    </a>
+                                </h1>
+                                <div class="clearfix entry-meta">
+                                    <span class="pull-left">
+                                        <time class="entry-date fa fa-calendar" datetime="2017/05/06 17:02:17">
+                                            &nbsp;2017/05/06
+                                        </time>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="categories-links fa fa-folder-o">
+                                            <a href="https://9iphp.com/./web/laravel" rel="category tag" data-original-title=""
+                                            title="">
+                                                Laravel
+                                            </a>
+                                        </span>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="fa fa-comments-o comments-link">
+                                            <a href="https://9iphp.com/web/laravel/laravel-5-5-error-views.html#comments"
+                                            data-original-title="" title="">
+                                                暂无评论
+                                            </a>
+                                        </span>
+                                        <span class="dot">
+                                            |
+                                        </span>
+                                        <span class="rating tip" title="" data-original-title="平均得分 5,满分 5 分">
+                                            <span class="percent" style="width:100%">
+                                            </span>
+                                        </span>
+                                        (
+                                        <span class="starNum">
+                                            1评
+                                        </span>
+                                        )
+                                    </span>
+                                    <!-- <span class="hidden-xs pull-left"> <span class="dot">|</span> <span class="fa fa-user"> <a href="https://9iphp.com/author/specs" title="由Specs发布" rel="author">Specs</a></span> <span class="dot">|</span> <span class="fa fa-eye"> 1.3k views</span> </span> -->
+                                </div>
+                            </header>
+                            <div class="entry-summary entry-content clearfix">
+                                <a class="hidden-xs thumbLink" href="https://9iphp.com/web/laravel/laravel-5-5-error-views.html"
+                                title="" data-original-title="Laravel 5.5 中将对默认的错误页面进行一些改进">
+                                    <img class="thumb pull-left lazyLoad" src="https://static.9iphp.com/wp-content/uploads/2017/05/laravel-54-error.png-w1"
+                                    data-original="https://static.9iphp.com/wp-content/uploads/2017/05/laravel-54-error.png-w2"
+                                    alt="Laravel 5.5 中将对默认的错误页面进行一些改进">
+                                </a>
+                                <p>
+                                    Laravel 5.5 中将对默认的错误页面进行新的改善过的设计。默认的错误页面会继承自 errors::layout 文件，并使用 flexbox
+                                    和垂直居中的消息对之前的页面做了些小的改进。
+                                </p>
+                            </div>
+                            <footer class="entry-footer clearfix hidden-xs">
+                                <div class="pull-left footer-tag">
+                                    <a href="https://9iphp.com/tag/laravel" rel="tag" data-original-title=""
+                                    title="">
+                                        Laravel
+                                    </a>
+                                    <a href="https://9iphp.com/tag/laravel-5-5" rel="tag" data-original-title=""
+                                    title="">
+                                        Laravel 5.5
+                                    </a>
+                                    <a href="https://9iphp.com/tag/%e8%a7%86%e5%9b%be" rel="tag" data-original-title=""
+                                    title="">
+                                        视图
+                                    </a>
+                                    <a href="https://9iphp.com/tag/%e9%94%99%e8%af%af%e9%a1%b5%e9%9d%a2" rel="tag"
+                                    data-original-title="" title="">
+                                        错误页面
+                                    </a>
+                                </div>
+                                <a class="pull-right more-link" href="https://9iphp.com/web/laravel/laravel-5-5-error-views.html"
+                                title="" data-original-title="阅读全文">
+                                    阅读全文»
+                                </a>
+                            </footer>
+                        </article>
+                        <!--首页文章列表模块-->
+                        <!--分页-->
+                        <ul class="pagination pull-right">
+                            <li class="active">
+                                <a href="https://9iphp.com/" data-original-title="" title="">
+                                    1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://9iphp.com/page/2" data-original-title="" title="">
+                                    2
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://9iphp.com/page/3" data-original-title="" title="">
+                                    3
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://9iphp.com/page/4" data-original-title="" title="">
+                                    4
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://9iphp.com/page/2" class="next" title="" data-original-title="下一页">
+                                    &gt;
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://9iphp.com/page/32" class="extend" title="" data-original-title="尾页">
+                                    »
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <!--侧边栏-->
+                    <aside id="side-bar" class="col-md-4">
+                        <div id="sidebar" class="affix-top">
+                            <aside id="specs_widget_tags-6" class="widget widget_specs_widget_tags panel panel-specs visible-lg visible-md clearfix">
+                                <div class="panel-heading">
+                                    <h2>
+                                        <i class="fa fa-tags">
+                                        </i>
+                                        标签云
+                                    </h2>
+                                </div>
+                                <div class="tag_clouds">
+                                    <a href="https://9iphp.com/tag/laravel" class="tag-link-332 tag-link-position-1"
+                                    title="" style="font-size: 14px;" data-original-title="95个话题">
+                                        Laravel
+                                    </a>
+                                    <a href="https://9iphp.com/tag/wordpress-2" class="tag-link-9 tag-link-position-2"
+                                    title="" style="font-size: 14px;" data-original-title="36个话题">
+                                        WordPress
+                                    </a>
+                                    <a href="https://9iphp.com/tag/php" class="tag-link-408 tag-link-position-3"
+                                    title="" style="font-size: 14px;" data-original-title="34个话题">
+                                        PHP
+                                    </a>
+                                    <a href="https://9iphp.com/tag/laravel-5-3" class="tag-link-446 tag-link-position-4"
+                                    title="" style="font-size: 14px;" data-original-title="29个话题">
+                                        Laravel 5.3
+                                    </a>
+                                    <a href="https://9iphp.com/tag/%e4%b8%ad%e6%96%87%e6%96%87%e6%a1%a3" class="tag-link-452 tag-link-position-5"
+                                    title="" style="font-size: 14px;" data-original-title="19个话题">
+                                        中文文档
+                                    </a>
+                                    <a href="https://9iphp.com/tag/jquery" class="tag-link-116 tag-link-position-6"
+                                    title="" style="font-size: 14px;" data-original-title="15个话题">
+                                        Jquery
+                                    </a>
+                                    <a href="https://9iphp.com/tag/dedecms" class="tag-link-34 tag-link-position-7"
+                                    title="" style="font-size: 14px;" data-original-title="12个话题">
+                                        dedecms
+                                    </a>
+                                    <a href="https://9iphp.com/tag/css" class="tag-link-27 tag-link-position-8"
+                                    title="" style="font-size: 14px;" data-original-title="11个话题">
+                                        css
+                                    </a>
+                                    <a href="https://9iphp.com/tag/%e5%be%ae%e4%bf%a1" class="tag-link-41 tag-link-position-9"
+                                    title="" style="font-size: 14px;" data-original-title="11个话题">
+                                        微信
+                                    </a>
+                                    <a href="https://9iphp.com/tag/%e7%a8%8b%e5%ba%8f%e5%91%98" class="tag-link-45 tag-link-position-10"
+                                    title="" style="font-size: 14px;" data-original-title="11个话题">
+                                        程序员
+                                    </a>
+                                    <a href="https://9iphp.com/tag/javascript-2" class="tag-link-155 tag-link-position-11"
+                                    title="" style="font-size: 14px;" data-original-title="11个话题">
+                                        Javascript
+                                    </a>
+                                    <a href="https://9iphp.com/tag/html-2" class="tag-link-25 tag-link-position-12"
+                                    title="" style="font-size: 14px;" data-original-title="9个话题">
+                                        html
+                                    </a>
+                                    <a href="https://9iphp.com/tag/linux" class="tag-link-409 tag-link-position-13"
+                                    title="" style="font-size: 14px;" data-original-title="9个话题">
+                                        Linux
+                                    </a>
+                                    <a href="https://9iphp.com/tag/%e6%a8%a1%e5%9e%8b" class="tag-link-351 tag-link-position-14"
+                                    title="" style="font-size: 14px;" data-original-title="9个话题">
+                                        模型
+                                    </a>
+                                    <a href="https://9iphp.com/tag/dede-2" class="tag-link-14 tag-link-position-15"
+                                    title="" style="font-size: 14px;" data-original-title="9个话题">
+                                        dede
+                                    </a>
+                                    <a href="https://9iphp.com/tag/bootstrap" class="tag-link-142 tag-link-position-16"
+                                    title="" style="font-size: 14px;" data-original-title="8个话题">
+                                        Bootstrap
+                                    </a>
+                                    <a href="https://9iphp.com/tag/9iphp" class="tag-link-201 tag-link-position-17"
+                                    title="" style="font-size: 14px;" data-original-title="8个话题">
+                                        9iphp
+                                    </a>
+                                    <a href="https://9iphp.com/tag/%e8%a7%86%e5%9b%be" class="tag-link-339 tag-link-position-18"
+                                    title="" style="font-size: 14px;" data-original-title="8个话题">
+                                        视图
+                                    </a>
+                                    <a href="https://9iphp.com/tag/%e4%ba%8b%e4%bb%b6" class="tag-link-438 tag-link-position-19"
+                                    title="" style="font-size: 14px;" data-original-title="8个话题">
+                                        事件
+                                    </a>
+                                    <a href="https://9iphp.com/tag/%e7%bb%87%e6%a2%a6" class="tag-link-87 tag-link-position-20"
+                                    title="" style="font-size: 14px;" data-original-title="7个话题">
+                                        织梦
+                                    </a>
+                                </div>
+                            </aside>
+                            <aside id="specs_recommend-6" class="widget widget_specs_recommend panel panel-specs visible-lg visible-md clearfix">
+                                <div class="panel-heading">
+                                    <h2>
+                                        <i class="fa fa-share-alt">
+                                        </i>
+                                        微信公众号
+                                    </h2>
+                                </div>
+                                <div class="textwidget">
+                                    <img src="https://static.9iphp.com/wp-content/uploads/2014/07/qrcode_for_gh_info.jpg">
+                                </div>
+                            </aside>
+                            <aside id="text-10" class="widget widget_text panel panel-specs visible-lg visible-md clearfix">
+                                <div class="panel-heading">
+                                    <h2>
+                                        广告
+                                    </h2>
+                                </div>
+                                <div class="textwidget">
+                                    <div>
+                                        <!--<script type="text/javascript">var cpro_id="u1982868";(window["cproStyleApi"] = window["cproStyleApi"] || {})[cpro_id]={at:"3",rsi0:"330",rsi1:"250",pat:"6",tn:"baiduCustNativeAD",rss1:"#FFFFFF",conBW:"0",adp:"1",ptt:"0",titFF:"%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91",titFS:"14",rss2:"#393939",titSU:"0",ptbg:"70",piw:"0",pih:"0",ptp:"0"}<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>-->
+                                        <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+                                        </script>
+                                        <!-- 模版页-300宽 -->
+                                        <ins class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px;"
+                                        data-ad-client="ca-pub-6074386496019881" data-ad-slot="8739581250" data-adsbygoogle-status="done">
+                                            <ins id="aswift_0_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;">
+                                                <ins id="aswift_0_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;">
+                                                    <iframe width="300" height="250" frameborder="0" marginwidth="0" marginheight="0"
+                                                    vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true"
+                                                    onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}"
+                                                    id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;width:300px;height:250px;">
+                                                    </iframe>
+                                                </ins>
+                                            </ins>
+                                        </ins>
+                                        <script>
+                                            (adsbygoogle = window.adsbygoogle || []).push({});
+                                        </script>
+                                    </div>
+                                </div>
+                            </aside>
+                            <aside id="specs_widget_recent_comments-13" class="widget widget_specs_widget_recent_comments panel panel-specs visible-lg visible-md clearfix">
+                                <div class="panel-heading">
+                                    <h2>
+                                        <i class="fa fa-comments-o">
+                                        </i>
+                                        最新评论
+                                    </h2>
+                                </div>
+                                <ul class="list-group">
+                                    <a class="list-group-item clearfix comment_list" href="https://9iphp.com/opensystem/thinkphp/999.html#comments"
+                                    title="" data-original-title="发表在 [TP笔记]ThinkPHP自定义错误页面、成功页面及异常页面">
+                                        <div class="comment-avatar" data-url="https://secure.gravatar.com/avatar/db379dc772f649c5b8a4a2686aee8b41?s=40&amp;d=monsterid&amp;r=g">
+                                        </div>
+                                        这个邮箱有什么作用呢？这个方法不错，谢谢了&nbsp;
+                                    </a>
+                                    <a class="list-group-item clearfix comment_list" href="https://9iphp.com/opensystem/wordpress/828.html#comments"
+                                    title="" data-original-title="发表在 自制Wordpress响应式主题-9IPHP 上线了~~">
+                                        <div class="comment-avatar" data-url="https://secure.gravatar.com/avatar/184d1feffd65127623ecefa0a45ce220?s=40&amp;d=monsterid&amp;r=g">
+                                        </div>
+                                        主题不错！&nbsp;
+                                    </a>
+                                    <a class="list-group-item clearfix comment_list" href="https://9iphp.com/web/javascript/679.html#comments"
+                                    title="" data-original-title="发表在 用高德地图JS API获取位置经纬度并在当前页显示">
+                                        <div class="comment-avatar" data-url="https://secure.gravatar.com/avatar/f0ae0f50c9bb82636872597d6361d4a3?s=40&amp;d=monsterid&amp;r=g">
+                                        </div>
+                                        我的这个搜索也用不了Uncaught TypeError: Cannot s...&nbsp;
+                                    </a>
+                                    <a class="list-group-item clearfix comment_list" href="https://9iphp.com/web/php/1204.html#comments"
+                                    title="" data-original-title="发表在 响应式Wordpress主题-9IPHP 使用教程及FAQ">
+                                        <div class="comment-avatar" data-url="https://secure.gravatar.com/avatar/b1c2511417702c866ee2a81fe31f0c11?s=40&amp;d=monsterid&amp;r=g">
+                                        </div>
+                                        最近在搭建个人博客，选择了9IPHP感觉非常不错，但是有一点不足的是点赞功能不好...&nbsp;
+                                    </a>
+                                    <a class="list-group-item clearfix comment_list" href="https://9iphp.com/web/javascript/679.html#comments"
+                                    title="" data-original-title="发表在 用高德地图JS API获取位置经纬度并在当前页显示">
+                                        <div class="comment-avatar" data-url="https://secure.gravatar.com/avatar/f0ae0f50c9bb82636872597d6361d4a3?s=40&amp;d=monsterid&amp;r=g">
+                                        </div>
+                                        加一个三级联动定位大概位置，再模糊搜索就更好了。&nbsp;
+                                    </a>
+                                </ul>
+                            </aside>
+                            <aside id="text-11" class="widget widget_text panel panel-specs visible-lg visible-md clearfix">
+                                <div class="panel-heading">
+                                    <h2>
+                                        广告
+                                    </h2>
+                                </div>
+                                <div class="textwidget">
+                                    <div>
+                                        <!--<script type="text/javascript">var cpro_id = "u1906183";<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>-->
+                                        <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+                                        </script>
+                                        <!-- 模版页-300宽 -->
+                                        <ins class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px;"
+                                        data-ad-client="ca-pub-6074386496019881" data-ad-slot="8739581250" data-adsbygoogle-status="done">
+                                            <ins id="aswift_1_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;">
+                                                <ins id="aswift_1_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;">
+                                                    <iframe width="300" height="250" frameborder="0" marginwidth="0" marginheight="0"
+                                                    vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true"
+                                                    onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}"
+                                                    id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;width:300px;height:250px;">
+                                                    </iframe>
+                                                </ins>
+                                            </ins>
+                                        </ins>
+                                        <script>
+                                            (adsbygoogle = window.adsbygoogle || []).push({});
+                                        </script>
+                                    </div>
+                                </div>
+                            </aside>
+                        </div>
+                    </aside>
+                </section>
+            </div>
+        </div>
+        <div class="main-footer">
+            <div class="container">
+                <h3>
+                    友情链接
+                </h3>
+                <ul class="list-unstyled list-inline">
+                    <li>
+                        <a href="http://webres.wang/">
+                            WEB资源网
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <footer id="body-footer">
+            <div class="container clearfix">
+                <p>
+                    Copyright © 2014 Specs&#039; Blog-就爱PHP | 图片存储
+                    <a href="https://portal.qiniu.com/signup?code=3lnaew1whqs7m" target="_blank"
+                    title="七牛云存储">
+                        七牛
+                    </a>
+                    |
+                    <a title="友情链接" href="https://9iphp.com/links" target="_blank">
+                        友情链接
+                    </a>
+                    |
+                    <a href="https://9iphp.com/sitemap.html" target="_blank" title="站点地图">
+                        站点地图
+                    </a>
+                </p>
+                <p>
+                    <script type="text/javascript">
+                        var cnzz_protocol = (("https:" == document.location.protocol) ? " https://": " http://");
+                        document.write(unescape("%3Cspan id='cnzz_stat_icon_1000068169'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000068169' type='text/javascript'%3E%3C/script%3E"));
+                    </script>
+                    <script>
+                        var _hmt = _hmt || []; (function() {
+                            var hm = document.createElement("script");
+                            hm.src = "//hm.baidu.com/hm.js?eda0950fe5a0a0195ff7b99f2cc8d11f";
+                            var s = document.getElementsByTagName("script")[0];
+                            s.parentNode.insertBefore(hm, s);
+                        })();
+                    </script>
+                    |
+                    <a href="http://www.miitbeian.gov.cn/" target="_blank">
+                        冀ICP备14020811号
+                    </a>
+                    |
+                    <i class="fa fa-heart text-red grow">
+                    </i>
+                    Theme By
+                    <a href="http://9iphp.com" title="Specs' Bolg" target="_blank">
+                        Specs
+                    </a>
+                </p>
+            </div>
+            <ul id="jump" class="visible-lg">
+                <li>
+                    <a id="weixin" title="微信公众号" href="javascript:void(0)">
+                        <i class="fa fa-wechat">
+                        </i>
+                        <div id="EWM">
+                            <img src="picture/weixin_code.jpg" alt="二维码" />
+                        </div>
+                    </a>
+                </li>
+                <!--<li><a id="share" title="意见反馈" href="https://9iphp.com/guestbook" target="_blank"><i class="fa fa-share-square-o"></i></a></li>-->
+                <li>
+                    <a id="share" title="友情链接" href="https://9iphp.com/links" target="_blank">
+                        <i class="fa fa-link">
+                        </i>
+                    </a>
+                </li>
+                <li>
+                    <a id="top" href="#top" title="返回顶部" style="display:none;">
+                        <i class="fa fa-arrow-circle-up">
+                        </i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        <script type='text/javascript'>
+            /* <![CDATA[ */
+            var SPECS = {
+                "um_ajaxurl": "https:\/\/9iphp.com\/wp-admin\/admin-ajax.php"
+            };
+            /* ]]> */
+            
+        </script>
+        <script type='text/javascript' src='js/comments-ajax.js'>
+        </script>
+        <script type='text/javascript' src='js/wp-embed.min.js'>
+        </script>
+    </body>
+
+</html>
+<!-- Dynamic page generated in 0.072 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2018-05-25 10:59:00 -->
+<!-- Compression=g zip -->

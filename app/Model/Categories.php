@@ -12,13 +12,10 @@ class Categories extends Model
     protected $primaryKey = 'cate_id';//定义主键
 //    public $timestamps = false;//类似addtime updatetime  
     public $timestamps = false;
-   
-    public function __construct(array $attributes = [])
+    //当前分类下的所有文章
+    public function getarticle()
     {
-        parent::__construct($attributes);
-        $this->setParentColumn('parent_id');
-        $this->setOrderColumn('order');
-        $this->setTitleColumn('title');
+        return $this->hasMany('App\Model\Article', 'cate_id');
     }
     
     
