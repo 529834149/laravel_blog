@@ -115,7 +115,7 @@
                     视图
                 </a>
             </div>
-            <a class="pull-right more-link" href="/article/details?aid={{$v->aid}}"
+            <a class="pull-right more-link" href="/article/{{$v->aid}}/details"
             title="" data-original-title="阅读全文">
                 阅读全文»
             </a>
@@ -197,7 +197,7 @@
                     时间
                 </a>
             </div>
-            <a class="pull-right more-link" href="/article/details?aid={{$v->aid}}"
+            <a class="pull-right more-link" href="/article/{{$v->aid}}/details"
             title="" data-original-title="阅读全文">
                 阅读全文»
             </a>
