@@ -132,7 +132,7 @@
                                 </a>
                             </li>
                             <li id="menu-item-840" class="menu-item menu-item-type-post_type menu-item-object-page">
-                                <a href="#">
+                                <a href="/archived_posts">
                                     <i class='fa fa-archive'>
                                     </i>
                                     归档文章

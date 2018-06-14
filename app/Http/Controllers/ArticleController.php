@@ -22,6 +22,19 @@ class ArticleController extends Controller
         
         return view('home.article.list',  compact('get_article'));
     }
+    public function archived_posts(Request $request,  Article $article)
+    {
+        $select = \DB::table('articles')->select('*',\DB::raw('date_format(from_unixtime(publish_time),"%Y") as year'),\DB::raw('date_format(from_unixtime(publish_time),"%m") as month'),\DB::raw('date_format(from_unixtime(publish_time),"%d") as day'))->orderBy('publish_time','desc')->get();
+        $newArray = [];
+        foreach($select as $k=>$item){
+            if (isset($newArray[$item->year])) {
+                 $newArray[$item->year][$item->month][] = ['title'=>$item->article_title,'aid'=>$item->aid,'day'=>$item->day,'month'=>$item->month];
+            } else {
+                $newArray[$item->year] = [ $item->month => [['title'=>$item->article_title,'aid'=>$item->aid,'day'=>$item->day,'month'=>$item->month]]];
+            }
+        }
+        return view('home.article.archived_posts',  compact('newArray'));
+    }
     /**
      * Show the form for creating a new resource.
      *

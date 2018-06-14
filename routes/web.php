@@ -15,6 +15,7 @@ Route::group(['prefix' => 'bodys', 'namespace' => 'bodys'], function(){
 });
 Route::resource('/','ArticleController');
 Route::resource('/topic','TopicController');
+Route::get('/archived_posts','ArticleController@archived_posts');
 Route::get('/article/{aid}/details','ArticleController@show');
 //Route::resource('category', 'CategoryController');
 //Route::resource('demo', 'DemoController');
