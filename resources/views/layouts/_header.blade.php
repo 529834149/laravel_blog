@@ -142,11 +142,11 @@
                                  <a href="/internet_information">
                                     <i class='fa fa-tags'>
                                     </i>
-                                    互联网资讯
+                                    资讯
                                 </a>
                             </li>
                             <li id="menu-item-882" class="menu-item menu-item-type-post_type menu-item-object-page">
-                                <a href="#">
+                                <a href="/reply">
                                     <i class='fa fa-comments-o'>
                                     </i>
                                     留言板
