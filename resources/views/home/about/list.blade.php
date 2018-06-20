@@ -14,7 +14,7 @@
             width: '100%',
             autoplay: false,
             //支持播放地址播放,此播放优先级最高
-            source : '播放url',
+            source : 'http://www.bodys.top/b9c08d3f8763414dae458322d84be788/9d03658a7dc740239e6e3cdfbd5827ce-0915d6bb87acaf7464044182693229de-ld.mp4',
             //播放方式二：点播用户推荐
             vid : '1e067a2831b641db90d570b6480fbc40',
             playauth : '',
