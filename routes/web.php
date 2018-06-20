@@ -20,6 +20,7 @@ Route::get('/article/{aid}/details','ArticleController@show');
 Route::resource('/internet_information','InternetController');
 Route::get('/internet_information/{id}/details','InternetController@show');
 Route::resource('/reply','ReplyController');
+Route::resource('/about','AboutController');
 //Route::resource('category', 'CategoryController');
 //Route::resource('demo', 'DemoController');
 //Route::resource('article', 'ArticleController');

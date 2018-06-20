@@ -153,7 +153,7 @@
                                 </a>
                             </li>
                             <li id="menu-item-891" class="menu-item menu-item-type-post_type menu-item-object-page">
-                                <a href="#">
+                                <a href="/about">
                                     <i class='fa fa-user'>
                                     </i>
                                     关于
