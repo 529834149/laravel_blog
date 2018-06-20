@@ -1,25 +1,43 @@
 @extends('layouts.app')
 
-@section('title',' 的个人中心')
+@section('title',' 关于')
 
 @section('content')
-  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
-  <link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.3.5/skins/default/aliplayer-min.css"/>
-  <script type="text/javascript" src="https://g.alicdn.com/de/prismplayer/2.3.5/aliplayer-min.js"></script>
-<section class="row">
-    <div class="prism-player" id="J_prismPlayer">
-    </div>
-    <script>
-        var player = Aliplayer({
-            id: "J_prismPlayer",
-            autoplay: true,
-            width: "1920px",
-            height: "1280px",
-            vid: "58353d059f204e9b9f1b64774be1e4f2",
-            playauth: "客户调用接口生成",
-        });
-    </script>
+<link rel="stylesheet" href="//g.alicdn.com/de/prismplayer/2.7.0/skins/default/aliplayer-min.css" />
+<script charset="utf-8" type="text/javascript" src="//g.alicdn.com/de/prismplayer/2.7.0/aliplayer-min.js"></script>
     <section id="main" class="col-md-8">
+        <div  class="prism-player" id="J_prismPlayer" style="position: absolute"></div>
+        
+        <script>
+            var player = new Aliplayer({
+            id: 'J_prismPlayer',
+            width: '100%',
+            autoplay: false,
+            //支持播放地址播放,此播放优先级最高
+            source : '播放url',
+            //播放方式二：点播用户推荐
+            vid : '1e067a2831b641db90d570b6480fbc40',
+            playauth : '',
+            cover: 'http://liveroom-img.oss-cn-qingdao.aliyuncs.com/logo.png',            
+            //播放方式三：仅MPS用户使用
+            vid : '1e067a2831b641db90d570b6480fbc40',
+            accId: '',
+            accSecret: '',
+            stsToken: '',
+            domainRegion: '',
+            authInfo: '',
+            //播放方式四：使用STS方式播放
+            vid : '1e067a2831b641db90d570b6480fbc40',
+            accessKeyId: '',
+            securityToken: '',
+            accessKeySecret: ''
+            },function(player){
+                console.log('播放器创建好了。')
+           });
+        </script>
+        
+        
+        
         <article class="well clearfix page" id="post">
             <header class="entry-header">
                 <h1 class="entry-title">
@@ -305,5 +323,8 @@
     </aside>
     <!--底部-->
 </section>
+<script src="/public/home/aliyun-upload-sdk-demo-1.3.1/lib/es6-promise.min.js"></script>
+<script src="/public/home/aliyun-upload-sdk-demo-1.3.1/lib/aliyun-oss-sdk4.13.2.min.js"></script>
+<script src="/public/home/aliyun-upload-sdk-demo-1.3.1/aliyun-vod-upload-sdk1.3.1.min.js"></script>
 @include('layouts._left_item')
 @stop
