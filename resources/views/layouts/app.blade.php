@@ -116,7 +116,7 @@
                     <!--主体内容-->
                     @yield('content')
                     <!--侧边栏-->
-                 
+                   
                 </section>
             </div>
         </div>

@@ -18,7 +18,6 @@ class AboutController extends Controller
      */
     public function index(Request $request,  Article $article)
     {
-        
         return view('home.about.list');
     }
    
