@@ -3,6 +3,7 @@
 @section('title',' 的个人中心')
 
 @section('content')
+<link rel="stylesheet" href="/public/share/dist/css/share.min.css">
 <section id="main" class="col-md-8">
     <article class="well clearfix entry-common" id="post-1918">
         <header class="entry-header">
@@ -123,6 +124,7 @@
                 <!-- <span class="hidden-xs pull-left"> <span class="dot">|</span> <span class="fa fa-user"> <a href="https://9iphp.com/author/specs" title="由Specs发布" rel="author">Specs</a></span> <span class="dot">|</span> <span class="fa fa-eye"> 732 views</span> </span> -->
             </div>
         </header>
+        
         <div class="entry-content clearfix">
             <p>
                 <a href="/public/home/images/laravel-logo-search.jpg"
@@ -138,6 +140,8 @@
         </div>
             <!--相关文章-->
         </footer>
+        
+        <div id="share-4" data-disabled="google"></div>
         <div id="comments" class="comments-area">
             <h2 class="comments-title">
                 本文共 2 个回复
@@ -193,5 +197,13 @@
         </div>
     </article>
 </section>
+<script src="http://apps.bdimg.com/libs/jquery/1.8.2/jquery.js"></script>
+<script src="/public/share/dist/js/jquery.share.min.js"></script>
+<script>
+////$('#share-1').share();
+//$('#share-2').share({sites: ['qzone', 'qq', 'weibo','wechat']});
+//$('#share-3').share();
+$('#share-4').share();
+</script>
 @include('layouts._left_item')
 @stop
